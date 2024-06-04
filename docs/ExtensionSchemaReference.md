@@ -1,0 +1,18 @@
+# OpenapiClient::ExtensionSchemaReference
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **type** | **String** |  |  |
+
+## Example
+
+```ruby
+require 'openapi_client'
+
+instance = OpenapiClient::ExtensionSchemaReference.new(
+  type: null
+)
+```
+
