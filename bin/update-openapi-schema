@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json > openapiv3.json
