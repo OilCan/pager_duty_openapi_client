@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationWarningInvalidData
+# PagerDutyOpenapiClient::OrchestrationWarningInvalidData
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationWarningInvalidData.new(
+instance = PagerDutyOpenapiClient::OrchestrationWarningInvalidData.new(
   message: null,
   rule_id: null,
   feature: null,

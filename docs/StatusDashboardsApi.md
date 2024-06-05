@@ -1,4 +1,4 @@
-# OpenapiClient::StatusDashboardsApi
+# PagerDutyOpenapiClient::StatusDashboardsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -23,16 +23,16 @@ Get a Status Dashboard by its PagerDuty `id`.  Scoped OAuth requires: `status_da
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusDashboardsApi.new
+api_instance = PagerDutyOpenapiClient::StatusDashboardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -40,7 +40,7 @@ begin
   # Get a single Status Dashboard by `id`
   result = api_instance.get_status_dashboard_by_id(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_by_id: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatusDashboardById200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_by_id_with_http_info: #{e}"
 end
 ```
@@ -96,16 +96,16 @@ Get a Status Dashboard by its PagerDuty `url_slug`.  A `url_slug` is a human-rea
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusDashboardsApi.new
+api_instance = PagerDutyOpenapiClient::StatusDashboardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 url_slug = 'url_slug_example' # String | The `url_slug` for a status dashboard
 
@@ -113,7 +113,7 @@ begin
   # Get a single Status Dashboard by `url_slug`
   result = api_instance.get_status_dashboard_by_url_slug(accept, url_slug)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_by_url_slug: #{e}"
 end
 ```
@@ -131,7 +131,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatusDashboardById200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_by_url_slug_with_http_info: #{e}"
 end
 ```
@@ -169,16 +169,16 @@ Get impacted Business Services for a Status Dashboard by `id`  This endpoint doe
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusDashboardsApi.new
+api_instance = PagerDutyOpenapiClient::StatusDashboardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
@@ -189,7 +189,7 @@ begin
   # Get impacted Business Services for a Status Dashboard by `id`.
   result = api_instance.get_status_dashboard_service_impacts_by_id(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_service_impacts_by_id: #{e}"
 end
 ```
@@ -207,7 +207,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceSupportingServiceImpacts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_service_impacts_by_id_with_http_info: #{e}"
 end
 ```
@@ -246,16 +246,16 @@ Get Business Service Impacts for the Business Services on a Status Dashboard by 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusDashboardsApi.new
+api_instance = PagerDutyOpenapiClient::StatusDashboardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 url_slug = 'url_slug_example' # String | The `url_slug` for a status dashboard
 opts = {
@@ -266,7 +266,7 @@ begin
   # Get impacted Business Services for a  Status Dashboard by `url_slug`
   result = api_instance.get_status_dashboard_service_impacts_by_url_slug(accept, url_slug, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_service_impacts_by_url_slug: #{e}"
 end
 ```
@@ -284,7 +284,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceSupportingServiceImpacts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->get_status_dashboard_service_impacts_by_url_slug_with_http_info: #{e}"
 end
 ```
@@ -323,23 +323,23 @@ Get all your account's custom Status Dashboard views.  Scoped OAuth requires: `s
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusDashboardsApi.new
+api_instance = PagerDutyOpenapiClient::StatusDashboardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 
 begin
   # List Status Dashboards
   result = api_instance.list_status_dashboards(accept)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->list_status_dashboards: #{e}"
 end
 ```
@@ -357,7 +357,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusDashboards200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusDashboardsApi->list_status_dashboards_with_http_info: #{e}"
 end
 ```

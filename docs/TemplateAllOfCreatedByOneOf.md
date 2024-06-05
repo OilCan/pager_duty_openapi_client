@@ -1,4 +1,4 @@
-# OpenapiClient::TemplateAllOfCreatedByOneOf
+# PagerDutyOpenapiClient::TemplateAllOfCreatedByOneOf
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::TemplateAllOfCreatedByOneOf.new(
+instance = PagerDutyOpenapiClient::TemplateAllOfCreatedByOneOf.new(
   type: null
 )
 ```

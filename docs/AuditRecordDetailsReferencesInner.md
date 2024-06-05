@@ -1,4 +1,4 @@
-# OpenapiClient::AuditRecordDetailsReferencesInner
+# PagerDutyOpenapiClient::AuditRecordDetailsReferencesInner
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AuditRecordDetailsReferencesInner.new(
+instance = PagerDutyOpenapiClient::AuditRecordDetailsReferencesInner.new(
   name: team_members,
   description: First and Last name,
   added: null,

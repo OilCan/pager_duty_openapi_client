@@ -1,4 +1,4 @@
-# OpenapiClient::ReachTriggerLimitLogEntry
+# PagerDutyOpenapiClient::ReachTriggerLimitLogEntry
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ReachTriggerLimitLogEntry.new(
+instance = PagerDutyOpenapiClient::ReachTriggerLimitLogEntry.new(
   type: null,
   created_at: null,
   channel: null,

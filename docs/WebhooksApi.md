@@ -1,4 +1,4 @@
-# OpenapiClient::WebhooksApi
+# PagerDutyOpenapiClient::WebhooksApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -25,27 +25,27 @@ Creates a new webhook subscription.  For more information on webhook subscriptio
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_webhook_subscription_request: OpenapiClient::CreateWebhookSubscriptionRequest.new({webhook_subscription: OpenapiClient::WebhookSubscription.new({type: 'webhook_subscription', delivery_method: OpenapiClient::WebhookSubscriptionDeliveryMethod.new({type: 'http_delivery_method', url: 'url_example'}), events: ['events_example'], filter: OpenapiClient::WebhookSubscriptionFilter.new({type: 'account_reference'})})}) # CreateWebhookSubscriptionRequest | 
+  create_webhook_subscription_request: PagerDutyOpenapiClient::CreateWebhookSubscriptionRequest.new({webhook_subscription: PagerDutyOpenapiClient::WebhookSubscription.new({type: 'webhook_subscription', delivery_method: PagerDutyOpenapiClient::WebhookSubscriptionDeliveryMethod.new({type: 'http_delivery_method', url: 'url_example'}), events: ['events_example'], filter: PagerDutyOpenapiClient::WebhookSubscriptionFilter.new({type: 'account_reference'})})}) # CreateWebhookSubscriptionRequest | 
 }
 
 begin
   # Create a webhook subscription
   result = api_instance.create_webhook_subscription(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->create_webhook_subscription: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateWebhookSubscriptionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->create_webhook_subscription_with_http_info: #{e}"
 end
 ```
@@ -102,23 +102,23 @@ Deletes a webhook subscription.  Scoped OAuth requires: `webhook_subscriptions.w
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
 begin
   # Delete a webhook subscription
   api_instance.delete_webhook_subscription(accept, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->delete_webhook_subscription: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->delete_webhook_subscription_with_http_info: #{e}"
 end
 ```
@@ -174,16 +174,16 @@ Enable a webhook subscription that is temporarily disabled. (This API does not r
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -191,7 +191,7 @@ begin
   # Enable a webhook subscription
   result = api_instance.enable_webhook_subscription(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->enable_webhook_subscription: #{e}"
 end
 ```
@@ -209,7 +209,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateWebhookSubscriptionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->enable_webhook_subscription_with_http_info: #{e}"
 end
 ```
@@ -247,16 +247,16 @@ Gets details about an existing webhook subscription.  Scoped OAuth requires: `we
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -264,7 +264,7 @@ begin
   # Get a webhook subscription
   result = api_instance.get_webhook_subscription(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->get_webhook_subscription: #{e}"
 end
 ```
@@ -282,7 +282,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateWebhookSubscriptionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->get_webhook_subscription_with_http_info: #{e}"
 end
 ```
@@ -320,16 +320,16 @@ List existing webhook subscriptions.  The `filter_type` and `filter_id` query pa
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 opts = {
   limit: 56, # Integer | The number of results per page.
@@ -343,7 +343,7 @@ begin
   # List webhook subscriptions
   result = api_instance.list_webhook_subscriptions(accept, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->list_webhook_subscriptions: #{e}"
 end
 ```
@@ -361,7 +361,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListWebhookSubscriptions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->list_webhook_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -403,23 +403,23 @@ Test a webhook subscription.  Fires a test event against the webhook subscriptio
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
 begin
   # Test a webhook subscription
   api_instance.test_webhook_subscription(accept, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->test_webhook_subscription: #{e}"
 end
 ```
@@ -437,7 +437,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->test_webhook_subscription_with_http_info: #{e}"
 end
 ```
@@ -475,28 +475,28 @@ Updates an existing webhook subscription.  Only the fields being updated need to
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::WebhooksApi.new
+api_instance = PagerDutyOpenapiClient::WebhooksApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  webhook_subscription_update: OpenapiClient::WebhookSubscriptionUpdate.new # WebhookSubscriptionUpdate | 
+  webhook_subscription_update: PagerDutyOpenapiClient::WebhookSubscriptionUpdate.new # WebhookSubscriptionUpdate | 
 }
 
 begin
   # Update a webhook subscription
   result = api_instance.update_webhook_subscription(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->update_webhook_subscription: #{e}"
 end
 ```
@@ -514,7 +514,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateWebhookSubscriptionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling WebhooksApi->update_webhook_subscription_with_http_info: #{e}"
 end
 ```

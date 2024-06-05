@@ -1,4 +1,4 @@
-# OpenapiClient::ImpactAdditionalFields
+# PagerDutyOpenapiClient::ImpactAdditionalFields
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ImpactAdditionalFields.new(
+instance = PagerDutyOpenapiClient::ImpactAdditionalFields.new(
   highest_impacting_priority: null
 )
 ```

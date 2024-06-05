@@ -1,4 +1,4 @@
-# OpenapiClient::RemoveBusinessServiceNotificationSubscriber200Response
+# PagerDutyOpenapiClient::RemoveBusinessServiceNotificationSubscriber200Response
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RemoveBusinessServiceNotificationSubscriber200Response.new(
+instance = PagerDutyOpenapiClient::RemoveBusinessServiceNotificationSubscriber200Response.new(
   deleted_count: null,
   unauthorized_count: null,
   non_existent_count: null

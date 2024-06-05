@@ -1,4 +1,4 @@
-# OpenapiClient::GetBusinessServicePriorityThresholds200Response
+# PagerDutyOpenapiClient::GetBusinessServicePriorityThresholds200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetBusinessServicePriorityThresholds200Response.new(
+instance = PagerDutyOpenapiClient::GetBusinessServicePriorityThresholds200Response.new(
   global_threshold: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::StandardInclusionExclusion
+# PagerDutyOpenapiClient::StandardInclusionExclusion
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::StandardInclusionExclusion.new(
+instance = PagerDutyOpenapiClient::StandardInclusionExclusion.new(
   type: null,
   id: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::CreateServiceDependency200Response
+# PagerDutyOpenapiClient::CreateServiceDependency200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateServiceDependency200Response.new(
+instance = PagerDutyOpenapiClient::CreateServiceDependency200Response.new(
   relationships: null
 )
 ```

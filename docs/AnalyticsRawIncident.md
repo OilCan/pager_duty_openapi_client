@@ -1,4 +1,4 @@
-# OpenapiClient::AnalyticsRawIncident
+# PagerDutyOpenapiClient::AnalyticsRawIncident
 
 ## Properties
 
@@ -54,9 +54,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AnalyticsRawIncident.new(
+instance = PagerDutyOpenapiClient::AnalyticsRawIncident.new(
   acknowledged_user_ids: null,
   acknowledged_user_names: null,
   acknowledgement_count: null,

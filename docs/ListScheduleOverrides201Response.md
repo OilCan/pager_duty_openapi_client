@@ -1,4 +1,4 @@
-# OpenapiClient::ListScheduleOverrides201Response
+# PagerDutyOpenapiClient::ListScheduleOverrides201Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListScheduleOverrides201Response.new(
+instance = PagerDutyOpenapiClient::ListScheduleOverrides201Response.new(
   overrides: null
 )
 ```

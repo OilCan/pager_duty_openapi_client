@@ -1,4 +1,4 @@
-# OpenapiClient::CreateBusinessServiceNotificationSubscribers200Response
+# PagerDutyOpenapiClient::CreateBusinessServiceNotificationSubscribers200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateBusinessServiceNotificationSubscribers200Response.new(
+instance = PagerDutyOpenapiClient::CreateBusinessServiceNotificationSubscribers200Response.new(
   subscriptions: null
 )
 ```

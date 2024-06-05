@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentWorkflowAllOfStepsAllOfActionConfigurationInputsInner
+# PagerDutyOpenapiClient::IncidentWorkflowAllOfStepsAllOfActionConfigurationInputsInner
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentWorkflowAllOfStepsAllOfActionConfigurationInputsInner.new(
+instance = PagerDutyOpenapiClient::IncidentWorkflowAllOfStepsAllOfActionConfigurationInputsInner.new(
   name: null,
   parameter_type: null,
   value: null

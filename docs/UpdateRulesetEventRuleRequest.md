@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateRulesetEventRuleRequest
+# PagerDutyOpenapiClient::UpdateRulesetEventRuleRequest
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateRulesetEventRuleRequest.new(
+instance = PagerDutyOpenapiClient::UpdateRulesetEventRuleRequest.new(
   rule: null,
   rule_id: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::GetIncidentWorkflowTrigger200Response
+# PagerDutyOpenapiClient::GetIncidentWorkflowTrigger200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetIncidentWorkflowTrigger200Response.new(
+instance = PagerDutyOpenapiClient::GetIncidentWorkflowTrigger200Response.new(
   trigger: null
 )
 ```

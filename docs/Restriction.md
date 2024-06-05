@@ -1,4 +1,4 @@
-# OpenapiClient::Restriction
+# PagerDutyOpenapiClient::Restriction
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Restriction.new(
+instance = PagerDutyOpenapiClient::Restriction.new(
   type: null,
   duration_seconds: null,
   start_time_of_day: null,

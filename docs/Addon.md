@@ -1,4 +1,4 @@
-# OpenapiClient::Addon
+# PagerDutyOpenapiClient::Addon
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Addon.new(
+instance = PagerDutyOpenapiClient::Addon.new(
   type: null,
   name: null,
   src: null

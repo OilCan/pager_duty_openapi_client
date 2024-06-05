@@ -1,4 +1,4 @@
-# OpenapiClient::RelatedIncidentServiceDependencyRelationship
+# PagerDutyOpenapiClient::RelatedIncidentServiceDependencyRelationship
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RelatedIncidentServiceDependencyRelationship.new(
+instance = PagerDutyOpenapiClient::RelatedIncidentServiceDependencyRelationship.new(
   dependent_services: null,
   supporting_services: null
 )

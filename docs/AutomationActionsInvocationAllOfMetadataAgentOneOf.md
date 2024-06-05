@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsInvocationAllOfMetadataAgentOneOf
+# PagerDutyOpenapiClient::AutomationActionsInvocationAllOfMetadataAgentOneOf
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsInvocationAllOfMetadataAgentOneOf.new(
+instance = PagerDutyOpenapiClient::AutomationActionsInvocationAllOfMetadataAgentOneOf.new(
   id: PT4KHRS,
   type: incident_workflow_reference
 )

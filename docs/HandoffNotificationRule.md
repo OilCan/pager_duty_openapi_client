@@ -1,4 +1,4 @@
-# OpenapiClient::HandoffNotificationRule
+# PagerDutyOpenapiClient::HandoffNotificationRule
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::HandoffNotificationRule.new(
+instance = PagerDutyOpenapiClient::HandoffNotificationRule.new(
   id: null,
   notify_advance_in_minutes: null,
   handoff_type: null,

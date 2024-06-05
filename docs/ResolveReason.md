@@ -1,4 +1,4 @@
-# OpenapiClient::ResolveReason
+# PagerDutyOpenapiClient::ResolveReason
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ResolveReason.new(
+instance = PagerDutyOpenapiClient::ResolveReason.new(
   type: null,
   incident: null
 )

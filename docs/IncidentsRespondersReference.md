@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentsRespondersReference
+# PagerDutyOpenapiClient::IncidentsRespondersReference
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentsRespondersReference.new(
+instance = PagerDutyOpenapiClient::IncidentsRespondersReference.new(
   state: pending,
   user: null,
   incident: null,

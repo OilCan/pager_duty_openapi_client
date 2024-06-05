@@ -1,4 +1,4 @@
-# OpenapiClient::NotificationRule
+# PagerDutyOpenapiClient::NotificationRule
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::NotificationRule.new(
+instance = PagerDutyOpenapiClient::NotificationRule.new(
   type: null,
   start_delay_in_minutes: null,
   contact_method: null,

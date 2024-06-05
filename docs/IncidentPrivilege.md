@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentPrivilege
+# PagerDutyOpenapiClient::IncidentPrivilege
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentPrivilege.new(
+instance = PagerDutyOpenapiClient::IncidentPrivilege.new(
   role: null,
   permissions: null
 )

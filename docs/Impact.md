@@ -1,4 +1,4 @@
-# OpenapiClient::Impact
+# PagerDutyOpenapiClient::Impact
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Impact.new(
+instance = PagerDutyOpenapiClient::Impact.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::RulesetUpdater
+# PagerDutyOpenapiClient::RulesetUpdater
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RulesetUpdater.new(
+instance = PagerDutyOpenapiClient::RulesetUpdater.new(
   id: null,
   type: null,
   _self: null

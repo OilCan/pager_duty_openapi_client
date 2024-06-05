@@ -1,4 +1,4 @@
-# OpenapiClient::LogEntriesApi
+# PagerDutyOpenapiClient::LogEntriesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -21,16 +21,16 @@ Get details for a specific incident log entry. This method provides additional i
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::LogEntriesApi.new
+api_instance = PagerDutyOpenapiClient::LogEntriesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -43,7 +43,7 @@ begin
   # Get a log entry
   result = api_instance.get_log_entry(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LogEntriesApi->get_log_entry: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetLogEntry200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LogEntriesApi->get_log_entry_with_http_info: #{e}"
 end
 ```
@@ -102,16 +102,16 @@ List all of the incident log entries across the entire account.  A log of all th
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::LogEntriesApi.new
+api_instance = PagerDutyOpenapiClient::LogEntriesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -130,7 +130,7 @@ begin
   # List log entries
   result = api_instance.list_log_entries(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LogEntriesApi->list_log_entries: #{e}"
 end
 ```
@@ -148,7 +148,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentLogEntries200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LogEntriesApi->list_log_entries_with_http_info: #{e}"
 end
 ```
@@ -195,28 +195,28 @@ Update an existing incident log entry channel.  For more information see the [AP
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::LogEntriesApi.new
+api_instance = PagerDutyOpenapiClient::LogEntriesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  update_log_entry_channel_request: OpenapiClient::UpdateLogEntryChannelRequest.new({channel: OpenapiClient::UpdateLogEntryChannelRequestChannel.new({details: 'details_example', type: 'web_trigger'})}) # UpdateLogEntryChannelRequest | The log entry channel to be updated.
+  update_log_entry_channel_request: PagerDutyOpenapiClient::UpdateLogEntryChannelRequest.new({channel: PagerDutyOpenapiClient::UpdateLogEntryChannelRequestChannel.new({details: 'details_example', type: 'web_trigger'})}) # UpdateLogEntryChannelRequest | The log entry channel to be updated.
 }
 
 begin
   # Update log entry channel information.
   api_instance.update_log_entry_channel(accept, content_type, id, from, opts)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LogEntriesApi->update_log_entry_channel: #{e}"
 end
 ```
@@ -234,7 +234,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LogEntriesApi->update_log_entry_channel_with_http_info: #{e}"
 end
 ```

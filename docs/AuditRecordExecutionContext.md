@@ -1,4 +1,4 @@
-# OpenapiClient::AuditRecordExecutionContext
+# PagerDutyOpenapiClient::AuditRecordExecutionContext
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AuditRecordExecutionContext.new(
+instance = PagerDutyOpenapiClient::AuditRecordExecutionContext.new(
   request_id: null,
   remote_address: null
 )

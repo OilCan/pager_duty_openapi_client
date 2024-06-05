@@ -1,4 +1,4 @@
-# OpenapiClient::GetTeamNotificationSubscriptions200ResponseAllOfSubscriptionsInner
+# PagerDutyOpenapiClient::GetTeamNotificationSubscriptions200ResponseAllOfSubscriptionsInner
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetTeamNotificationSubscriptions200ResponseAllOfSubscriptionsInner.new(
+instance = PagerDutyOpenapiClient::GetTeamNotificationSubscriptions200ResponseAllOfSubscriptionsInner.new(
   subscription: null,
   subscribable_name: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1Rules
+# PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1Rules
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1Rules.new(
+instance = PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1Rules.new(
   actions: null
 )
 ```

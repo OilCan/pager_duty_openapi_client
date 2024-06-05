@@ -1,4 +1,4 @@
-# OpenapiClient::EmailContactMethod
+# PagerDutyOpenapiClient::EmailContactMethod
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EmailContactMethod.new(
+instance = PagerDutyOpenapiClient::EmailContactMethod.new(
   type: null,
   send_short_email: null
 )

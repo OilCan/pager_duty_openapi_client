@@ -1,4 +1,4 @@
-# OpenapiClient::AnalyticsIncidentMetricsEscalationPolicy
+# PagerDutyOpenapiClient::AnalyticsIncidentMetricsEscalationPolicy
 
 ## Properties
 
@@ -38,9 +38,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AnalyticsIncidentMetricsEscalationPolicy.new(
+instance = PagerDutyOpenapiClient::AnalyticsIncidentMetricsEscalationPolicy.new(
   distinct_responder_count: null,
   escalation_policy_id: null,
   escalation_policy_name: null,

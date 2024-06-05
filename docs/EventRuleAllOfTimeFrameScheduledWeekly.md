@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfTimeFrameScheduledWeekly
+# PagerDutyOpenapiClient::EventRuleAllOfTimeFrameScheduledWeekly
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfTimeFrameScheduledWeekly.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfTimeFrameScheduledWeekly.new(
   start_time: null,
   duration: null,
   timezone: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::WeeklyRestriction
+# PagerDutyOpenapiClient::WeeklyRestriction
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::WeeklyRestriction.new(
+instance = PagerDutyOpenapiClient::WeeklyRestriction.new(
   start_day_of_week: null
 )
 ```

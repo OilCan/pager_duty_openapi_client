@@ -1,4 +1,4 @@
-# OpenapiClient::AlertCount
+# PagerDutyOpenapiClient::AlertCount
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AlertCount.new(
+instance = PagerDutyOpenapiClient::AlertCount.new(
   triggered: null,
   resolved: null,
   all: null

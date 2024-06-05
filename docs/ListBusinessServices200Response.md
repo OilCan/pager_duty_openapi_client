@@ -1,4 +1,4 @@
-# OpenapiClient::ListBusinessServices200Response
+# PagerDutyOpenapiClient::ListBusinessServices200Response
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListBusinessServices200Response.new(
+instance = PagerDutyOpenapiClient::ListBusinessServices200Response.new(
   offset: null,
   limit: null,
   more: null,

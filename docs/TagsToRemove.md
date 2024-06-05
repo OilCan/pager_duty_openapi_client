@@ -1,4 +1,4 @@
-# OpenapiClient::TagsToRemove
+# PagerDutyOpenapiClient::TagsToRemove
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::TagsToRemove.new(
+instance = PagerDutyOpenapiClient::TagsToRemove.new(
   type: null,
   id: null
 )

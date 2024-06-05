@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleActionsCommonSeverity
+# PagerDutyOpenapiClient::EventRuleActionsCommonSeverity
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleActionsCommonSeverity.new(
+instance = PagerDutyOpenapiClient::EventRuleActionsCommonSeverity.new(
   value: null
 )
 ```

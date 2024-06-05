@@ -1,4 +1,4 @@
-# OpenapiClient::AuditRecordMethod
+# PagerDutyOpenapiClient::AuditRecordMethod
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AuditRecordMethod.new(
+instance = PagerDutyOpenapiClient::AuditRecordMethod.new(
   description: null,
   truncated_token: 3xyz,
   type: null

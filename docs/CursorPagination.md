@@ -1,4 +1,4 @@
-# OpenapiClient::CursorPagination
+# PagerDutyOpenapiClient::CursorPagination
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CursorPagination.new(
+instance = PagerDutyOpenapiClient::CursorPagination.new(
   limit: null,
   next_cursor: dXNlcjaVMzc5V0ZYTlo&#x3D;
 )

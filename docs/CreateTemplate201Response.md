@@ -1,4 +1,4 @@
-# OpenapiClient::CreateTemplate201Response
+# PagerDutyOpenapiClient::CreateTemplate201Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateTemplate201Response.new(
+instance = PagerDutyOpenapiClient::CreateTemplate201Response.new(
   template: null
 )
 ```

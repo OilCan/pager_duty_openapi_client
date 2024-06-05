@@ -1,4 +1,4 @@
-# OpenapiClient::ExtensionSchemaReference
+# PagerDutyOpenapiClient::ExtensionSchemaReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ExtensionSchemaReference.new(
+instance = PagerDutyOpenapiClient::ExtensionSchemaReference.new(
   type: null
 )
 ```

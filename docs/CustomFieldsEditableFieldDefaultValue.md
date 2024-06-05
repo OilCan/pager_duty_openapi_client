@@ -1,4 +1,4 @@
-# OpenapiClient::CustomFieldsEditableFieldDefaultValue
+# PagerDutyOpenapiClient::CustomFieldsEditableFieldDefaultValue
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::CustomFieldsEditableFieldDefaultValue.openapi_one_of
+PagerDutyOpenapiClient::CustomFieldsEditableFieldDefaultValue.openapi_one_of
 # =>
 # [
 #   :'Model0',
@@ -30,12 +30,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::CustomFieldsEditableFieldDefaultValue.build(data)
+PagerDutyOpenapiClient::CustomFieldsEditableFieldDefaultValue.build(data)
 # => #<Model0:0x00007fdd4aab02a0>
 
-OpenapiClient::CustomFieldsEditableFieldDefaultValue.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::CustomFieldsEditableFieldDefaultValue.build(data_that_doesnt_match)
 # => nil
 ```
 

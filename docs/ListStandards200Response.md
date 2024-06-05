@@ -1,4 +1,4 @@
-# OpenapiClient::ListStandards200Response
+# PagerDutyOpenapiClient::ListStandards200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListStandards200Response.new(
+instance = PagerDutyOpenapiClient::ListStandards200Response.new(
   standards: null
 )
 ```

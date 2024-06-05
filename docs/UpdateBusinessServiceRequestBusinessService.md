@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateBusinessServiceRequestBusinessService
+# PagerDutyOpenapiClient::UpdateBusinessServiceRequestBusinessService
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateBusinessServiceRequestBusinessService.new(
+instance = PagerDutyOpenapiClient::UpdateBusinessServiceRequestBusinessService.new(
   name: null,
   description: null,
   point_of_contact: null,

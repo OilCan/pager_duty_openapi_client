@@ -1,4 +1,4 @@
-# OpenapiClient::TemplatesApi
+# PagerDutyOpenapiClient::TemplatesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -25,23 +25,23 @@ Create a new template  Scoped OAuth requires: `templates.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
-create_template_request = OpenapiClient::CreateTemplateRequest.new({template: OpenapiClient::EditableTemplate.new}) # CreateTemplateRequest | 
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
+create_template_request = PagerDutyOpenapiClient::CreateTemplateRequest.new({template: PagerDutyOpenapiClient::EditableTemplate.new}) # CreateTemplateRequest | 
 
 begin
   # Create a template
   result = api_instance.create_template(create_template_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->create_template: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTemplate201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->create_template_with_http_info: #{e}"
 end
 ```
@@ -96,22 +96,22 @@ Delete a specific of templates on the account  Scoped OAuth requires: `templates
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
 id = 'id_example' # String | The ID of the resource.
 
 begin
   # Delete a template
   api_instance.delete_template(id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->delete_template: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->delete_template_with_http_info: #{e}"
 end
 ```
@@ -166,23 +166,23 @@ Get a single template on the account  Scoped OAuth requires: `templates.read`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
 id = 'id_example' # String | The ID of the resource.
 
 begin
   # Get a template
   result = api_instance.get_template(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->get_template: #{e}"
 end
 ```
@@ -200,7 +200,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTemplate201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->get_template_with_http_info: #{e}"
 end
 ```
@@ -237,16 +237,16 @@ Get a list of fields that can be used on the account templates.  Scoped OAuth re
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 
@@ -254,7 +254,7 @@ begin
   # List template fields
   result = api_instance.get_template_fields(accept, content_type)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->get_template_fields: #{e}"
 end
 ```
@@ -272,7 +272,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTemplateFields200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->get_template_fields_with_http_info: #{e}"
 end
 ```
@@ -310,16 +310,16 @@ Get a list of all the template on an account  Scoped OAuth requires: `templates.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
 opts = {
   limit: 56, # Integer | The number of results per page.
   offset: 56, # Integer | Offset to start pagination search results.
@@ -333,7 +333,7 @@ begin
   # List templates
   result = api_instance.get_templates(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->get_templates: #{e}"
 end
 ```
@@ -351,7 +351,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTemplates200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->get_templates_with_http_info: #{e}"
 end
 ```
@@ -393,24 +393,24 @@ Render a template. This endpoint has a variable request body depending on the te
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
 id = 'id_example' # String | The ID of the resource.
-render_template_request = OpenapiClient::StatusUpdateTemplateInput.new # RenderTemplateRequest | 
+render_template_request = PagerDutyOpenapiClient::StatusUpdateTemplateInput.new # RenderTemplateRequest | 
 
 begin
   # Render a template
   result = api_instance.render_template(id, render_template_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->render_template: #{e}"
 end
 ```
@@ -428,7 +428,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RenderedTemplate>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->render_template_with_http_info: #{e}"
 end
 ```
@@ -466,24 +466,24 @@ Update an existing template  Scoped OAuth requires: `templates.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TemplatesApi.new
+api_instance = PagerDutyOpenapiClient::TemplatesApi.new
 id = 'id_example' # String | The ID of the resource.
-create_template_request = OpenapiClient::CreateTemplateRequest.new({template: OpenapiClient::EditableTemplate.new}) # CreateTemplateRequest | 
+create_template_request = PagerDutyOpenapiClient::CreateTemplateRequest.new({template: PagerDutyOpenapiClient::EditableTemplate.new}) # CreateTemplateRequest | 
 
 begin
   # Update a template
   result = api_instance.update_template(id, create_template_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->update_template: #{e}"
 end
 ```
@@ -501,7 +501,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTemplate201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TemplatesApi->update_template_with_http_info: #{e}"
 end
 ```

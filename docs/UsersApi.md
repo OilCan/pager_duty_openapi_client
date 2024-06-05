@@ -1,4 +1,4 @@
-# OpenapiClient::UsersApi
+# PagerDutyOpenapiClient::UsersApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -53,28 +53,28 @@ Create a new user.  Users are members of a PagerDuty account that have the abili
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_user_request: OpenapiClient::CreateUserRequest.new({user: OpenapiClient::CreateUserRequestUser.new({name: 'name_example', type: 'user', email: 'email_example'})}) # CreateUserRequest | The user to be created.
+  create_user_request: PagerDutyOpenapiClient::CreateUserRequest.new({user: PagerDutyOpenapiClient::CreateUserRequestUser.new({name: 'name_example', type: 'user', email: 'email_example'})}) # CreateUserRequest | The user to be created.
 }
 
 begin
   # Create a user
   result = api_instance.create_user(accept, content_type, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user: #{e}"
 end
 ```
@@ -92,7 +92,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUser201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_with_http_info: #{e}"
 end
 ```
@@ -132,28 +132,28 @@ Create a new contact method for the User.  Users are members of a PagerDuty acco
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_user_contact_method_request: OpenapiClient::CreateUserContactMethodRequest.new({contact_method: OpenapiClient::EmailContactMethod.new({label: 'label_example', address: 'address_example'})}) # CreateUserContactMethodRequest | The contact method to be created.
+  create_user_contact_method_request: PagerDutyOpenapiClient::CreateUserContactMethodRequest.new({contact_method: PagerDutyOpenapiClient::EmailContactMethod.new({label: 'label_example', address: 'address_example'})}) # CreateUserContactMethodRequest | The contact method to be created.
 }
 
 begin
   # Create a user contact method
   result = api_instance.create_user_contact_method(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_contact_method: #{e}"
 end
 ```
@@ -171,7 +171,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserContactMethod201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_contact_method_with_http_info: #{e}"
 end
 ```
@@ -211,28 +211,28 @@ Create a new Handoff Notification Rule. Users are members of a PagerDuty account
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_user_handoff_notification_rule_request: OpenapiClient::CreateUserHandoffNotificationRuleRequest.new({oncall_handoff_notification_rule: OpenapiClient::HandoffNotificationRule.new({id: 'id_example', handoff_type: 'both', contact_method: OpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserHandoffNotificationRuleRequest | The Handoff Notification Rule to be created.
+  create_user_handoff_notification_rule_request: PagerDutyOpenapiClient::CreateUserHandoffNotificationRuleRequest.new({oncall_handoff_notification_rule: PagerDutyOpenapiClient::HandoffNotificationRule.new({id: 'id_example', handoff_type: 'both', contact_method: PagerDutyOpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserHandoffNotificationRuleRequest | The Handoff Notification Rule to be created.
 }
 
 begin
   # Create a User Handoff Notification Rule
   result = api_instance.create_user_handoff_notification_rule(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_handoff_notification_rule: #{e}"
 end
 ```
@@ -250,7 +250,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserHandoffNotificationRuleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_handoff_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -290,28 +290,28 @@ Create a new notification rule.  Users are members of a PagerDuty account that h
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_user_notification_rule_request: OpenapiClient::CreateUserNotificationRuleRequest.new({notification_rule: OpenapiClient::NotificationRule.new({type: 'assignment_notification_rule', start_delay_in_minutes: 37, contact_method: OpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'}), urgency: 'high'})}) # CreateUserNotificationRuleRequest | The notification rule to be created.
+  create_user_notification_rule_request: PagerDutyOpenapiClient::CreateUserNotificationRuleRequest.new({notification_rule: PagerDutyOpenapiClient::NotificationRule.new({type: 'assignment_notification_rule', start_delay_in_minutes: 37, contact_method: PagerDutyOpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'}), urgency: 'high'})}) # CreateUserNotificationRuleRequest | The notification rule to be created.
 }
 
 begin
   # Create a user notification rule
   result = api_instance.create_user_notification_rule(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_notification_rule: #{e}"
 end
 ```
@@ -329,7 +329,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserNotificationRuleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -369,27 +369,27 @@ Create new Notification Subscriptions for the given User.  Scoped OAuth requires
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_team_notification_subscriptions_request: OpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [OpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to subscribe to.
+  create_team_notification_subscriptions_request: PagerDutyOpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [PagerDutyOpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to subscribe to.
 }
 
 begin
   # Create Notification Subcriptions
   result = api_instance.create_user_notification_subscriptions(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_notification_subscriptions: #{e}"
 end
 ```
@@ -407,7 +407,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessServiceNotificationSubscribers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_notification_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -446,29 +446,29 @@ Create a new status update notification rule.  Users are members of a PagerDuty 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 x_early_access = 'status-update-notification-rules' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header and the above value. Do not use this endpoint in production, as it may change! 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_user_status_update_notification_rule_request: OpenapiClient::CreateUserStatusUpdateNotificationRuleRequest.new({status_update_notification_rule: OpenapiClient::StatusUpdateNotificationRule.new({contact_method: OpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserStatusUpdateNotificationRuleRequest | The status update notification rule to be created.
+  create_user_status_update_notification_rule_request: PagerDutyOpenapiClient::CreateUserStatusUpdateNotificationRuleRequest.new({status_update_notification_rule: PagerDutyOpenapiClient::StatusUpdateNotificationRule.new({contact_method: PagerDutyOpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserStatusUpdateNotificationRuleRequest | The status update notification rule to be created.
 }
 
 begin
   # Create a user status update notification rule
   result = api_instance.create_user_status_update_notification_rule(accept, content_type, x_early_access, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_status_update_notification_rule: #{e}"
 end
 ```
@@ -486,7 +486,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserStatusUpdateNotificationRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->create_user_status_update_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -527,16 +527,16 @@ Remove an existing user.  Returns 400 if the user has assigned incidents unless 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -544,7 +544,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a user
   api_instance.delete_user(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user: #{e}"
 end
 ```
@@ -562,7 +562,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_with_http_info: #{e}"
 end
 ```
@@ -601,16 +601,16 @@ Remove a user's contact method.  Users are members of a PagerDuty account that h
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -619,7 +619,7 @@ contact_method_id = 'contact_method_id_example' # String | The contact method ID
 begin
   # Delete a user's contact method
   api_instance.delete_user_contact_method(accept, content_type, id, contact_method_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_contact_method: #{e}"
 end
 ```
@@ -637,7 +637,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_contact_method_with_http_info: #{e}"
 end
 ```
@@ -677,16 +677,16 @@ Remove a User's Handoff Notification Rule. Users are members of a PagerDuty acco
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -695,7 +695,7 @@ oncall_handoff_notification_rule_id = 'oncall_handoff_notification_rule_id_examp
 begin
   # Delete a User's Handoff Notification rule
   api_instance.delete_user_handoff_notification_rule(accept, content_type, id, oncall_handoff_notification_rule_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_handoff_notification_rule: #{e}"
 end
 ```
@@ -713,7 +713,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_handoff_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -753,16 +753,16 @@ Remove a user's notification rule.  Users are members of a PagerDuty account tha
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -771,7 +771,7 @@ notification_rule_id = 'notification_rule_id_example' # String | The notificatio
 begin
   # Delete a user's notification rule
   api_instance.delete_user_notification_rule(accept, content_type, id, notification_rule_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_notification_rule: #{e}"
 end
 ```
@@ -789,7 +789,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -829,16 +829,16 @@ Delete a user's session.  Beginning November 2021, user sessions no longer inclu
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -848,7 +848,7 @@ session_id = 'session_id_example' # String | The session ID for the user.
 begin
   # Delete a user's session
   api_instance.delete_user_session(accept, content_type, id, type, session_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_session: #{e}"
 end
 ```
@@ -866,7 +866,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_session_with_http_info: #{e}"
 end
 ```
@@ -907,16 +907,16 @@ Delete all user sessions.  Beginning November 2021, user sessions no longer incl
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -924,7 +924,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete all user sessions
   api_instance.delete_user_sessions(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_sessions: #{e}"
 end
 ```
@@ -942,7 +942,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_sessions_with_http_info: #{e}"
 end
 ```
@@ -981,16 +981,16 @@ Remove a user's status update notification rule.  Users are members of a PagerDu
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 x_early_access = 'status-update-notification-rules' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header and the above value. Do not use this endpoint in production, as it may change! 
@@ -1000,7 +1000,7 @@ status_update_notification_rule_id = 'status_update_notification_rule_id_example
 begin
   # Delete a user's status update notification rule
   api_instance.delete_user_status_update_notification_rule(accept, content_type, x_early_access, id, status_update_notification_rule_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_status_update_notification_rule: #{e}"
 end
 ```
@@ -1018,7 +1018,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->delete_user_status_update_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -1059,16 +1059,16 @@ Get details about the current user.  This endpoint can only be used with a [user
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -1079,7 +1079,7 @@ begin
   # Get the current user
   result = api_instance.get_current_user(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_current_user: #{e}"
 end
 ```
@@ -1097,7 +1097,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUser201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_current_user_with_http_info: #{e}"
 end
 ```
@@ -1136,16 +1136,16 @@ Get details about an existing user.  Users are members of a PagerDuty account th
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1157,7 +1157,7 @@ begin
   # Get a user
   result = api_instance.get_user(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user: #{e}"
 end
 ```
@@ -1175,7 +1175,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUser201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_with_http_info: #{e}"
 end
 ```
@@ -1215,16 +1215,16 @@ Get details about a User's contact method.  Users are members of a PagerDuty acc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1234,7 +1234,7 @@ begin
   # Get a user's contact method
   result = api_instance.get_user_contact_method(accept, content_type, id, contact_method_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_contact_method: #{e}"
 end
 ```
@@ -1252,7 +1252,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserContactMethod201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_contact_method_with_http_info: #{e}"
 end
 ```
@@ -1292,16 +1292,16 @@ List contact methods of your PagerDuty user.  Users are members of a PagerDuty a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1310,7 +1310,7 @@ begin
   # List a user's contact methods
   result = api_instance.get_user_contact_methods(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_contact_methods: #{e}"
 end
 ```
@@ -1328,7 +1328,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserContactMethods200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_contact_methods_with_http_info: #{e}"
 end
 ```
@@ -1367,16 +1367,16 @@ Get details about a User's Handoff Notification Rule. Users are members of a Pag
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1386,7 +1386,7 @@ begin
   # Get a user's handoff notification rule
   result = api_instance.get_user_handoff_notifiaction_rule(accept, content_type, id, oncall_handoff_notification_rule_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_handoff_notifiaction_rule: #{e}"
 end
 ```
@@ -1404,7 +1404,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserHandoffNotificationRuleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_handoff_notifiaction_rule_with_http_info: #{e}"
 end
 ```
@@ -1444,16 +1444,16 @@ List Handoff Notification Rules of your PagerDuty User. Users are members of a P
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1462,7 +1462,7 @@ begin
   # List a User's Handoff Notification Rules
   result = api_instance.get_user_handoff_notification_rules(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_handoff_notification_rules: #{e}"
 end
 ```
@@ -1480,7 +1480,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserHandoffNotificationRules200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_handoff_notification_rules_with_http_info: #{e}"
 end
 ```
@@ -1519,16 +1519,16 @@ Get the License allocated to a User  Scoped OAuth requires: `licenses.read`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1537,7 +1537,7 @@ begin
   # Get the License allocated to a User
   result = api_instance.get_user_license(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_license: #{e}"
 end
 ```
@@ -1555,7 +1555,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserLicense200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_license_with_http_info: #{e}"
 end
 ```
@@ -1594,16 +1594,16 @@ Get details about a user's notification rule.  Users are members of a PagerDuty 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1616,7 +1616,7 @@ begin
   # Get a user's notification rule
   result = api_instance.get_user_notification_rule(accept, content_type, id, notification_rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_notification_rule: #{e}"
 end
 ```
@@ -1634,7 +1634,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserNotificationRuleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -1675,16 +1675,16 @@ List notification rules of your PagerDuty user.  Users are members of a PagerDut
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1697,7 +1697,7 @@ begin
   # List a user's notification rules
   result = api_instance.get_user_notification_rules(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_notification_rules: #{e}"
 end
 ```
@@ -1715,7 +1715,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserNotificationRules200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_notification_rules_with_http_info: #{e}"
 end
 ```
@@ -1756,16 +1756,16 @@ Retrieve a list of Notification Subscriptions the given User has.  <!-- theme: w
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -1773,7 +1773,7 @@ begin
   # List Notification Subscriptions
   result = api_instance.get_user_notification_subscriptions(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_notification_subscriptions: #{e}"
 end
 ```
@@ -1791,7 +1791,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTeamNotificationSubscriptions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_notification_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -1829,16 +1829,16 @@ Get details about a user's session.  Beginning November 2021, user sessions no l
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1849,7 +1849,7 @@ begin
   # Get a user's session
   result = api_instance.get_user_session(accept, content_type, id, type, session_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_session: #{e}"
 end
 ```
@@ -1867,7 +1867,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserSession200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_session_with_http_info: #{e}"
 end
 ```
@@ -1908,16 +1908,16 @@ List active sessions of a PagerDuty user.  Beginning November 2021, active sessi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1926,7 +1926,7 @@ begin
   # List a user's active sessions
   result = api_instance.get_user_sessions(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_sessions: #{e}"
 end
 ```
@@ -1944,7 +1944,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserSessions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_sessions_with_http_info: #{e}"
 end
 ```
@@ -1983,16 +1983,16 @@ Get details about a user's status update notification rule.  Users are members o
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 x_early_access = 'status-update-notification-rules' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header and the above value. Do not use this endpoint in production, as it may change! 
@@ -2006,7 +2006,7 @@ begin
   # Get a user's status update notification rule
   result = api_instance.get_user_status_update_notification_rule(accept, content_type, x_early_access, id, status_update_notification_rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_status_update_notification_rule: #{e}"
 end
 ```
@@ -2024,7 +2024,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserStatusUpdateNotificationRule200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_status_update_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -2066,16 +2066,16 @@ List status update notification rules of your PagerDuty user.  Users are members
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -2088,7 +2088,7 @@ begin
   # List a user's status update notification rules
   result = api_instance.get_user_status_update_notification_rules(accept, content_type, id, x_early_access, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_status_update_notification_rules: #{e}"
 end
 ```
@@ -2106,7 +2106,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserStatusUpdateNotificationRules200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->get_user_status_update_notification_rules_with_http_info: #{e}"
 end
 ```
@@ -2147,16 +2147,16 @@ List users of your PagerDuty account, optionally filtered by a search query.  Us
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -2172,7 +2172,7 @@ begin
   # List users
   result = api_instance.list_users(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->list_users: #{e}"
 end
 ```
@@ -2190,7 +2190,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListUsers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->list_users_with_http_info: #{e}"
 end
 ```
@@ -2234,16 +2234,16 @@ The response will include audit records with changes that are made to the identi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -2258,7 +2258,7 @@ begin
   # List audit records for a user
   result = api_instance.list_users_audit_records(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->list_users_audit_records: #{e}"
 end
 ```
@@ -2276,7 +2276,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuditRecordResponseSchema>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->list_users_audit_records_with_http_info: #{e}"
 end
 ```
@@ -2319,27 +2319,27 @@ Unsubscribe the given User from Notifications on the matching Subscribable entit
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_team_notification_subscriptions_request: OpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [OpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to unsubscribe from.
+  create_team_notification_subscriptions_request: PagerDutyOpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [PagerDutyOpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to unsubscribe from.
 }
 
 begin
   # Remove Notification Subscriptions
   result = api_instance.unsubscribe_user_notification_subscriptions(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->unsubscribe_user_notification_subscriptions: #{e}"
 end
 ```
@@ -2357,7 +2357,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RemoveBusinessServiceNotificationSubscriber200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->unsubscribe_user_notification_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -2396,28 +2396,28 @@ Update an existing user.  Users are members of a PagerDuty account that have the
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_user_request: OpenapiClient::CreateUserRequest.new({user: OpenapiClient::CreateUserRequestUser.new({name: 'name_example', type: 'user', email: 'email_example'})}) # CreateUserRequest | The user to be updated.
+  create_user_request: PagerDutyOpenapiClient::CreateUserRequest.new({user: PagerDutyOpenapiClient::CreateUserRequestUser.new({name: 'name_example', type: 'user', email: 'email_example'})}) # CreateUserRequest | The user to be updated.
 }
 
 begin
   # Update a user
   result = api_instance.update_user(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user: #{e}"
 end
 ```
@@ -2435,7 +2435,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUser201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_with_http_info: #{e}"
 end
 ```
@@ -2475,29 +2475,29 @@ Update a User's contact method.  Users are members of a PagerDuty account that h
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 contact_method_id = 'contact_method_id_example' # String | The contact method ID on the user.
 opts = {
-  create_user_contact_method_request: OpenapiClient::CreateUserContactMethodRequest.new({contact_method: OpenapiClient::EmailContactMethod.new({label: 'label_example', address: 'address_example'})}) # CreateUserContactMethodRequest | The user's contact method to be updated.
+  create_user_contact_method_request: PagerDutyOpenapiClient::CreateUserContactMethodRequest.new({contact_method: PagerDutyOpenapiClient::EmailContactMethod.new({label: 'label_example', address: 'address_example'})}) # CreateUserContactMethodRequest | The user's contact method to be updated.
 }
 
 begin
   # Update a user's contact method
   result = api_instance.update_user_contact_method(accept, content_type, id, contact_method_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_contact_method: #{e}"
 end
 ```
@@ -2515,7 +2515,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateUserContactMethod201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_contact_method_with_http_info: #{e}"
 end
 ```
@@ -2556,29 +2556,29 @@ Update a User's Handoff Notification Rule. Users are members of a PagerDuty acco
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 oncall_handoff_notification_rule_id = 'oncall_handoff_notification_rule_id_example' # String | The oncall handoff notification rule ID on the user.
 opts = {
-  create_user_handoff_notification_rule_request: OpenapiClient::CreateUserHandoffNotificationRuleRequest.new({oncall_handoff_notification_rule: OpenapiClient::HandoffNotificationRule.new({id: 'id_example', handoff_type: 'both', contact_method: OpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserHandoffNotificationRuleRequest | The User's Handoff Notification Rule to be updated.
+  create_user_handoff_notification_rule_request: PagerDutyOpenapiClient::CreateUserHandoffNotificationRuleRequest.new({oncall_handoff_notification_rule: PagerDutyOpenapiClient::HandoffNotificationRule.new({id: 'id_example', handoff_type: 'both', contact_method: PagerDutyOpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserHandoffNotificationRuleRequest | The User's Handoff Notification Rule to be updated.
 }
 
 begin
   # Update a User's Handoff Notification Rule
   result = api_instance.update_user_handoff_notification(accept, content_type, id, oncall_handoff_notification_rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_handoff_notification: #{e}"
 end
 ```
@@ -2596,7 +2596,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateUserHandoffNotification200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_handoff_notification_with_http_info: #{e}"
 end
 ```
@@ -2637,29 +2637,29 @@ Update a user's notification rule.  Users are members of a PagerDuty account tha
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 notification_rule_id = 'notification_rule_id_example' # String | The notification rule ID on the user.
 opts = {
-  create_user_notification_rule_request: OpenapiClient::CreateUserNotificationRuleRequest.new({notification_rule: OpenapiClient::NotificationRule.new({type: 'assignment_notification_rule', start_delay_in_minutes: 37, contact_method: OpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'}), urgency: 'high'})}) # CreateUserNotificationRuleRequest | The user's notification rule to be updated.
+  create_user_notification_rule_request: PagerDutyOpenapiClient::CreateUserNotificationRuleRequest.new({notification_rule: PagerDutyOpenapiClient::NotificationRule.new({type: 'assignment_notification_rule', start_delay_in_minutes: 37, contact_method: PagerDutyOpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'}), urgency: 'high'})}) # CreateUserNotificationRuleRequest | The user's notification rule to be updated.
 }
 
 begin
   # Update a user's notification rule
   result = api_instance.update_user_notification_rule(accept, content_type, id, notification_rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_notification_rule: #{e}"
 end
 ```
@@ -2677,7 +2677,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateUserNotificationRule200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_notification_rule_with_http_info: #{e}"
 end
 ```
@@ -2718,30 +2718,30 @@ Update a user's status update notification rule.  Users are members of a PagerDu
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UsersApi.new
+api_instance = PagerDutyOpenapiClient::UsersApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 x_early_access = 'status-update-notification-rules' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header and the above value. Do not use this endpoint in production, as it may change! 
 id = 'id_example' # String | The ID of the resource.
 status_update_notification_rule_id = 'status_update_notification_rule_id_example' # String | The status update notification rule ID on the user.
 opts = {
-  create_user_status_update_notification_rule201_response: OpenapiClient::CreateUserStatusUpdateNotificationRule201Response.new({status_update_notification_rule: OpenapiClient::StatusUpdateNotificationRule.new({contact_method: OpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserStatusUpdateNotificationRule201Response | The user's status update notification rule to be updated.
+  create_user_status_update_notification_rule201_response: PagerDutyOpenapiClient::CreateUserStatusUpdateNotificationRule201Response.new({status_update_notification_rule: PagerDutyOpenapiClient::StatusUpdateNotificationRule.new({contact_method: PagerDutyOpenapiClient::ContactMethodReference.new({type: 'email_contact_method_reference'})})}) # CreateUserStatusUpdateNotificationRule201Response | The user's status update notification rule to be updated.
 }
 
 begin
   # Update a user's status update notification rule
   result = api_instance.update_user_status_update_notification_rule(accept, content_type, x_early_access, id, status_update_notification_rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_status_update_notification_rule: #{e}"
 end
 ```
@@ -2759,7 +2759,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateUserStatusUpdateNotificationRule200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling UsersApi->update_user_status_update_notification_rule_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceEventRule
+# PagerDutyOpenapiClient::ServiceEventRule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ServiceEventRule.new(
+instance = PagerDutyOpenapiClient::ServiceEventRule.new(
   position: null,
   actions: null
 )

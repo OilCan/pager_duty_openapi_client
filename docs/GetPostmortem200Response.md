@@ -1,4 +1,4 @@
-# OpenapiClient::GetPostmortem200Response
+# PagerDutyOpenapiClient::GetPostmortem200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetPostmortem200Response.new(
+instance = PagerDutyOpenapiClient::GetPostmortem200Response.new(
   postmortem: null
 )
 ```

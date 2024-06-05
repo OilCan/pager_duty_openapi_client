@@ -1,4 +1,4 @@
-# OpenapiClient::ScheduledAction
+# PagerDutyOpenapiClient::ScheduledAction
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ScheduledAction.new(
+instance = PagerDutyOpenapiClient::ScheduledAction.new(
   type: null,
   at: null,
   to_urgency: null

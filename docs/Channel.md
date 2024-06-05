@@ -1,4 +1,4 @@
-# OpenapiClient::Channel
+# PagerDutyOpenapiClient::Channel
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Channel.new(
+instance = PagerDutyOpenapiClient::Channel.new(
   type: null,
   user: null,
   team: null,

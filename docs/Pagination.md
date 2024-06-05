@@ -1,4 +1,4 @@
-# OpenapiClient::Pagination
+# PagerDutyOpenapiClient::Pagination
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Pagination.new(
+instance = PagerDutyOpenapiClient::Pagination.new(
   offset: null,
   limit: null,
   more: null,

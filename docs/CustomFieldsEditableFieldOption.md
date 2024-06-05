@@ -1,4 +1,4 @@
-# OpenapiClient::CustomFieldsEditableFieldOption
+# PagerDutyOpenapiClient::CustomFieldsEditableFieldOption
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CustomFieldsEditableFieldOption.new(
+instance = PagerDutyOpenapiClient::CustomFieldsEditableFieldOption.new(
   id: null,
   type: null,
   created_at: null,

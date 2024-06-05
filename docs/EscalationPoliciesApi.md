@@ -1,4 +1,4 @@
-# OpenapiClient::EscalationPoliciesApi
+# PagerDutyOpenapiClient::EscalationPoliciesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -24,28 +24,28 @@ Creates a new escalation policy. At least one escalation rule must be provided. 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EscalationPoliciesApi.new
+api_instance = PagerDutyOpenapiClient::EscalationPoliciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
   from: 'from_example', # String | The email address of a valid user associated with the account making the request. This is optional, and is only used for change tracking.
-  create_escalation_policy_request: OpenapiClient::CreateEscalationPolicyRequest.new({escalation_policy: OpenapiClient::EscalationPolicy.new({type: 'escalation_policy', name: 'name_example', escalation_rules: [OpenapiClient::EscalationRule.new({escalation_delay_in_minutes: 37, targets: [OpenapiClient::EscalationTargetReference.new({type: 'user'})]})]})}) # CreateEscalationPolicyRequest | The escalation policy to be created.
+  create_escalation_policy_request: PagerDutyOpenapiClient::CreateEscalationPolicyRequest.new({escalation_policy: PagerDutyOpenapiClient::EscalationPolicy.new({type: 'escalation_policy', name: 'name_example', escalation_rules: [PagerDutyOpenapiClient::EscalationRule.new({escalation_delay_in_minutes: 37, targets: [PagerDutyOpenapiClient::EscalationTargetReference.new({type: 'user'})]})]})}) # CreateEscalationPolicyRequest | The escalation policy to be created.
 }
 
 begin
   # Create an escalation policy
   result = api_instance.create_escalation_policy(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->create_escalation_policy: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateEscalationPolicyRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->create_escalation_policy_with_http_info: #{e}"
 end
 ```
@@ -103,16 +103,16 @@ Deletes an existing escalation policy and rules. The escalation policy must not 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EscalationPoliciesApi.new
+api_instance = PagerDutyOpenapiClient::EscalationPoliciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -120,7 +120,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an escalation policy
   api_instance.delete_escalation_policy(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->delete_escalation_policy: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->delete_escalation_policy_with_http_info: #{e}"
 end
 ```
@@ -177,16 +177,16 @@ Get information about an existing escalation policy and its rules.  Escalation p
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EscalationPoliciesApi.new
+api_instance = PagerDutyOpenapiClient::EscalationPoliciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -198,7 +198,7 @@ begin
   # Get an escalation policy
   result = api_instance.get_escalation_policy(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->get_escalation_policy: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateEscalationPolicyRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->get_escalation_policy_with_http_info: #{e}"
 end
 ```
@@ -256,16 +256,16 @@ List all of the existing escalation policies.  Escalation policies define which 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EscalationPoliciesApi.new
+api_instance = PagerDutyOpenapiClient::EscalationPoliciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -283,7 +283,7 @@ begin
   # List escalation policies
   result = api_instance.list_escalation_policies(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->list_escalation_policies: #{e}"
 end
 ```
@@ -301,7 +301,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListEscalationPolicies200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->list_escalation_policies_with_http_info: #{e}"
 end
 ```
@@ -347,16 +347,16 @@ The returned records are sorted by the `execution_time` from newest to oldest.  
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EscalationPoliciesApi.new
+api_instance = PagerDutyOpenapiClient::EscalationPoliciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -371,7 +371,7 @@ begin
   # List audit records for an escalation policy
   result = api_instance.list_escalation_policy_audit_records(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->list_escalation_policy_audit_records: #{e}"
 end
 ```
@@ -389,7 +389,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuditRecordResponseSchema>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->list_escalation_policy_audit_records_with_http_info: #{e}"
 end
 ```
@@ -432,28 +432,28 @@ Updates an existing escalation policy and rules.  Escalation policies define whi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EscalationPoliciesApi.new
+api_instance = PagerDutyOpenapiClient::EscalationPoliciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_escalation_policy_request: OpenapiClient::CreateEscalationPolicyRequest.new({escalation_policy: OpenapiClient::EscalationPolicy.new({type: 'escalation_policy', name: 'name_example', escalation_rules: [OpenapiClient::EscalationRule.new({escalation_delay_in_minutes: 37, targets: [OpenapiClient::EscalationTargetReference.new({type: 'user'})]})]})}) # CreateEscalationPolicyRequest | The escalation policy to be updated.
+  create_escalation_policy_request: PagerDutyOpenapiClient::CreateEscalationPolicyRequest.new({escalation_policy: PagerDutyOpenapiClient::EscalationPolicy.new({type: 'escalation_policy', name: 'name_example', escalation_rules: [PagerDutyOpenapiClient::EscalationRule.new({escalation_delay_in_minutes: 37, targets: [PagerDutyOpenapiClient::EscalationTargetReference.new({type: 'user'})]})]})}) # CreateEscalationPolicyRequest | The escalation policy to be updated.
 }
 
 begin
   # Update an escalation policy
   result = api_instance.update_escalation_policy(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->update_escalation_policy: #{e}"
 end
 ```
@@ -471,7 +471,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateEscalationPolicyRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EscalationPoliciesApi->update_escalation_policy_with_http_info: #{e}"
 end
 ```

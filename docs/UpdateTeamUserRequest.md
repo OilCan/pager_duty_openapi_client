@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateTeamUserRequest
+# PagerDutyOpenapiClient::UpdateTeamUserRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateTeamUserRequest.new(
+instance = PagerDutyOpenapiClient::UpdateTeamUserRequest.new(
   role: null
 )
 ```

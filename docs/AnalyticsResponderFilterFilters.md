@@ -1,4 +1,4 @@
-# OpenapiClient::AnalyticsResponderFilterFilters
+# PagerDutyOpenapiClient::AnalyticsResponderFilterFilters
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AnalyticsResponderFilterFilters.new(
+instance = PagerDutyOpenapiClient::AnalyticsResponderFilterFilters.new(
   date_range_start: 2023-10-01T00:00:00+05:00,
   date_range_end: 2023-10-01T00:00:00Z,
   urgency: high,

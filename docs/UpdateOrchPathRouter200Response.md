@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateOrchPathRouter200Response
+# PagerDutyOpenapiClient::UpdateOrchPathRouter200Response
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateOrchPathRouter200Response.new(
+instance = PagerDutyOpenapiClient::UpdateOrchPathRouter200Response.new(
   orchestration_path: null,
   warnings: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleActionsCommonSuppress
+# PagerDutyOpenapiClient::EventRuleActionsCommonSuppress
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleActionsCommonSuppress.new(
+instance = PagerDutyOpenapiClient::EventRuleActionsCommonSuppress.new(
   value: null,
   threshold_value: null,
   threshold_time_unit: null,

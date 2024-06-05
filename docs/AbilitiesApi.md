@@ -1,4 +1,4 @@
-# OpenapiClient::AbilitiesApi
+# PagerDutyOpenapiClient::AbilitiesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -20,16 +20,16 @@ Test whether your account has a given ability.  \"Abilities\" describes your acc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AbilitiesApi.new
+api_instance = PagerDutyOpenapiClient::AbilitiesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -37,7 +37,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Test an ability
   api_instance.get_ability(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AbilitiesApi->get_ability: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AbilitiesApi->get_ability_with_http_info: #{e}"
 end
 ```
@@ -94,16 +94,16 @@ List all of your account's abilities, by name.  \"Abilities\" describes your acc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AbilitiesApi.new
+api_instance = PagerDutyOpenapiClient::AbilitiesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 
@@ -111,7 +111,7 @@ begin
   # List abilities
   result = api_instance.list_abilities(accept, content_type)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AbilitiesApi->list_abilities: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAbilities200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AbilitiesApi->list_abilities_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::EditableTemplateTemplatedFields
+# PagerDutyOpenapiClient::EditableTemplateTemplatedFields
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EditableTemplateTemplatedFields.new(
+instance = PagerDutyOpenapiClient::EditableTemplateTemplatedFields.new(
   email_subject: null,
   email_body: null,
   message: null

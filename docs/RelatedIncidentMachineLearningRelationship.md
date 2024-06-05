@@ -1,4 +1,4 @@
-# OpenapiClient::RelatedIncidentMachineLearningRelationship
+# PagerDutyOpenapiClient::RelatedIncidentMachineLearningRelationship
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RelatedIncidentMachineLearningRelationship.new(
+instance = PagerDutyOpenapiClient::RelatedIncidentMachineLearningRelationship.new(
   grouping_classification: null,
   user_feedback: null
 )

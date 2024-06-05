@@ -1,4 +1,4 @@
-# OpenapiClient::ValueByFieldNameValue
+# PagerDutyOpenapiClient::ValueByFieldNameValue
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::ValueByFieldNameValue.openapi_one_of
+PagerDutyOpenapiClient::ValueByFieldNameValue.openapi_one_of
 # =>
 # [
 #   :'Model0',
@@ -30,12 +30,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::ValueByFieldNameValue.build(data)
+PagerDutyOpenapiClient::ValueByFieldNameValue.build(data)
 # => #<Model0:0x00007fdd4aab02a0>
 
-OpenapiClient::ValueByFieldNameValue.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::ValueByFieldNameValue.build(data_that_doesnt_match)
 # => nil
 ```
 

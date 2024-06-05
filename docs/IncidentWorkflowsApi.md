@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentWorkflowsApi
+# PagerDutyOpenapiClient::IncidentWorkflowsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -33,28 +33,28 @@ Associate a Service with an existing Incident Workflow Trigger  Scoped OAuth req
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  associate_service_to_incident_workflow_trigger_request: OpenapiClient::AssociateServiceToIncidentWorkflowTriggerRequest.new({service: OpenapiClient::AssociateServiceToIncidentWorkflowTriggerRequestService.new}) # AssociateServiceToIncidentWorkflowTriggerRequest | 
+  associate_service_to_incident_workflow_trigger_request: PagerDutyOpenapiClient::AssociateServiceToIncidentWorkflowTriggerRequest.new({service: PagerDutyOpenapiClient::AssociateServiceToIncidentWorkflowTriggerRequestService.new}) # AssociateServiceToIncidentWorkflowTriggerRequest | 
 }
 
 begin
   # Associate a Trigger and Service
   result = api_instance.associate_service_to_incident_workflow_trigger(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->associate_service_to_incident_workflow_trigger: #{e}"
 end
 ```
@@ -72,7 +72,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentWorkflowTriggerRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->associate_service_to_incident_workflow_trigger_with_http_info: #{e}"
 end
 ```
@@ -112,28 +112,28 @@ Start an Instance of an Incident Workflow. Sometimes referred to as \"triggering
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_incident_workflow_instance_request: OpenapiClient::CreateIncidentWorkflowInstanceRequest.new({incident_workflow_instance: OpenapiClient::CreateIncidentWorkflowInstanceRequestIncidentWorkflowInstance.new}) # CreateIncidentWorkflowInstanceRequest | 
+  create_incident_workflow_instance_request: PagerDutyOpenapiClient::CreateIncidentWorkflowInstanceRequest.new({incident_workflow_instance: PagerDutyOpenapiClient::CreateIncidentWorkflowInstanceRequestIncidentWorkflowInstance.new}) # CreateIncidentWorkflowInstanceRequest | 
 }
 
 begin
   # Start an Incident Workflow Instance
   result = api_instance.create_incident_workflow_instance(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->create_incident_workflow_instance: #{e}"
 end
 ```
@@ -151,7 +151,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentWorkflowInstance201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->create_incident_workflow_instance_with_http_info: #{e}"
 end
 ```
@@ -191,27 +191,27 @@ Create new Incident Workflow Trigger  Scoped OAuth requires: `incident_workflows
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_incident_workflow_trigger_request: OpenapiClient::CreateIncidentWorkflowTriggerRequest.new({trigger: OpenapiClient::IncidentWorkflowTrigger.new}) # CreateIncidentWorkflowTriggerRequest | 
+  create_incident_workflow_trigger_request: PagerDutyOpenapiClient::CreateIncidentWorkflowTriggerRequest.new({trigger: PagerDutyOpenapiClient::IncidentWorkflowTrigger.new}) # CreateIncidentWorkflowTriggerRequest | 
 }
 
 begin
   # Create a Trigger
   result = api_instance.create_incident_workflow_trigger(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->create_incident_workflow_trigger: #{e}"
 end
 ```
@@ -229,7 +229,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentWorkflowTriggerRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->create_incident_workflow_trigger_with_http_info: #{e}"
 end
 ```
@@ -268,16 +268,16 @@ Delete an existing Incident Workflow  An Incident Workflow is a sequence of conf
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -285,7 +285,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an Incident Workflow
   api_instance.delete_incident_workflow(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->delete_incident_workflow: #{e}"
 end
 ```
@@ -303,7 +303,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->delete_incident_workflow_with_http_info: #{e}"
 end
 ```
@@ -342,16 +342,16 @@ Delete an existing Incident Workflow Trigger  Scoped OAuth requires: `incident_w
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -359,7 +359,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a Trigger
   api_instance.delete_incident_workflow_trigger(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->delete_incident_workflow_trigger: #{e}"
 end
 ```
@@ -377,7 +377,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->delete_incident_workflow_trigger_with_http_info: #{e}"
 end
 ```
@@ -416,16 +416,16 @@ Remove a an existing Service from an Incident Workflow Trigger  Scoped OAuth req
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 trigger_id = 'trigger_id_example' # String | Identifier for the Trigger
@@ -435,7 +435,7 @@ begin
   # Dissociate a Trigger and Service
   result = api_instance.delete_service_from_incident_workflow_trigger(accept, content_type, trigger_id, service_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->delete_service_from_incident_workflow_trigger: #{e}"
 end
 ```
@@ -453,7 +453,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentWorkflowTriggerRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->delete_service_from_incident_workflow_trigger_with_http_info: #{e}"
 end
 ```
@@ -493,16 +493,16 @@ Get an existing Incident Workflow An Incident Workflow is a sequence of configur
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -511,7 +511,7 @@ begin
   # Get an Incident Workflow
   result = api_instance.get_incident_workflow(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->get_incident_workflow: #{e}"
 end
 ```
@@ -529,7 +529,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostIncidentWorkflowRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->get_incident_workflow_with_http_info: #{e}"
 end
 ```
@@ -568,16 +568,16 @@ Get an Incident Workflow Action  Scoped OAuth requires: `incident_workflows.read
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -586,7 +586,7 @@ begin
   # Get an Action
   result = api_instance.get_incident_workflow_action(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->get_incident_workflow_action: #{e}"
 end
 ```
@@ -604,7 +604,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentWorkflowAction200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->get_incident_workflow_action_with_http_info: #{e}"
 end
 ```
@@ -643,16 +643,16 @@ Retrieve an existing Incident Workflows Trigger  Scoped OAuth requires: `inciden
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -661,7 +661,7 @@ begin
   # Get a Trigger
   result = api_instance.get_incident_workflow_trigger(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->get_incident_workflow_trigger: #{e}"
 end
 ```
@@ -679,7 +679,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentWorkflowTrigger200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->get_incident_workflow_trigger_with_http_info: #{e}"
 end
 ```
@@ -718,16 +718,16 @@ List Incident Workflow Actions  Scoped OAuth requires: `incident_workflows.read`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -740,7 +740,7 @@ begin
   # List Actions
   result = api_instance.list_incident_workflow_actions(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->list_incident_workflow_actions: #{e}"
 end
 ```
@@ -758,7 +758,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentWorkflowActions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->list_incident_workflow_actions_with_http_info: #{e}"
 end
 ```
@@ -799,16 +799,16 @@ List existing Incident Workflow Triggers  Scoped OAuth requires: `incident_workf
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -826,7 +826,7 @@ begin
   # List Triggers
   result = api_instance.list_incident_workflow_triggers(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->list_incident_workflow_triggers: #{e}"
 end
 ```
@@ -844,7 +844,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentWorkflowTriggers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->list_incident_workflow_triggers_with_http_info: #{e}"
 end
 ```
@@ -890,16 +890,16 @@ List existing Incident Workflows.  This is the best method to use to list all In
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -914,7 +914,7 @@ begin
   # List Incident Workflows
   result = api_instance.list_incident_workflows(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->list_incident_workflows: #{e}"
 end
 ```
@@ -932,7 +932,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentWorkflows200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->list_incident_workflows_with_http_info: #{e}"
 end
 ```
@@ -975,27 +975,27 @@ Create a new Incident Workflow  An Incident Workflow is a sequence of configurab
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  post_incident_workflow_request: OpenapiClient::PostIncidentWorkflowRequest.new({incident_workflow: OpenapiClient::IncidentWorkflow.new}) # PostIncidentWorkflowRequest | 
+  post_incident_workflow_request: PagerDutyOpenapiClient::PostIncidentWorkflowRequest.new({incident_workflow: PagerDutyOpenapiClient::IncidentWorkflow.new}) # PostIncidentWorkflowRequest | 
 }
 
 begin
   # Create an Incident Workflow
   result = api_instance.post_incident_workflow(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->post_incident_workflow: #{e}"
 end
 ```
@@ -1013,7 +1013,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostIncidentWorkflowRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->post_incident_workflow_with_http_info: #{e}"
 end
 ```
@@ -1052,28 +1052,28 @@ Update an Incident Workflow  An Incident Workflow is a sequence of configurable 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  post_incident_workflow_request: OpenapiClient::PostIncidentWorkflowRequest.new({incident_workflow: OpenapiClient::IncidentWorkflow.new}) # PostIncidentWorkflowRequest | 
+  post_incident_workflow_request: PagerDutyOpenapiClient::PostIncidentWorkflowRequest.new({incident_workflow: PagerDutyOpenapiClient::IncidentWorkflow.new}) # PostIncidentWorkflowRequest | 
 }
 
 begin
   # Update an Incident Workflow
   result = api_instance.put_incident_workflow(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->put_incident_workflow: #{e}"
 end
 ```
@@ -1091,7 +1091,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostIncidentWorkflowRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->put_incident_workflow_with_http_info: #{e}"
 end
 ```
@@ -1131,28 +1131,28 @@ Update an existing Incident Workflow Trigger  Scoped OAuth requires: `incident_w
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentWorkflowsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentWorkflowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_incident_workflow_trigger_request: OpenapiClient::CreateIncidentWorkflowTriggerRequest.new({trigger: OpenapiClient::IncidentWorkflowTrigger.new}) # CreateIncidentWorkflowTriggerRequest | 
+  create_incident_workflow_trigger_request: PagerDutyOpenapiClient::CreateIncidentWorkflowTriggerRequest.new({trigger: PagerDutyOpenapiClient::IncidentWorkflowTrigger.new}) # CreateIncidentWorkflowTriggerRequest | 
 }
 
 begin
   # Update a Trigger
   result = api_instance.update_incident_workflow_trigger(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->update_incident_workflow_trigger: #{e}"
 end
 ```
@@ -1170,7 +1170,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentWorkflowTriggerRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentWorkflowsApi->update_incident_workflow_trigger_with_http_info: #{e}"
 end
 ```

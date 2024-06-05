@@ -1,4 +1,4 @@
-# OpenapiClient::GetBusinessServiceTopLevelImpactors200Response
+# PagerDutyOpenapiClient::GetBusinessServiceTopLevelImpactors200Response
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetBusinessServiceTopLevelImpactors200Response.new(
+instance = PagerDutyOpenapiClient::GetBusinessServiceTopLevelImpactors200Response.new(
   limit: null,
   more: null,
   impactors: null

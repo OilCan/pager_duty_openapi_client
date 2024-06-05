@@ -1,4 +1,4 @@
-# OpenapiClient::GetLogEntry200Response
+# PagerDutyOpenapiClient::GetLogEntry200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetLogEntry200Response.new(
+instance = PagerDutyOpenapiClient::GetLogEntry200Response.new(
   log_entry: null
 )
 ```

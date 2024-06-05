@@ -1,4 +1,4 @@
-# OpenapiClient::CreateCacheVarOnGlobalOrchRequest
+# PagerDutyOpenapiClient::CreateCacheVarOnGlobalOrchRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateCacheVarOnGlobalOrchRequest.new(
+instance = PagerDutyOpenapiClient::CreateCacheVarOnGlobalOrchRequest.new(
   cache_variable: null
 )
 ```

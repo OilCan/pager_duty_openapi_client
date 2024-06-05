@@ -1,4 +1,4 @@
-# OpenapiClient::PhoneContactMethod
+# PagerDutyOpenapiClient::PhoneContactMethod
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::PhoneContactMethod.new(
+instance = PagerDutyOpenapiClient::PhoneContactMethod.new(
   type: null,
   country_code: null,
   enabled: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::AnalyticsResponderFilter
+# PagerDutyOpenapiClient::AnalyticsResponderFilter
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AnalyticsResponderFilter.new(
+instance = PagerDutyOpenapiClient::AnalyticsResponderFilter.new(
   filters: null,
   time_zone: Etc/UTC,
   order: null,

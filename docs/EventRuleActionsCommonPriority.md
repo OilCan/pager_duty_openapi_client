@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleActionsCommonPriority
+# PagerDutyOpenapiClient::EventRuleActionsCommonPriority
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleActionsCommonPriority.new(
+instance = PagerDutyOpenapiClient::EventRuleActionsCommonPriority.new(
   value: null
 )
 ```

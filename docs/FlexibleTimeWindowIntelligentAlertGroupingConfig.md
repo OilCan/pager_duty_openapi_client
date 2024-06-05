@@ -1,4 +1,4 @@
-# OpenapiClient::FlexibleTimeWindowIntelligentAlertGroupingConfig
+# PagerDutyOpenapiClient::FlexibleTimeWindowIntelligentAlertGroupingConfig
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::FlexibleTimeWindowIntelligentAlertGroupingConfig.new(
+instance = PagerDutyOpenapiClient::FlexibleTimeWindowIntelligentAlertGroupingConfig.new(
   time_window: null,
   recommended_time_window: null
 )

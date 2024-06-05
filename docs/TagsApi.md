@@ -1,4 +1,4 @@
-# OpenapiClient::TagsApi
+# PagerDutyOpenapiClient::TagsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -25,29 +25,29 @@ Assign existing or new tags.  A Tag is applied to Escalation Policies, Teams or 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 entity_type = 'users' # String | Type of entity related with the tag
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_entity_type_by_id_change_tags_request: OpenapiClient::CreateEntityTypeByIdChangeTagsRequest.new # CreateEntityTypeByIdChangeTagsRequest | 
+  create_entity_type_by_id_change_tags_request: PagerDutyOpenapiClient::CreateEntityTypeByIdChangeTagsRequest.new # CreateEntityTypeByIdChangeTagsRequest | 
 }
 
 begin
   # Assign tags
   result = api_instance.create_entity_type_by_id_change_tags(accept, content_type, entity_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->create_entity_type_by_id_change_tags: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->create_entity_type_by_id_change_tags_with_http_info: #{e}"
 end
 ```
@@ -106,27 +106,27 @@ Create a Tag.  A Tag is applied to Escalation Policies, Teams or Users and can b
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_tags_request: OpenapiClient::CreateTagsRequest.new({tag: OpenapiClient::Tag.new({type: 'tag', label: 'label_example'})}) # CreateTagsRequest | 
+  create_tags_request: PagerDutyOpenapiClient::CreateTagsRequest.new({tag: PagerDutyOpenapiClient::Tag.new({type: 'tag', label: 'label_example'})}) # CreateTagsRequest | 
 }
 
 begin
   # Create a tag
   result = api_instance.create_tags(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->create_tags: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTagsRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->create_tags_with_http_info: #{e}"
 end
 ```
@@ -183,16 +183,16 @@ Remove an existing Tag.  A Tag is applied to Escalation Policies, Teams or Users
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -200,7 +200,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a tag
   api_instance.delete_tag(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->delete_tag: #{e}"
 end
 ```
@@ -218,7 +218,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->delete_tag_with_http_info: #{e}"
 end
 ```
@@ -257,16 +257,16 @@ Get related tags for Users, Teams or Escalation Policies.  A Tag is applied to E
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 entity_type = 'users' # String | Type of entity related with the tag
@@ -281,7 +281,7 @@ begin
   # Get tags for entities
   result = api_instance.get_entity_type_by_id_tags(accept, content_type, entity_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->get_entity_type_by_id_tags: #{e}"
 end
 ```
@@ -299,7 +299,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetEntityTypeByIdTags200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->get_entity_type_by_id_tags_with_http_info: #{e}"
 end
 ```
@@ -342,16 +342,16 @@ Get details about an existing Tag.  A Tag is applied to Escalation Policies, Tea
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -360,7 +360,7 @@ begin
   # Get a tag
   result = api_instance.get_tag(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->get_tag: #{e}"
 end
 ```
@@ -378,7 +378,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTagsRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->get_tag_with_http_info: #{e}"
 end
 ```
@@ -417,16 +417,16 @@ Get related Users, Teams or Escalation Policies for the Tag.  A Tag is applied t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -441,7 +441,7 @@ begin
   # Get connected entities
   result = api_instance.get_tags_by_entity_type(accept, content_type, id, entity_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->get_tags_by_entity_type: #{e}"
 end
 ```
@@ -459,7 +459,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTagsByEntityType200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->get_tags_by_entity_type_with_http_info: #{e}"
 end
 ```
@@ -502,16 +502,16 @@ List all of your account's tags.  A Tag is applied to Escalation Policies, Teams
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = PagerDutyOpenapiClient::TagsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -525,7 +525,7 @@ begin
   # List tags
   result = api_instance.list_tags(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->list_tags: #{e}"
 end
 ```
@@ -543,7 +543,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetEntityTypeByIdTags200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TagsApi->list_tags_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::CreateIncidentStatusUpdate200Response
+# PagerDutyOpenapiClient::CreateIncidentStatusUpdate200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateIncidentStatusUpdate200Response.new(
+instance = PagerDutyOpenapiClient::CreateIncidentStatusUpdate200Response.new(
   status_update: null
 )
 ```

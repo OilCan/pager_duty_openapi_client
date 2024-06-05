@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfParameters
+# PagerDutyOpenapiClient::EventRuleAllOfParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfParameters.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfParameters.new(
   value: null,
   path: null
 )

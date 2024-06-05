@@ -1,4 +1,4 @@
-# OpenapiClient::ListServiceEventRules200ResponseAllOfMigratedTo
+# PagerDutyOpenapiClient::ListServiceEventRules200ResponseAllOfMigratedTo
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListServiceEventRules200ResponseAllOfMigratedTo.new(
+instance = PagerDutyOpenapiClient::ListServiceEventRules200ResponseAllOfMigratedTo.new(
   id: null,
   type: null,
   _self: null

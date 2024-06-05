@@ -1,4 +1,4 @@
-# OpenapiClient::StatusPageService
+# PagerDutyOpenapiClient::StatusPageService
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::StatusPageService.new(
+instance = PagerDutyOpenapiClient::StatusPageService.new(
   id: null,
   _self: null,
   name: null,

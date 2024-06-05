@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfTimeFrame
+# PagerDutyOpenapiClient::EventRuleAllOfTimeFrame
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfTimeFrame.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfTimeFrame.new(
   active_between: null,
   scheduled_weekly: null
 )

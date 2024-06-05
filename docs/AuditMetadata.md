@@ -1,4 +1,4 @@
-# OpenapiClient::AuditMetadata
+# PagerDutyOpenapiClient::AuditMetadata
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AuditMetadata.new(
+instance = PagerDutyOpenapiClient::AuditMetadata.new(
   messages: null
 )
 ```

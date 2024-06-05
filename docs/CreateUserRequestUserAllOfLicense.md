@@ -1,4 +1,4 @@
-# OpenapiClient::CreateUserRequestUserAllOfLicense
+# PagerDutyOpenapiClient::CreateUserRequestUserAllOfLicense
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateUserRequestUserAllOfLicense.new(
+instance = PagerDutyOpenapiClient::CreateUserRequestUserAllOfLicense.new(
   type: null
 )
 ```

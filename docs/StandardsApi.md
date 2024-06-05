@@ -1,4 +1,4 @@
-# OpenapiClient::StandardsApi
+# PagerDutyOpenapiClient::StandardsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -22,16 +22,16 @@ List standards applied to a specific resource  Scoped OAuth requires: `standards
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StandardsApi.new
+api_instance = PagerDutyOpenapiClient::StandardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | Id of the resource to apply the standards.
 resource_type = 'technical_services' # String | 
@@ -40,7 +40,7 @@ begin
   # List a resource's standards scores
   result = api_instance.list_resource_standards(accept, id, resource_type)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->list_resource_standards: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StandardApplied>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->list_resource_standards_with_http_info: #{e}"
 end
 ```
@@ -97,16 +97,16 @@ List standards applied to a set of resources  Scoped OAuth requires: `standards.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StandardsApi.new
+api_instance = PagerDutyOpenapiClient::StandardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 ids = ['inner_example'] # Array<String> | Ids of resources to apply the standards. Maximum of 100 items
 resource_type = 'technical_services' # String | 
@@ -115,7 +115,7 @@ begin
   # List resources' standards scores
   result = api_instance.list_resource_standards_many_services(accept, ids, resource_type)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->list_resource_standards_many_services: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListResourceStandardsManyServices200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->list_resource_standards_many_services_with_http_info: #{e}"
 end
 ```
@@ -172,16 +172,16 @@ Get all standards of an account.  Scoped OAuth requires: `standards.read`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StandardsApi.new
+api_instance = PagerDutyOpenapiClient::StandardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 opts = {
   active: true, # Boolean | 
@@ -192,7 +192,7 @@ begin
   # List Standards
   result = api_instance.list_standards(accept, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->list_standards: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStandards200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->list_standards_with_http_info: #{e}"
 end
 ```
@@ -249,28 +249,28 @@ Updates a standard  Scoped OAuth requires: `standards.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StandardsApi.new
+api_instance = PagerDutyOpenapiClient::StandardsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | Id of the standard
 opts = {
-  update_standard_request: OpenapiClient::UpdateStandardRequest.new # UpdateStandardRequest | 
+  update_standard_request: PagerDutyOpenapiClient::UpdateStandardRequest.new # UpdateStandardRequest | 
 }
 
 begin
   # Update a standard
   result = api_instance.update_standard(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->update_standard: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Standard>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StandardsApi->update_standard_with_http_info: #{e}"
 end
 ```

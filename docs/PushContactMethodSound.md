@@ -1,4 +1,4 @@
-# OpenapiClient::PushContactMethodSound
+# PagerDutyOpenapiClient::PushContactMethodSound
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::PushContactMethodSound.new(
+instance = PagerDutyOpenapiClient::PushContactMethodSound.new(
   type: null,
   file: null
 )

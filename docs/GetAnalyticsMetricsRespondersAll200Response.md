@@ -1,4 +1,4 @@
-# OpenapiClient::GetAnalyticsMetricsRespondersAll200Response
+# PagerDutyOpenapiClient::GetAnalyticsMetricsRespondersAll200Response
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetAnalyticsMetricsRespondersAll200Response.new(
+instance = PagerDutyOpenapiClient::GetAnalyticsMetricsRespondersAll200Response.new(
   filters: null,
   time_zone: Etc/UTC,
   order: null,

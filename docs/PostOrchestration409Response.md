@@ -1,4 +1,4 @@
-# OpenapiClient::PostOrchestration409Response
+# PagerDutyOpenapiClient::PostOrchestration409Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::PostOrchestration409Response.new(
+instance = PagerDutyOpenapiClient::PostOrchestration409Response.new(
   error: null
 )
 ```

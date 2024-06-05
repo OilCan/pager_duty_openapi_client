@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateLogEntryChannelRequestChannel
+# PagerDutyOpenapiClient::UpdateLogEntryChannelRequestChannel
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateLogEntryChannelRequestChannel.new(
+instance = PagerDutyOpenapiClient::UpdateLogEntryChannelRequestChannel.new(
   details: null,
   type: null
 )

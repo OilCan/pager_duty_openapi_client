@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsInvocationAllOfTiming
+# PagerDutyOpenapiClient::AutomationActionsInvocationAllOfTiming
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsInvocationAllOfTiming.new(
+instance = PagerDutyOpenapiClient::AutomationActionsInvocationAllOfTiming.new(
   timestamp: null,
   state: null
 )

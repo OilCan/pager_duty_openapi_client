@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfActionsAllOfRoute
+# PagerDutyOpenapiClient::EventRuleAllOfActionsAllOfRoute
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfActionsAllOfRoute.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfActionsAllOfRoute.new(
   value: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::TeamsApi
+# PagerDutyOpenapiClient::TeamsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -32,27 +32,27 @@ Create a new Team.  A team is a collection of Users and Escalation Policies that
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_team_request: OpenapiClient::CreateTeamRequest.new({team: OpenapiClient::Team.new({type: 'team', name: 'name_example'})}) # CreateTeamRequest | The team to be created.
+  create_team_request: PagerDutyOpenapiClient::CreateTeamRequest.new({team: PagerDutyOpenapiClient::Team.new({type: 'team', name: 'name_example'})}) # CreateTeamRequest | The team to be created.
 }
 
 begin
   # Create a team
   result = api_instance.create_team(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->create_team: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTeamRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->create_team_with_http_info: #{e}"
 end
 ```
@@ -109,27 +109,27 @@ Create new Notification Subscriptions for the given Team.  Scoped OAuth requires
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_team_notification_subscriptions_request: OpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [OpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to subscribe to.
+  create_team_notification_subscriptions_request: PagerDutyOpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [PagerDutyOpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to subscribe to.
 }
 
 begin
   # Create Team Notification Subscriptions
   result = api_instance.create_team_notification_subscriptions(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->create_team_notification_subscriptions: #{e}"
 end
 ```
@@ -147,7 +147,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessServiceNotificationSubscribers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->create_team_notification_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -186,16 +186,16 @@ Remove an existing team.  Succeeds only if the team has no associated Escalation
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -206,7 +206,7 @@ opts = {
 begin
   # Delete a team
   api_instance.delete_team(accept, content_type, id, opts)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->delete_team: #{e}"
 end
 ```
@@ -224,7 +224,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->delete_team_with_http_info: #{e}"
 end
 ```
@@ -264,16 +264,16 @@ Remove an escalation policy from a team.  A team is a collection of Users and Es
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -282,7 +282,7 @@ escalation_policy_id = 'escalation_policy_id_example' # String | The escalation 
 begin
   # Remove an escalation policy from a team
   api_instance.delete_team_escalation_policy(accept, content_type, id, escalation_policy_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->delete_team_escalation_policy: #{e}"
 end
 ```
@@ -300,7 +300,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->delete_team_escalation_policy_with_http_info: #{e}"
 end
 ```
@@ -340,16 +340,16 @@ Remove a user from a team.  A team is a collection of Users and Escalation Polic
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -358,7 +358,7 @@ user_id = 'user_id_example' # String | The user ID on the team.
 begin
   # Remove a user from a team
   api_instance.delete_team_user(accept, content_type, id, user_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->delete_team_user: #{e}"
 end
 ```
@@ -376,7 +376,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->delete_team_user_with_http_info: #{e}"
 end
 ```
@@ -416,16 +416,16 @@ Get details about an existing team.  A team is a collection of Users and Escalat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -437,7 +437,7 @@ begin
   # Get a team
   result = api_instance.get_team(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->get_team: #{e}"
 end
 ```
@@ -455,7 +455,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTeamRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->get_team_with_http_info: #{e}"
 end
 ```
@@ -495,16 +495,16 @@ Retrieve a list of Notification Subscriptions the given Team has.  <!-- theme: w
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -512,7 +512,7 @@ begin
   # List Team Notification Subscriptions
   result = api_instance.get_team_notification_subscriptions(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->get_team_notification_subscriptions: #{e}"
 end
 ```
@@ -530,7 +530,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTeamNotificationSubscriptions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->get_team_notification_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -568,16 +568,16 @@ Get information about members on a team.  A team is a collection of Users and Es
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -592,7 +592,7 @@ begin
   # List members of a team
   result = api_instance.list_team_users(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->list_team_users: #{e}"
 end
 ```
@@ -610,7 +610,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTeamUsers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->list_team_users_with_http_info: #{e}"
 end
 ```
@@ -653,16 +653,16 @@ List teams of your PagerDuty account, optionally filtered by a search query.  A 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -676,7 +676,7 @@ begin
   # List teams
   result = api_instance.list_teams(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->list_teams: #{e}"
 end
 ```
@@ -694,7 +694,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTeams200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->list_teams_with_http_info: #{e}"
 end
 ```
@@ -736,16 +736,16 @@ The returned records are sorted by the `execution_time` from newest to oldest.  
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -760,7 +760,7 @@ begin
   # List audit records for a team
   result = api_instance.list_teams_audit_records(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->list_teams_audit_records: #{e}"
 end
 ```
@@ -778,7 +778,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuditRecordResponseSchema>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->list_teams_audit_records_with_http_info: #{e}"
 end
 ```
@@ -821,27 +821,27 @@ Unsubscribe the given Team from Notifications on the matching Subscribable entit
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_team_notification_subscriptions_request: OpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [OpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to unsubscribe from.
+  create_team_notification_subscriptions_request: PagerDutyOpenapiClient::CreateTeamNotificationSubscriptionsRequest.new({subscribables: [PagerDutyOpenapiClient::NotificationSubscribable.new]}) # CreateTeamNotificationSubscriptionsRequest | The entities to unsubscribe from.
 }
 
 begin
   
   result = api_instance.remove_team_notification_subscriptions(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->remove_team_notification_subscriptions: #{e}"
 end
 ```
@@ -859,7 +859,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RemoveBusinessServiceNotificationSubscriber200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->remove_team_notification_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -898,28 +898,28 @@ Update an existing team.  A team is a collection of Users and Escalation Policie
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_team_request: OpenapiClient::CreateTeamRequest.new({team: OpenapiClient::Team.new({type: 'team', name: 'name_example'})}) # CreateTeamRequest | The team to be updated.
+  create_team_request: PagerDutyOpenapiClient::CreateTeamRequest.new({team: PagerDutyOpenapiClient::Team.new({type: 'team', name: 'name_example'})}) # CreateTeamRequest | The team to be updated.
 }
 
 begin
   # Update a team
   result = api_instance.update_team(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->update_team: #{e}"
 end
 ```
@@ -937,7 +937,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTeamRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->update_team_with_http_info: #{e}"
 end
 ```
@@ -977,16 +977,16 @@ Add an escalation policy to a team.  A team is a collection of Users and Escalat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -995,7 +995,7 @@ escalation_policy_id = 'escalation_policy_id_example' # String | The escalation 
 begin
   # Add an escalation policy to a team
   api_instance.update_team_escalation_policy(accept, content_type, id, escalation_policy_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->update_team_escalation_policy: #{e}"
 end
 ```
@@ -1013,7 +1013,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->update_team_escalation_policy_with_http_info: #{e}"
 end
 ```
@@ -1053,28 +1053,28 @@ Add a user to a team. Attempting to add a user with the `read_only_user` role wi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TeamsApi.new
+api_instance = PagerDutyOpenapiClient::TeamsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 user_id = 'user_id_example' # String | The user ID on the team.
 opts = {
-  update_team_user_request: OpenapiClient::UpdateTeamUserRequest.new # UpdateTeamUserRequest | The role of the user on the team.
+  update_team_user_request: PagerDutyOpenapiClient::UpdateTeamUserRequest.new # UpdateTeamUserRequest | The role of the user on the team.
 }
 
 begin
   # Add a user to a team
   api_instance.update_team_user(accept, content_type, id, user_id, opts)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->update_team_user: #{e}"
 end
 ```
@@ -1092,7 +1092,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling TeamsApi->update_team_user_with_http_info: #{e}"
 end
 ```

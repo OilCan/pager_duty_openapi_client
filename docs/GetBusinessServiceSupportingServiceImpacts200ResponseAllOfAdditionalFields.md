@@ -1,4 +1,4 @@
-# OpenapiClient::GetBusinessServiceSupportingServiceImpacts200ResponseAllOfAdditionalFields
+# PagerDutyOpenapiClient::GetBusinessServiceSupportingServiceImpacts200ResponseAllOfAdditionalFields
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetBusinessServiceSupportingServiceImpacts200ResponseAllOfAdditionalFields.new(
+instance = PagerDutyOpenapiClient::GetBusinessServiceSupportingServiceImpacts200ResponseAllOfAdditionalFields.new(
   total_impacted_count: null
 )
 ```

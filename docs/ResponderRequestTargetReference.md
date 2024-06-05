@@ -1,4 +1,4 @@
-# OpenapiClient::ResponderRequestTargetReference
+# PagerDutyOpenapiClient::ResponderRequestTargetReference
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ResponderRequestTargetReference.new(
+instance = PagerDutyOpenapiClient::ResponderRequestTargetReference.new(
   type: null,
   id: null,
   summary: null,

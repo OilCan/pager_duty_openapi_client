@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomationActionInvocation201Response
+# PagerDutyOpenapiClient::CreateAutomationActionInvocation201Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateAutomationActionInvocation201Response.new(
+instance = PagerDutyOpenapiClient::CreateAutomationActionInvocation201Response.new(
   invocation: null
 )
 ```

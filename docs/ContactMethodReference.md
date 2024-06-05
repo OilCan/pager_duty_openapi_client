@@ -1,4 +1,4 @@
-# OpenapiClient::ContactMethodReference
+# PagerDutyOpenapiClient::ContactMethodReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ContactMethodReference.new(
+instance = PagerDutyOpenapiClient::ContactMethodReference.new(
   type: null
 )
 ```

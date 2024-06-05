@@ -1,4 +1,4 @@
-# OpenapiClient::AuditApi
+# PagerDutyOpenapiClient::AuditApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -19,16 +19,16 @@ List audit trail records matching provided query params or default criteria.  Th
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AuditApi.new
+api_instance = PagerDutyOpenapiClient::AuditApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -48,7 +48,7 @@ begin
   # List audit records
   result = api_instance.list_audit_records(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AuditApi->list_audit_records: #{e}"
 end
 ```
@@ -66,7 +66,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuditRecordResponseSchema>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AuditApi->list_audit_records_with_http_info: #{e}"
 end
 ```

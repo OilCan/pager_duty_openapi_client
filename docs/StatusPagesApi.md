@@ -1,4 +1,4 @@
-# OpenapiClient::StatusPagesApi
+# PagerDutyOpenapiClient::StatusPagesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -45,27 +45,27 @@ Create a Post for a Status Page by Status Page ID.  Scoped OAuth requires: `stat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_status_page_post_request: OpenapiClient::CreateStatusPagePostRequest.new({post: OpenapiClient::StatusPagePostPostRequest.new({type: 'status_page_post', title: 'title_example', post_type: 'incident', starts_at: Time.now, ends_at: Time.now, updates: [OpenapiClient::StatusPagePostUpdateRequest.new({post: OpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', status: OpenapiClient::StatusPagePostUpdateStatus.new({id: 'id_example'}), severity: OpenapiClient::StatusPagePostUpdateSeverity.new({id: 'id_example'}), impacted_services: [TODO], update_frequency_ms: 37, notify_subscribers: false, type: 'type_example'})], status_page: OpenapiClient::StatusPageImpactStatusPage.new({id: 'id_example'})})}) # CreateStatusPagePostRequest | 
+  create_status_page_post_request: PagerDutyOpenapiClient::CreateStatusPagePostRequest.new({post: PagerDutyOpenapiClient::StatusPagePostPostRequest.new({type: 'status_page_post', title: 'title_example', post_type: 'incident', starts_at: Time.now, ends_at: Time.now, updates: [PagerDutyOpenapiClient::StatusPagePostUpdateRequest.new({post: PagerDutyOpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', status: PagerDutyOpenapiClient::StatusPagePostUpdateStatus.new({id: 'id_example'}), severity: PagerDutyOpenapiClient::StatusPagePostUpdateSeverity.new({id: 'id_example'}), impacted_services: [TODO], update_frequency_ms: 37, notify_subscribers: false, type: 'type_example'})], status_page: PagerDutyOpenapiClient::StatusPageImpactStatusPage.new({id: 'id_example'})})}) # CreateStatusPagePostRequest | 
 }
 
 begin
   # Create a Status Page Post
   result = api_instance.create_status_page_post(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_post: #{e}"
 end
 ```
@@ -83,7 +83,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPagePost201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_post_with_http_info: #{e}"
 end
 ```
@@ -122,28 +122,28 @@ Create a Post Update for a Post by Post ID.  Scoped OAuth requires: `status_page
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
 opts = {
-  create_status_page_post_update_request: OpenapiClient::CreateStatusPagePostUpdateRequest.new({post_update: OpenapiClient::StatusPagePostUpdateRequest.new({post: OpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', status: OpenapiClient::StatusPagePostUpdateStatus.new({id: 'id_example'}), severity: OpenapiClient::StatusPagePostUpdateSeverity.new({id: 'id_example'}), impacted_services: [TODO], update_frequency_ms: 37, notify_subscribers: false, type: 'type_example'})}) # CreateStatusPagePostUpdateRequest | 
+  create_status_page_post_update_request: PagerDutyOpenapiClient::CreateStatusPagePostUpdateRequest.new({post_update: PagerDutyOpenapiClient::StatusPagePostUpdateRequest.new({post: PagerDutyOpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', status: PagerDutyOpenapiClient::StatusPagePostUpdateStatus.new({id: 'id_example'}), severity: PagerDutyOpenapiClient::StatusPagePostUpdateSeverity.new({id: 'id_example'}), impacted_services: [TODO], update_frequency_ms: 37, notify_subscribers: false, type: 'type_example'})}) # CreateStatusPagePostUpdateRequest | 
 }
 
 begin
   # Create a Status Page Post Update
   result = api_instance.create_status_page_post_update(accept, id, post_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_post_update: #{e}"
 end
 ```
@@ -161,7 +161,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPagePostUpdate201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_post_update_with_http_info: #{e}"
 end
 ```
@@ -201,28 +201,28 @@ Create a Postmortem for a Post by Post ID.  Scoped OAuth requires: `status_pages
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
 opts = {
-  create_status_page_postmortem_request: OpenapiClient::CreateStatusPagePostmortemRequest.new # CreateStatusPagePostmortemRequest | 
+  create_status_page_postmortem_request: PagerDutyOpenapiClient::CreateStatusPagePostmortemRequest.new # CreateStatusPagePostmortemRequest | 
 }
 
 begin
   # Create a Post Postmortem
   result = api_instance.create_status_page_postmortem(accept, id, post_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_postmortem: #{e}"
 end
 ```
@@ -240,7 +240,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPostmortem200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_postmortem_with_http_info: #{e}"
 end
 ```
@@ -280,27 +280,27 @@ Create a Subscription for a Status Page by Status Page ID.  Scoped OAuth require
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_status_page_subscription_request: OpenapiClient::CreateStatusPageSubscriptionRequest.new({subscription: OpenapiClient::StatusPageSubscriptionRequest.new({channel: 'webhook', contact: 'contact_example', status_page: OpenapiClient::StatusPageSubscriptionRequestStatusPage.new({id: 'id_example'}), subscribable_object: OpenapiClient::SubscribableObject.new, type: 'type_example'})}) # CreateStatusPageSubscriptionRequest | 
+  create_status_page_subscription_request: PagerDutyOpenapiClient::CreateStatusPageSubscriptionRequest.new({subscription: PagerDutyOpenapiClient::StatusPageSubscriptionRequest.new({channel: 'webhook', contact: 'contact_example', status_page: PagerDutyOpenapiClient::StatusPageSubscriptionRequestStatusPage.new({id: 'id_example'}), subscribable_object: PagerDutyOpenapiClient::SubscribableObject.new, type: 'type_example'})}) # CreateStatusPageSubscriptionRequest | 
 }
 
 begin
   # Create a Status Page Subscription
   result = api_instance.create_status_page_subscription(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_subscription: #{e}"
 end
 ```
@@ -318,7 +318,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPageSubscription201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->create_status_page_subscription_with_http_info: #{e}"
 end
 ```
@@ -357,16 +357,16 @@ Delete a Post for a Status Page by Status Page ID and Post ID.  Scoped OAuth req
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -374,7 +374,7 @@ post_id = 'post_id_example' # String | The ID of the Status Page Post.
 begin
   # Delete a Status Page Post
   api_instance.delete_status_page_post(accept, id, post_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_post: #{e}"
 end
 ```
@@ -392,7 +392,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_post_with_http_info: #{e}"
 end
 ```
@@ -431,16 +431,16 @@ Delete a Post Update for a Post by Post ID and Post Update ID.  Scoped OAuth req
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -449,7 +449,7 @@ post_update_id = 'post_update_id_example' # String | The ID of the Status Page P
 begin
   # Delete a Status Page Post Update
   api_instance.delete_status_page_post_update(accept, id, post_id, post_update_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_post_update: #{e}"
 end
 ```
@@ -467,7 +467,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_post_update_with_http_info: #{e}"
 end
 ```
@@ -507,16 +507,16 @@ Delete a Postmortem for a Post by Post ID.  Scoped OAuth requires: `status_pages
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -524,7 +524,7 @@ post_id = 'post_id_example' # String | The ID of the Status Page Post.
 begin
   # Delete a Post Postmortem
   api_instance.delete_status_page_postmortem(accept, id, post_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_postmortem: #{e}"
 end
 ```
@@ -542,7 +542,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_postmortem_with_http_info: #{e}"
 end
 ```
@@ -581,16 +581,16 @@ Delete a Subscription for a Status Page by Status Page ID and Subscription ID.  
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 subscription_id = 'subscription_id_example' # String | The ID of the Status Page subscription.
@@ -598,7 +598,7 @@ subscription_id = 'subscription_id_example' # String | The ID of the Status Page
 begin
   # Delete a Status Page Subscription
   api_instance.delete_status_page_subscription(accept, id, subscription_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_subscription: #{e}"
 end
 ```
@@ -616,7 +616,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->delete_status_page_subscription_with_http_info: #{e}"
 end
 ```
@@ -655,16 +655,16 @@ Get a Post Update for a Post by Post ID and Post Update ID.  Scoped OAuth requir
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -674,7 +674,7 @@ begin
   # Get a Status Page Post Update
   result = api_instance.get_post_update(accept, id, post_id, post_update_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_post_update: #{e}"
 end
 ```
@@ -692,7 +692,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPagePostUpdate201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_post_update_with_http_info: #{e}"
 end
 ```
@@ -732,16 +732,16 @@ Get a Postmortem for a Post by Post ID.  Scoped OAuth requires: `status_pages.re
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -750,7 +750,7 @@ begin
   # Get a Post Postmortem
   result = api_instance.get_postmortem(accept, id, post_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_postmortem: #{e}"
 end
 ```
@@ -768,7 +768,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPostmortem200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_postmortem_with_http_info: #{e}"
 end
 ```
@@ -807,16 +807,16 @@ Get an Impact for a Status Page by Status Page ID and Impact ID.  Scoped OAuth r
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 impact_id = 'impact_id_example' # String | The ID of the Status Page Impact.
@@ -825,7 +825,7 @@ begin
   # Get a Status Page Impact
   result = api_instance.get_status_page_impact(accept, id, impact_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_impact: #{e}"
 end
 ```
@@ -843,7 +843,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatusPageImpact200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_impact_with_http_info: #{e}"
 end
 ```
@@ -882,16 +882,16 @@ Get a Post for a Status Page by Status Page ID and Post ID.  Scoped OAuth requir
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -903,7 +903,7 @@ begin
   # Get a Status Page Post
   result = api_instance.get_status_page_post(accept, id, post_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_post: #{e}"
 end
 ```
@@ -921,7 +921,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPagePost201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_post_with_http_info: #{e}"
 end
 ```
@@ -961,16 +961,16 @@ Get a Service for a Status Page by Status Page ID and Service ID.  Scoped OAuth 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 service_id = 'service_id_example' # String | The ID of the Status Page service.
@@ -979,7 +979,7 @@ begin
   # Get a Status Page Service
   result = api_instance.get_status_page_service(accept, id, service_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_service: #{e}"
 end
 ```
@@ -997,7 +997,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatusPageService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_service_with_http_info: #{e}"
 end
 ```
@@ -1036,16 +1036,16 @@ Get a Severity for a Status Page by Status Page ID and Severity ID.  Scoped OAut
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 severity_id = 'severity_id_example' # String | The ID of the Status Page severity.
@@ -1054,7 +1054,7 @@ begin
   # Get a Status Page Severity
   result = api_instance.get_status_page_severity(accept, id, severity_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_severity: #{e}"
 end
 ```
@@ -1072,7 +1072,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatusPageSeverity200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_severity_with_http_info: #{e}"
 end
 ```
@@ -1111,16 +1111,16 @@ Get a Status for a Status Page by Status Page ID and Status ID.  Scoped OAuth re
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 status_id = 'status_id_example' # String | The ID of the Status Page status.
@@ -1129,7 +1129,7 @@ begin
   # Get a Status Page Status
   result = api_instance.get_status_page_status(accept, id, status_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_status: #{e}"
 end
 ```
@@ -1147,7 +1147,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatusPageStatus200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_status_with_http_info: #{e}"
 end
 ```
@@ -1186,16 +1186,16 @@ Get a Subscription for a Status Page by Status Page ID and Subscription ID.  Sco
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 subscription_id = 'subscription_id_example' # String | The ID of the Status Page subscription.
@@ -1204,7 +1204,7 @@ begin
   # Get a Status Page Subscription
   result = api_instance.get_status_page_subscription(accept, id, subscription_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_subscription: #{e}"
 end
 ```
@@ -1222,7 +1222,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPageSubscription201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->get_status_page_subscription_with_http_info: #{e}"
 end
 ```
@@ -1261,16 +1261,16 @@ List Impacts for a Status Page by Status Page ID.  Scoped OAuth requires: `statu
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
@@ -1281,7 +1281,7 @@ begin
   # List Status Page Impacts
   result = api_instance.list_status_page_impacts(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_impacts: #{e}"
 end
 ```
@@ -1299,7 +1299,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPageImpacts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_impacts_with_http_info: #{e}"
 end
 ```
@@ -1338,16 +1338,16 @@ List Post Updates for a Status Page by Status Page ID and Post ID.  Scoped OAuth
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
@@ -1359,7 +1359,7 @@ begin
   # List Status Page Post Updates
   result = api_instance.list_status_page_post_updates(accept, id, post_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_post_updates: #{e}"
 end
 ```
@@ -1377,7 +1377,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPagePostUpdates200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_post_updates_with_http_info: #{e}"
 end
 ```
@@ -1417,16 +1417,16 @@ List Posts for a Status Page by Status Page ID.  Scoped OAuth requires: `status_
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
@@ -1439,7 +1439,7 @@ begin
   # List Status Page Posts
   result = api_instance.list_status_page_posts(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_posts: #{e}"
 end
 ```
@@ -1457,7 +1457,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPagePosts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_posts_with_http_info: #{e}"
 end
 ```
@@ -1498,16 +1498,16 @@ List Services for a Status Page by Status Page ID.  Scoped OAuth requires: `stat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -1515,7 +1515,7 @@ begin
   # List Status Page Services
   result = api_instance.list_status_page_services(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_services: #{e}"
 end
 ```
@@ -1533,7 +1533,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPageServices200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_services_with_http_info: #{e}"
 end
 ```
@@ -1571,16 +1571,16 @@ List Severities for a Status Page by Status Page ID.  Scoped OAuth requires: `st
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
@@ -1591,7 +1591,7 @@ begin
   # List Status Page Severities
   result = api_instance.list_status_page_severities(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_severities: #{e}"
 end
 ```
@@ -1609,7 +1609,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPageSeverities200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_severities_with_http_info: #{e}"
 end
 ```
@@ -1648,16 +1648,16 @@ List Statuses for a Status Page by Status Page ID.  Scoped OAuth requires: `stat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
@@ -1668,7 +1668,7 @@ begin
   # List Status Page Statuses
   result = api_instance.list_status_page_statuses(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_statuses: #{e}"
 end
 ```
@@ -1686,7 +1686,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPageStatuses200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_statuses_with_http_info: #{e}"
 end
 ```
@@ -1725,16 +1725,16 @@ List Subscriptions for a Status Page by Status Page ID.  Scoped OAuth requires: 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
@@ -1746,7 +1746,7 @@ begin
   # List Status Page Subscriptions
   result = api_instance.list_status_page_subscriptions(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_subscriptions: #{e}"
 end
 ```
@@ -1764,7 +1764,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPageSubscriptions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_page_subscriptions_with_http_info: #{e}"
 end
 ```
@@ -1804,16 +1804,16 @@ List Status Pages.  Scoped OAuth requires: `status_pages.read`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 opts = {
   status_page_type: 'public' # String | The type of the Status Page.
@@ -1823,7 +1823,7 @@ begin
   # List Status Pages
   result = api_instance.list_status_pages(accept, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_pages: #{e}"
 end
 ```
@@ -1841,7 +1841,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListStatusPages200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->list_status_pages_with_http_info: #{e}"
 end
 ```
@@ -1879,28 +1879,28 @@ Update a Post for a Status Page by Status Page ID.  Scoped OAuth requires: `stat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
 opts = {
-  update_status_page_post_request: OpenapiClient::UpdateStatusPagePostRequest.new({post: OpenapiClient::StatusPagePostPutRequest.new({type: 'status_page_post', title: 'title_example', post_type: 'incident', starts_at: Time.now, ends_at: Time.now, status_page: OpenapiClient::StatusPageImpactStatusPage.new({id: 'id_example'})})}) # UpdateStatusPagePostRequest | 
+  update_status_page_post_request: PagerDutyOpenapiClient::UpdateStatusPagePostRequest.new({post: PagerDutyOpenapiClient::StatusPagePostPutRequest.new({type: 'status_page_post', title: 'title_example', post_type: 'incident', starts_at: Time.now, ends_at: Time.now, status_page: PagerDutyOpenapiClient::StatusPageImpactStatusPage.new({id: 'id_example'})})}) # UpdateStatusPagePostRequest | 
 }
 
 begin
   # Update a Status Page Post
   result = api_instance.update_status_page_post(accept, id, post_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->update_status_page_post: #{e}"
 end
 ```
@@ -1918,7 +1918,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPagePost201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->update_status_page_post_with_http_info: #{e}"
 end
 ```
@@ -1958,29 +1958,29 @@ Update a Post Update for a Post by Post ID and Post Update ID.  Scoped OAuth req
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
 post_update_id = 'post_update_id_example' # String | The ID of the Status Page Post Update.
 opts = {
-  create_status_page_post_update_request: OpenapiClient::CreateStatusPagePostUpdateRequest.new({post_update: OpenapiClient::StatusPagePostUpdateRequest.new({post: OpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', status: OpenapiClient::StatusPagePostUpdateStatus.new({id: 'id_example'}), severity: OpenapiClient::StatusPagePostUpdateSeverity.new({id: 'id_example'}), impacted_services: [TODO], update_frequency_ms: 37, notify_subscribers: false, type: 'type_example'})}) # CreateStatusPagePostUpdateRequest | 
+  create_status_page_post_update_request: PagerDutyOpenapiClient::CreateStatusPagePostUpdateRequest.new({post_update: PagerDutyOpenapiClient::StatusPagePostUpdateRequest.new({post: PagerDutyOpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', status: PagerDutyOpenapiClient::StatusPagePostUpdateStatus.new({id: 'id_example'}), severity: PagerDutyOpenapiClient::StatusPagePostUpdateSeverity.new({id: 'id_example'}), impacted_services: [TODO], update_frequency_ms: 37, notify_subscribers: false, type: 'type_example'})}) # CreateStatusPagePostUpdateRequest | 
 }
 
 begin
   # Update a Status Page Post Update
   result = api_instance.update_status_page_post_update(accept, id, post_id, post_update_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->update_status_page_post_update: #{e}"
 end
 ```
@@ -1998,7 +1998,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateStatusPagePostUpdate201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->update_status_page_post_update_with_http_info: #{e}"
 end
 ```
@@ -2039,28 +2039,28 @@ Update a Postmortem for a Post by Post ID.  Scoped OAuth requires: `status_pages
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::StatusPagesApi.new
+api_instance = PagerDutyOpenapiClient::StatusPagesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 post_id = 'post_id_example' # String | The ID of the Status Page Post.
 opts = {
-  update_status_page_postmortem_request: OpenapiClient::UpdateStatusPagePostmortemRequest.new({postmortem: OpenapiClient::StatusPagePostmortemRequest.new({type: 'status_page_post_postmortem', post: OpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', notify_subscribers: false})}) # UpdateStatusPagePostmortemRequest | 
+  update_status_page_postmortem_request: PagerDutyOpenapiClient::UpdateStatusPagePostmortemRequest.new({postmortem: PagerDutyOpenapiClient::StatusPagePostmortemRequest.new({type: 'status_page_post_postmortem', post: PagerDutyOpenapiClient::StatusPagePostUpdatePost.new({id: 'id_example'}), message: 'message_example', notify_subscribers: false})}) # UpdateStatusPagePostmortemRequest | 
 }
 
 begin
   # Update a Post Postmortem
   result = api_instance.update_status_page_postmortem(accept, id, post_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->update_status_page_postmortem: #{e}"
 end
 ```
@@ -2078,7 +2078,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPostmortem200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling StatusPagesApi->update_status_page_postmortem_with_http_info: #{e}"
 end
 ```

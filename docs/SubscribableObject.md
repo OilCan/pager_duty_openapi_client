@@ -1,4 +1,4 @@
-# OpenapiClient::SubscribableObject
+# PagerDutyOpenapiClient::SubscribableObject
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::SubscribableObject.new(
+instance = PagerDutyOpenapiClient::SubscribableObject.new(
   id: null,
   type: null
 )

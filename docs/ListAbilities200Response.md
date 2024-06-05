@@ -1,4 +1,4 @@
-# OpenapiClient::ListAbilities200Response
+# PagerDutyOpenapiClient::ListAbilities200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListAbilities200Response.new(
+instance = PagerDutyOpenapiClient::ListAbilities200Response.new(
   abilities: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::RepeatEscalationPathLogEntry
+# PagerDutyOpenapiClient::RepeatEscalationPathLogEntry
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RepeatEscalationPathLogEntry.new(
+instance = PagerDutyOpenapiClient::RepeatEscalationPathLogEntry.new(
   type: null,
   created_at: null,
   channel: null,

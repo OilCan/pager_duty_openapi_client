@@ -1,4 +1,4 @@
-# OpenapiClient::StringValue
+# PagerDutyOpenapiClient::StringValue
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::StringValue.openapi_one_of
+PagerDutyOpenapiClient::StringValue.openapi_one_of
 # =>
 # [
 #   :'Array<String>',
@@ -26,12 +26,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::StringValue.build(data)
+PagerDutyOpenapiClient::StringValue.build(data)
 # => #<Array<String>:0x00007fdd4aab02a0>
 
-OpenapiClient::StringValue.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::StringValue.build(data_that_doesnt_match)
 # => nil
 ```
 

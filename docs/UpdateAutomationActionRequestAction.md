@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateAutomationActionRequestAction
+# PagerDutyOpenapiClient::UpdateAutomationActionRequestAction
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::UpdateAutomationActionRequestAction.openapi_one_of
+PagerDutyOpenapiClient::UpdateAutomationActionRequestAction.openapi_one_of
 # =>
 # [
 #   :'AutomationActionsProcessAutomationJobActionPutBody',
@@ -26,9 +26,9 @@ Returns the discriminator's property name.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::UpdateAutomationActionRequestAction.openapi_discriminator_name
+PagerDutyOpenapiClient::UpdateAutomationActionRequestAction.openapi_discriminator_name
 # => :'action_type'
 ```
 
@@ -39,9 +39,9 @@ Returns the discriminator's mapping.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::UpdateAutomationActionRequestAction.openapi_discriminator_mapping
+PagerDutyOpenapiClient::UpdateAutomationActionRequestAction.openapi_discriminator_mapping
 # =>
 # {
 #   :'process_automation' => :'AutomationActionsProcessAutomationJobActionPutBody',
@@ -56,12 +56,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::UpdateAutomationActionRequestAction.build(data)
+PagerDutyOpenapiClient::UpdateAutomationActionRequestAction.build(data)
 # => #<AutomationActionsProcessAutomationJobActionPutBody:0x00007fdd4aab02a0>
 
-OpenapiClient::UpdateAutomationActionRequestAction.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::UpdateAutomationActionRequestAction.build(data_that_doesnt_match)
 # => nil
 ```
 

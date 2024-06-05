@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAllActionsExtractionsAnyOf
+# PagerDutyOpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAllActionsExtractionsAnyOf
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAllActionsExtractionsAnyOf.new(
+instance = PagerDutyOpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAllActionsExtractionsAnyOf.new(
   target: event.summary,
   template: High CPU on {{hostname}} server
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::AlertGroupingSetting
+# PagerDutyOpenapiClient::AlertGroupingSetting
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AlertGroupingSetting.new(
+instance = PagerDutyOpenapiClient::AlertGroupingSetting.new(
   id: null,
   name: null,
   description: null,

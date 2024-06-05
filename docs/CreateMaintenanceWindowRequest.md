@@ -1,4 +1,4 @@
-# OpenapiClient::CreateMaintenanceWindowRequest
+# PagerDutyOpenapiClient::CreateMaintenanceWindowRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateMaintenanceWindowRequest.new(
+instance = PagerDutyOpenapiClient::CreateMaintenanceWindowRequest.new(
   maintenance_window: null
 )
 ```

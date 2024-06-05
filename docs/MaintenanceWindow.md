@@ -1,4 +1,4 @@
-# OpenapiClient::MaintenanceWindow
+# PagerDutyOpenapiClient::MaintenanceWindow
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::MaintenanceWindow.new(
+instance = PagerDutyOpenapiClient::MaintenanceWindow.new(
   type: null,
   sequence_number: null,
   start_time: null,

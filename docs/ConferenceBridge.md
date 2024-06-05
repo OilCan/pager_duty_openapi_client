@@ -1,4 +1,4 @@
-# OpenapiClient::ConferenceBridge
+# PagerDutyOpenapiClient::ConferenceBridge
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ConferenceBridge.new(
+instance = PagerDutyOpenapiClient::ConferenceBridge.new(
   conference_number: null,
   conference_url: null
 )

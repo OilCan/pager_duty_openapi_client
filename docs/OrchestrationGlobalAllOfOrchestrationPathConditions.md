@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationGlobalAllOfOrchestrationPathConditions
+# PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPathConditions
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationGlobalAllOfOrchestrationPathConditions.new(
+instance = PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPathConditions.new(
   expression: event.summary matches part &#39;my service error&#39;
 )
 ```

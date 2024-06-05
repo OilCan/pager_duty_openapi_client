@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAll
+# PagerDutyOpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAll
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAll.new(
+instance = PagerDutyOpenapiClient::OrchestrationUnroutedAllOfOrchestrationPathCatchAll.new(
   actions: null
 )
 ```

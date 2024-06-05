@@ -1,4 +1,4 @@
-# OpenapiClient::TeamReference
+# PagerDutyOpenapiClient::TeamReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::TeamReference.new(
+instance = PagerDutyOpenapiClient::TeamReference.new(
   type: null
 )
 ```

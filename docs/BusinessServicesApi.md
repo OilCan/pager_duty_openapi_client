@@ -1,4 +1,4 @@
-# OpenapiClient::BusinessServicesApi
+# PagerDutyOpenapiClient::BusinessServicesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -34,27 +34,27 @@ Create a new Business Service.  Business services model capabilities that span m
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_business_service_request: OpenapiClient::CreateBusinessServiceRequest.new # CreateBusinessServiceRequest | 
+  create_business_service_request: PagerDutyOpenapiClient::CreateBusinessServiceRequest.new # CreateBusinessServiceRequest | 
 }
 
 begin
   # Create a Business Service
   result = api_instance.create_business_service(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->create_business_service: #{e}"
 end
 ```
@@ -72,7 +72,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->create_business_service_with_http_info: #{e}"
 end
 ```
@@ -111,16 +111,16 @@ Subscribe your Account to a Business Service.  Scoped OAuth requires: `subscribe
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -128,7 +128,7 @@ begin
   # Create Business Service Account Subscription
   result = api_instance.create_business_service_account_subscription(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->create_business_service_account_subscription: #{e}"
 end
 ```
@@ -146,7 +146,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessServiceAccountSubscription200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->create_business_service_account_subscription_with_http_info: #{e}"
 end
 ```
@@ -184,27 +184,27 @@ Subscribe the given entities to the given Business Service.  Scoped OAuth requir
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_business_service_notification_subscribers_request: OpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [OpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to subscribe.
+  create_business_service_notification_subscribers_request: PagerDutyOpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [PagerDutyOpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to subscribe.
 }
 
 begin
   # Create Business Service Subscribers
   result = api_instance.create_business_service_notification_subscribers(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->create_business_service_notification_subscribers: #{e}"
 end
 ```
@@ -222,7 +222,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessServiceNotificationSubscribers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->create_business_service_notification_subscribers_with_http_info: #{e}"
 end
 ```
@@ -261,16 +261,16 @@ Delete an existing Business Service.  Once the service is deleted, it will not b
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -278,7 +278,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a Business Service
   api_instance.delete_business_service(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->delete_business_service: #{e}"
 end
 ```
@@ -296,7 +296,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->delete_business_service_with_http_info: #{e}"
 end
 ```
@@ -335,23 +335,23 @@ Clears the Priority Threshold for the account.  If the priority threshold is cle
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
 
 begin
   # Deletes the account-level priority threshold for Business Service impact
   api_instance.delete_business_service_priority_thresholds(accept, x_early_access)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->delete_business_service_priority_thresholds: #{e}"
 end
 ```
@@ -369,7 +369,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->delete_business_service_priority_thresholds_with_http_info: #{e}"
 end
 ```
@@ -407,16 +407,16 @@ Get details about an existing Business Service.  Business services model capabil
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -425,7 +425,7 @@ begin
   # Get a Business Service
   result = api_instance.get_business_service(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service: #{e}"
 end
 ```
@@ -443,7 +443,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_with_http_info: #{e}"
 end
 ```
@@ -482,16 +482,16 @@ Retrieve a list top-level Business Services sorted by highest Impact with `statu
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
 opts = {
@@ -503,7 +503,7 @@ begin
   # List Business Services sorted by impacted status
   result = api_instance.get_business_service_impacts(accept, x_early_access, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_impacts: #{e}"
 end
 ```
@@ -521,7 +521,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceSupportingServiceImpacts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_impacts_with_http_info: #{e}"
 end
 ```
@@ -561,16 +561,16 @@ Retrieves the priority threshold information for an account.  Currently, there i
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
 
@@ -578,7 +578,7 @@ begin
   # Get the global priority threshold for a Business Service to be considered impacted by an Incident
   result = api_instance.get_business_service_priority_thresholds(accept, x_early_access)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_priority_thresholds: #{e}"
 end
 ```
@@ -596,7 +596,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServicePriorityThresholds200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_priority_thresholds_with_http_info: #{e}"
 end
 ```
@@ -634,16 +634,16 @@ Retrieve a list of Notification Subscribers on the Business Service.  <!-- theme
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -651,7 +651,7 @@ begin
   # List Business Service Subscribers
   result = api_instance.get_business_service_subscribers(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_subscribers: #{e}"
 end
 ```
@@ -669,7 +669,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceSubscribers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_subscribers_with_http_info: #{e}"
 end
 ```
@@ -707,16 +707,16 @@ Retrieve of Business Services that support the given Business Service sorted by 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
@@ -729,7 +729,7 @@ begin
   # List the supporting Business Services for the given Business Service Id, sorted by impacted status.
   result = api_instance.get_business_service_supporting_service_impacts(accept, id, x_early_access, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_supporting_service_impacts: #{e}"
 end
 ```
@@ -747,7 +747,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceSupportingServiceImpacts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_supporting_service_impacts_with_http_info: #{e}"
 end
 ```
@@ -788,16 +788,16 @@ Retrieve a list of Impactors for the top-level Business Services on the account.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
 opts = {
@@ -808,7 +808,7 @@ begin
   # List Impactors affecting Business Services
   result = api_instance.get_business_service_top_level_impactors(accept, x_early_access, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_top_level_impactors: #{e}"
 end
 ```
@@ -826,7 +826,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceTopLevelImpactors200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->get_business_service_top_level_impactors_with_http_info: #{e}"
 end
 ```
@@ -865,16 +865,16 @@ List existing Business Services.  Business services model capabilities that span
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -887,7 +887,7 @@ begin
   # List Business Services
   result = api_instance.list_business_services(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->list_business_services: #{e}"
 end
 ```
@@ -905,7 +905,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListBusinessServices200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->list_business_services_with_http_info: #{e}"
 end
 ```
@@ -946,27 +946,27 @@ Set the Account-level priority threshold for Business Service. Scoped OAuth requ
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
 opts = {
-  put_business_service_priority_thresholds_request: OpenapiClient::PutBusinessServicePriorityThresholdsRequest.new({global_threshold: OpenapiClient::PutBusinessServicePriorityThresholdsRequestGlobalThreshold.new({id: 'id_example', order: 3.56})}) # PutBusinessServicePriorityThresholdsRequest | Set the `id` and `order` of the global Priority Threshold. These values can be obtained by calling the `/priorities` endpoint.  Once set, Incidents must be at or above the specified level in order to impact Business Services.  An exception to this rule is if the Incident has been added to the incident directly using the `PUT /incidents/{id}/business_services/{business_service_id}/impacts` endpoint.
+  put_business_service_priority_thresholds_request: PagerDutyOpenapiClient::PutBusinessServicePriorityThresholdsRequest.new({global_threshold: PagerDutyOpenapiClient::PutBusinessServicePriorityThresholdsRequestGlobalThreshold.new({id: 'id_example', order: 3.56})}) # PutBusinessServicePriorityThresholdsRequest | Set the `id` and `order` of the global Priority Threshold. These values can be obtained by calling the `/priorities` endpoint.  Once set, Incidents must be at or above the specified level in order to impact Business Services.  An exception to this rule is if the Incident has been added to the incident directly using the `PUT /incidents/{id}/business_services/{business_service_id}/impacts` endpoint.
 }
 
 begin
   # Set the Account-level priority threshold for Business Service impact.
   result = api_instance.put_business_service_priority_thresholds(accept, x_early_access, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->put_business_service_priority_thresholds: #{e}"
 end
 ```
@@ -984,7 +984,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PutBusinessServicePriorityThresholds200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->put_business_service_priority_thresholds_with_http_info: #{e}"
 end
 ```
@@ -1023,23 +1023,23 @@ Unsubscribe your Account from a Business Service.  Scoped OAuth requires: `subsc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
 begin
   # Delete Business Service Account Subscription
   api_instance.remove_business_service_account_subscription(accept, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->remove_business_service_account_subscription: #{e}"
 end
 ```
@@ -1057,7 +1057,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->remove_business_service_account_subscription_with_http_info: #{e}"
 end
 ```
@@ -1095,27 +1095,27 @@ Unsubscribes the matching Subscribers from a Business Service.  Scoped OAuth req
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_business_service_notification_subscribers_request: OpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [OpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to unsubscribe.
+  create_business_service_notification_subscribers_request: PagerDutyOpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [PagerDutyOpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to unsubscribe.
 }
 
 begin
   # Remove Business Service Subscribers
   result = api_instance.remove_business_service_notification_subscriber(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->remove_business_service_notification_subscriber: #{e}"
 end
 ```
@@ -1133,7 +1133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RemoveBusinessServiceNotificationSubscriber200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->remove_business_service_notification_subscriber_with_http_info: #{e}"
 end
 ```
@@ -1172,28 +1172,28 @@ Update an existing Business Service. NOTE that this endpoint also accepts the PA
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::BusinessServicesApi.new
+api_instance = PagerDutyOpenapiClient::BusinessServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  update_business_service_request: OpenapiClient::UpdateBusinessServiceRequest.new # UpdateBusinessServiceRequest | 
+  update_business_service_request: PagerDutyOpenapiClient::UpdateBusinessServiceRequest.new # UpdateBusinessServiceRequest | 
 }
 
 begin
   # Update a Business Service
   result = api_instance.update_business_service(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->update_business_service: #{e}"
 end
 ```
@@ -1211,7 +1211,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling BusinessServicesApi->update_business_service_with_http_info: #{e}"
 end
 ```

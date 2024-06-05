@@ -1,4 +1,4 @@
-# OpenapiClient::CreateIncidentSnoozeRequest
+# PagerDutyOpenapiClient::CreateIncidentSnoozeRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateIncidentSnoozeRequest.new(
+instance = PagerDutyOpenapiClient::CreateIncidentSnoozeRequest.new(
   duration: null
 )
 ```

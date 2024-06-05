@@ -1,4 +1,4 @@
-# OpenapiClient::ServicesApi
+# PagerDutyOpenapiClient::ServicesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -33,16 +33,16 @@ Convert this Service's Event Rules into functionally equivalent Event Orchestrat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -51,7 +51,7 @@ begin
   # Convert a Service's Event Rules into Event Orchestration Rules
   result = api_instance.convert_service_event_rules_to_event_orchestration(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->convert_service_event_rules_to_event_orchestration: #{e}"
 end
 ```
@@ -69,7 +69,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ConvertServiceEventRulesToEventOrchestration200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->convert_service_event_rules_to_event_orchestration_with_http_info: #{e}"
 end
 ```
@@ -108,27 +108,27 @@ Create a new service.  If `status` is included in the request, it must have a va
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_service_request: OpenapiClient::CreateServiceRequest.new({service: OpenapiClient::Service.new({type: 'service', escalation_policy: OpenapiClient::EscalationPolicyReference.new({type: 'escalation_policy_reference'})})}) # CreateServiceRequest | The service to be created
+  create_service_request: PagerDutyOpenapiClient::CreateServiceRequest.new({service: PagerDutyOpenapiClient::Service.new({type: 'service', escalation_policy: PagerDutyOpenapiClient::EscalationPolicyReference.new({type: 'escalation_policy_reference'})})}) # CreateServiceRequest | The service to be created
 }
 
 begin
   # Create a service
   result = api_instance.create_service(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->create_service: #{e}"
 end
 ```
@@ -146,7 +146,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->create_service_with_http_info: #{e}"
 end
 ```
@@ -185,28 +185,28 @@ Create a new Event Rule on a Service. <!-- theme: warning --> > ### End-of-life 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_service_event_rule_request: OpenapiClient::CreateServiceEventRuleRequest.new({rule: OpenapiClient::ServiceEventRule.new}) # CreateServiceEventRuleRequest | 
+  create_service_event_rule_request: PagerDutyOpenapiClient::CreateServiceEventRuleRequest.new({rule: PagerDutyOpenapiClient::ServiceEventRule.new}) # CreateServiceEventRuleRequest | 
 }
 
 begin
   # Create an Event Rule on a Service
   result = api_instance.create_service_event_rule(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->create_service_event_rule: #{e}"
 end
 ```
@@ -224,7 +224,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceEventRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->create_service_event_rule_with_http_info: #{e}"
 end
 ```
@@ -264,28 +264,28 @@ Create a new integration belonging to a Service.  A service may represent an app
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_service_integration_request: OpenapiClient::CreateServiceIntegrationRequest.new({integration: OpenapiClient::Integration.new}) # CreateServiceIntegrationRequest | The integration to be created
+  create_service_integration_request: PagerDutyOpenapiClient::CreateServiceIntegrationRequest.new({integration: PagerDutyOpenapiClient::Integration.new}) # CreateServiceIntegrationRequest | The integration to be created
 }
 
 begin
   # Create a new integration
   result = api_instance.create_service_integration(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->create_service_integration: #{e}"
 end
 ```
@@ -303,7 +303,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceIntegrationRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->create_service_integration_with_http_info: #{e}"
 end
 ```
@@ -343,16 +343,16 @@ Delete an existing service.  Once the service is deleted, it will not be accessi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -360,7 +360,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a service
   api_instance.delete_service(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->delete_service: #{e}"
 end
 ```
@@ -378,7 +378,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->delete_service_with_http_info: #{e}"
 end
 ```
@@ -417,16 +417,16 @@ Delete an Event Rule from a Service. <!-- theme: warning --> > ### End-of-life >
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -435,7 +435,7 @@ rule_id = 'rule_id_example' # String | The id of the Event Rule to retrieve.
 begin
   # Delete an Event Rule from a Service
   api_instance.delete_service_event_rule(accept, content_type, id, rule_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->delete_service_event_rule: #{e}"
 end
 ```
@@ -453,7 +453,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->delete_service_event_rule_with_http_info: #{e}"
 end
 ```
@@ -493,16 +493,16 @@ Get details about an existing service.  A service may represent an application, 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -514,7 +514,7 @@ begin
   # Get a service
   result = api_instance.get_service(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->get_service: #{e}"
 end
 ```
@@ -532,7 +532,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->get_service_with_http_info: #{e}"
 end
 ```
@@ -572,16 +572,16 @@ Get an Event Rule from a Service. <!-- theme: warning --> > ### End-of-life > Ru
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -591,7 +591,7 @@ begin
   # Get an Event Rule from a Service
   result = api_instance.get_service_event_rule(accept, content_type, id, rule_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->get_service_event_rule: #{e}"
 end
 ```
@@ -609,7 +609,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceEventRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->get_service_event_rule_with_http_info: #{e}"
 end
 ```
@@ -649,16 +649,16 @@ Get details about an integration belonging to a service.  A service may represen
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -671,7 +671,7 @@ begin
   # View an integration
   result = api_instance.get_service_integration(accept, content_type, id, integration_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->get_service_integration: #{e}"
 end
 ```
@@ -689,7 +689,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceIntegrationRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->get_service_integration_with_http_info: #{e}"
 end
 ```
@@ -730,16 +730,16 @@ The returned records are sorted by the `execution_time` from newest to oldest.  
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -754,7 +754,7 @@ begin
   # List audit records for a service
   result = api_instance.list_service_audit_records(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->list_service_audit_records: #{e}"
 end
 ```
@@ -772,7 +772,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuditRecordResponseSchema>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->list_service_audit_records_with_http_info: #{e}"
 end
 ```
@@ -815,16 +815,16 @@ List Event Rules on a Service. <!-- theme: warning --> > ### End-of-life > Rules
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -839,7 +839,7 @@ begin
   # List Service's Event Rules
   result = api_instance.list_service_event_rules(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->list_service_event_rules: #{e}"
 end
 ```
@@ -857,7 +857,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListServiceEventRules200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->list_service_event_rules_with_http_info: #{e}"
 end
 ```
@@ -900,16 +900,16 @@ List existing Services.  A service may represent an application, component, or t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -928,7 +928,7 @@ begin
   # List services
   result = api_instance.list_services(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->list_services: #{e}"
 end
 ```
@@ -946,7 +946,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListServices200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->list_services_with_http_info: #{e}"
 end
 ```
@@ -993,28 +993,28 @@ Update an existing service.  A service may represent an application, component, 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_service_request: OpenapiClient::CreateServiceRequest.new({service: OpenapiClient::Service.new({type: 'service', escalation_policy: OpenapiClient::EscalationPolicyReference.new({type: 'escalation_policy_reference'})})}) # CreateServiceRequest | The service to be updated.
+  create_service_request: PagerDutyOpenapiClient::CreateServiceRequest.new({service: PagerDutyOpenapiClient::Service.new({type: 'service', escalation_policy: PagerDutyOpenapiClient::EscalationPolicyReference.new({type: 'escalation_policy_reference'})})}) # CreateServiceRequest | The service to be updated.
 }
 
 begin
   # Update a service
   result = api_instance.update_service(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->update_service: #{e}"
 end
 ```
@@ -1032,7 +1032,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->update_service_with_http_info: #{e}"
 end
 ```
@@ -1072,29 +1072,29 @@ Update an Event Rule on a Service. Note that the endpoint supports partial updat
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 rule_id = 'rule_id_example' # String | The id of the Event Rule to retrieve.
 opts = {
-  update_service_event_rule_request: OpenapiClient::UpdateServiceEventRuleRequest.new({rule_id: 'rule_id_example'}) # UpdateServiceEventRuleRequest | 
+  update_service_event_rule_request: PagerDutyOpenapiClient::UpdateServiceEventRuleRequest.new({rule_id: 'rule_id_example'}) # UpdateServiceEventRuleRequest | 
 }
 
 begin
   # Update an Event Rule on a Service
   result = api_instance.update_service_event_rule(accept, content_type, id, rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->update_service_event_rule: #{e}"
 end
 ```
@@ -1112,7 +1112,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceEventRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->update_service_event_rule_with_http_info: #{e}"
 end
 ```
@@ -1153,29 +1153,29 @@ Update an integration belonging to a Service.  A service may represent an applic
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServicesApi.new
+api_instance = PagerDutyOpenapiClient::ServicesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 integration_id = 'integration_id_example' # String | The integration ID on the service.
 opts = {
-  create_service_integration_request: OpenapiClient::CreateServiceIntegrationRequest.new({integration: OpenapiClient::Integration.new}) # CreateServiceIntegrationRequest | The integration to be updated
+  create_service_integration_request: PagerDutyOpenapiClient::CreateServiceIntegrationRequest.new({integration: PagerDutyOpenapiClient::Integration.new}) # CreateServiceIntegrationRequest | The integration to be updated
 }
 
 begin
   # Update an existing integration
   result = api_instance.update_service_integration(accept, content_type, id, integration_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->update_service_integration: #{e}"
 end
 ```
@@ -1193,7 +1193,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceIntegrationRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServicesApi->update_service_integration_with_http_info: #{e}"
 end
 ```

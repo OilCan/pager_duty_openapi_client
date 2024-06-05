@@ -1,4 +1,4 @@
-# OpenapiClient::WebhooksV1IncidentDataTriggerSummaryData
+# PagerDutyOpenapiClient::WebhooksV1IncidentDataTriggerSummaryData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::WebhooksV1IncidentDataTriggerSummaryData.new(
+instance = PagerDutyOpenapiClient::WebhooksV1IncidentDataTriggerSummaryData.new(
   subject: null
 )
 ```

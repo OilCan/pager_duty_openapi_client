@@ -1,4 +1,4 @@
-# OpenapiClient::ListWebhookSubscriptions200Response
+# PagerDutyOpenapiClient::ListWebhookSubscriptions200Response
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListWebhookSubscriptions200Response.new(
+instance = PagerDutyOpenapiClient::ListWebhookSubscriptions200Response.new(
   offset: null,
   limit: null,
   more: null,

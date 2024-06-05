@@ -1,4 +1,4 @@
-# OpenapiClient::AddonReference
+# PagerDutyOpenapiClient::AddonReference
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AddonReference.new(
+instance = PagerDutyOpenapiClient::AddonReference.new(
   src: null,
   name: null,
   type: null

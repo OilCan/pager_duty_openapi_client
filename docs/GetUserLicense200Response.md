@@ -1,4 +1,4 @@
-# OpenapiClient::GetUserLicense200Response
+# PagerDutyOpenapiClient::GetUserLicense200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetUserLicense200Response.new(
+instance = PagerDutyOpenapiClient::GetUserLicense200Response.new(
   license: null
 )
 ```

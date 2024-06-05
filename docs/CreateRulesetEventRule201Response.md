@@ -1,4 +1,4 @@
-# OpenapiClient::CreateRulesetEventRule201Response
+# PagerDutyOpenapiClient::CreateRulesetEventRule201Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateRulesetEventRule201Response.new(
+instance = PagerDutyOpenapiClient::CreateRulesetEventRule201Response.new(
   rule: null
 )
 ```

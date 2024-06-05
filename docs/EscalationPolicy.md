@@ -1,4 +1,4 @@
-# OpenapiClient::EscalationPolicy
+# PagerDutyOpenapiClient::EscalationPolicy
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EscalationPolicy.new(
+instance = PagerDutyOpenapiClient::EscalationPolicy.new(
   type: null,
   name: null,
   description: null,

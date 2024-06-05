@@ -1,4 +1,4 @@
-# OpenapiClient::MergeIncidentsRequest
+# PagerDutyOpenapiClient::MergeIncidentsRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::MergeIncidentsRequest.new(
+instance = PagerDutyOpenapiClient::MergeIncidentsRequest.new(
   source_incidents: null
 )
 ```

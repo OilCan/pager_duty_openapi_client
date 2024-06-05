@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsProcessAutomationJobActionDataReference
+# PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionDataReference
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsProcessAutomationJobActionDataReference.new(
+instance = PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionDataReference.new(
   process_automation_job_id: 79c199bba1aff6e519f198457f5ec0fc,
   process_automation_job_arguments: -env production,
   process_automation_node_filter: mynode1 !nodename: mynode2

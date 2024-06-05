@@ -1,4 +1,4 @@
-# OpenapiClient::NotificationSubscriptionWithContext
+# PagerDutyOpenapiClient::NotificationSubscriptionWithContext
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::NotificationSubscriptionWithContext.new(
+instance = PagerDutyOpenapiClient::NotificationSubscriptionWithContext.new(
   subscriber_id: null,
   subscriber_type: null,
   subscribable_id: null,

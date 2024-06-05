@@ -1,4 +1,4 @@
-# OpenapiClient::LicensesApi
+# PagerDutyOpenapiClient::LicensesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -20,16 +20,16 @@ List the Licenses allocated to Users within your Account  Scoped OAuth requires:
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::LicensesApi.new
+api_instance = PagerDutyOpenapiClient::LicensesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -41,7 +41,7 @@ begin
   # List License Allocations
   result = api_instance.list_license_allocations(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LicensesApi->list_license_allocations: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListLicenseAllocations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LicensesApi->list_license_allocations_with_http_info: #{e}"
 end
 ```
@@ -99,16 +99,16 @@ List the Licenses associated with your Account  Scoped OAuth requires: `licenses
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::LicensesApi.new
+api_instance = PagerDutyOpenapiClient::LicensesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 
@@ -116,7 +116,7 @@ begin
   # List Licenses
   result = api_instance.list_licenses(accept, content_type)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LicensesApi->list_licenses: #{e}"
 end
 ```
@@ -134,7 +134,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListLicenses200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling LicensesApi->list_licenses_with_http_info: #{e}"
 end
 ```

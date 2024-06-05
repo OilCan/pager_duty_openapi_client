@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentUrgencyType
+# PagerDutyOpenapiClient::IncidentUrgencyType
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentUrgencyType.new(
+instance = PagerDutyOpenapiClient::IncidentUrgencyType.new(
   type: null,
   urgency: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::EmailParserValueExtractorsInner
+# PagerDutyOpenapiClient::EmailParserValueExtractorsInner
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EmailParserValueExtractorsInner.new(
+instance = PagerDutyOpenapiClient::EmailParserValueExtractorsInner.new(
   type: null,
   part: null,
   value_name: null,

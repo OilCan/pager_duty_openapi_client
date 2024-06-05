@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1CatchAllActionsAllOfIncidentCustomFieldUpdatesInner
+# PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1CatchAllActionsAllOfIncidentCustomFieldUpdatesInner
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1CatchAllActionsAllOfIncidentCustomFieldUpdatesInner.new(
+instance = PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1CatchAllActionsAllOfIncidentCustomFieldUpdatesInner.new(
   id: PEXCK89,
   value: High CPU on server
 )

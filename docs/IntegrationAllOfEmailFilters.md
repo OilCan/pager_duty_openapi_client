@@ -1,4 +1,4 @@
-# OpenapiClient::IntegrationAllOfEmailFilters
+# PagerDutyOpenapiClient::IntegrationAllOfEmailFilters
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IntegrationAllOfEmailFilters.new(
+instance = PagerDutyOpenapiClient::IntegrationAllOfEmailFilters.new(
   subject_mode: null,
   subject_regex: null,
   body_mode: null,

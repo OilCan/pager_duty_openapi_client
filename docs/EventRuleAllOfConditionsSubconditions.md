@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfConditionsSubconditions
+# PagerDutyOpenapiClient::EventRuleAllOfConditionsSubconditions
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfConditionsSubconditions.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfConditionsSubconditions.new(
   operator: null,
   parameters: null
 )

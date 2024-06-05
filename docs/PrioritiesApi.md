@@ -1,4 +1,4 @@
-# OpenapiClient::PrioritiesApi
+# PagerDutyOpenapiClient::PrioritiesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -19,16 +19,16 @@ List existing priorities, in order (most to least severe).  A priority is a labe
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::PrioritiesApi.new
+api_instance = PagerDutyOpenapiClient::PrioritiesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -41,7 +41,7 @@ begin
   # List priorities
   result = api_instance.list_priorities(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling PrioritiesApi->list_priorities: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListPriorities200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling PrioritiesApi->list_priorities_with_http_info: #{e}"
 end
 ```

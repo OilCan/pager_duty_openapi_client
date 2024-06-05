@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAddon201Response
+# PagerDutyOpenapiClient::CreateAddon201Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateAddon201Response.new(
+instance = PagerDutyOpenapiClient::CreateAddon201Response.new(
   addon: null
 )
 ```

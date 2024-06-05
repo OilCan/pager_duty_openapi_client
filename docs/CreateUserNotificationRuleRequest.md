@@ -1,4 +1,4 @@
-# OpenapiClient::CreateUserNotificationRuleRequest
+# PagerDutyOpenapiClient::CreateUserNotificationRuleRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateUserNotificationRuleRequest.new(
+instance = PagerDutyOpenapiClient::CreateUserNotificationRuleRequest.new(
   notification_rule: null
 )
 ```

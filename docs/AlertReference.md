@@ -1,4 +1,4 @@
-# OpenapiClient::AlertReference
+# PagerDutyOpenapiClient::AlertReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AlertReference.new(
+instance = PagerDutyOpenapiClient::AlertReference.new(
   type: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::Override
+# PagerDutyOpenapiClient::Override
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Override.new(
+instance = PagerDutyOpenapiClient::Override.new(
   id: null,
   start: null,
   _end: null,

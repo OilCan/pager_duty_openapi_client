@@ -1,4 +1,4 @@
-# OpenapiClient::Oncall
+# PagerDutyOpenapiClient::Oncall
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Oncall.new(
+instance = PagerDutyOpenapiClient::Oncall.new(
   escalation_policy: null,
   user: null,
   schedule: null,

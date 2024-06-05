@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfSetsInner
+# PagerDutyOpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfSetsInner
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfSetsInner.new(
+instance = PagerDutyOpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfSetsInner.new(
   rules: null
 )
 ```

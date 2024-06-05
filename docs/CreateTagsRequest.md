@@ -1,4 +1,4 @@
-# OpenapiClient::CreateTagsRequest
+# PagerDutyOpenapiClient::CreateTagsRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateTagsRequest.new(
+instance = PagerDutyOpenapiClient::CreateTagsRequest.new(
   tag: null
 )
 ```

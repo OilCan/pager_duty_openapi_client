@@ -1,4 +1,4 @@
-# OpenapiClient::ExtensionSchema
+# PagerDutyOpenapiClient::ExtensionSchema
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ExtensionSchema.new(
+instance = PagerDutyOpenapiClient::ExtensionSchema.new(
   icon_url: null,
   logo_url: null,
   label: null,

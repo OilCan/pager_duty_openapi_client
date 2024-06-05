@@ -1,4 +1,4 @@
-# OpenapiClient::EditableTemplate
+# PagerDutyOpenapiClient::EditableTemplate
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EditableTemplate.new(
+instance = PagerDutyOpenapiClient::EditableTemplate.new(
   template_type: null,
   name: null,
   description: null,

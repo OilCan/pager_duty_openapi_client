@@ -1,4 +1,4 @@
-# OpenapiClient::GetPausedIncidentReportCounts200ResponsePausedIncidentReportingCounts
+# PagerDutyOpenapiClient::GetPausedIncidentReportCounts200ResponsePausedIncidentReportingCounts
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetPausedIncidentReportCounts200ResponsePausedIncidentReportingCounts.new(
+instance = PagerDutyOpenapiClient::GetPausedIncidentReportCounts200ResponsePausedIncidentReportingCounts.new(
   since: null,
   _until: null,
   paused_count: null,

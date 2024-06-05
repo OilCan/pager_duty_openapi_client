@@ -1,4 +1,4 @@
-# OpenapiClient::AnalyticsResponderMetrics
+# PagerDutyOpenapiClient::AnalyticsResponderMetrics
 
 ## Properties
 
@@ -31,9 +31,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AnalyticsResponderMetrics.new(
+instance = PagerDutyOpenapiClient::AnalyticsResponderMetrics.new(
   mean_engaged_seconds: null,
   mean_time_to_acknowledge_seconds: null,
   responder_id: null,

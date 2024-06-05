@@ -1,4 +1,4 @@
-# OpenapiClient::GetExtensionSchema200Response
+# PagerDutyOpenapiClient::GetExtensionSchema200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetExtensionSchema200Response.new(
+instance = PagerDutyOpenapiClient::GetExtensionSchema200Response.new(
   extension_schema: null
 )
 ```

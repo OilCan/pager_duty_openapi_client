@@ -1,4 +1,4 @@
-# OpenapiClient::TriggerLogEntry
+# PagerDutyOpenapiClient::TriggerLogEntry
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::TriggerLogEntry.new(
+instance = PagerDutyOpenapiClient::TriggerLogEntry.new(
   type: null,
   created_at: null,
   channel: null,

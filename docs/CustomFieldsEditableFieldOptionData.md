@@ -1,4 +1,4 @@
-# OpenapiClient::CustomFieldsEditableFieldOptionData
+# PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionData
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::CustomFieldsEditableFieldOptionData.openapi_one_of
+PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionData.openapi_one_of
 # =>
 # [
 #   :'CustomFieldsEditableFieldOptionDataOneOf'
@@ -25,9 +25,9 @@ Returns the discriminator's property name.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::CustomFieldsEditableFieldOptionData.openapi_discriminator_name
+PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionData.openapi_discriminator_name
 # => :'data_type'
 ```
 
@@ -38,9 +38,9 @@ Returns the discriminator's mapping.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::CustomFieldsEditableFieldOptionData.openapi_discriminator_mapping
+PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionData.openapi_discriminator_mapping
 # =>
 # {
 #   :'string' => :'ERRORUNKNOWN'
@@ -54,12 +54,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::CustomFieldsEditableFieldOptionData.build(data)
+PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionData.build(data)
 # => #<CustomFieldsEditableFieldOptionDataOneOf:0x00007fdd4aab02a0>
 
-OpenapiClient::CustomFieldsEditableFieldOptionData.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionData.build(data_that_doesnt_match)
 # => nil
 ```
 

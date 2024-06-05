@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateStandardRequest
+# PagerDutyOpenapiClient::UpdateStandardRequest
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateStandardRequest.new(
+instance = PagerDutyOpenapiClient::UpdateStandardRequest.new(
   active: null,
   values: null,
   description: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::AssignmentAssignee
+# PagerDutyOpenapiClient::AssignmentAssignee
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::AssignmentAssignee.openapi_one_of
+PagerDutyOpenapiClient::AssignmentAssignee.openapi_one_of
 # =>
 # [
 #   :'User',
@@ -26,12 +26,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::AssignmentAssignee.build(data)
+PagerDutyOpenapiClient::AssignmentAssignee.build(data)
 # => #<User:0x00007fdd4aab02a0>
 
-OpenapiClient::AssignmentAssignee.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::AssignmentAssignee.build(data_that_doesnt_match)
 # => nil
 ```
 

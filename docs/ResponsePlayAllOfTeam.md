@@ -1,4 +1,4 @@
-# OpenapiClient::ResponsePlayAllOfTeam
+# PagerDutyOpenapiClient::ResponsePlayAllOfTeam
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::ResponsePlayAllOfTeam.openapi_one_of
+PagerDutyOpenapiClient::ResponsePlayAllOfTeam.openapi_one_of
 # =>
 # [
 #   :'Object',
@@ -26,12 +26,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::ResponsePlayAllOfTeam.build(data)
+PagerDutyOpenapiClient::ResponsePlayAllOfTeam.build(data)
 # => #<Object:0x00007fdd4aab02a0>
 
-OpenapiClient::ResponsePlayAllOfTeam.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::ResponsePlayAllOfTeam.build(data_that_doesnt_match)
 # => nil
 ```
 

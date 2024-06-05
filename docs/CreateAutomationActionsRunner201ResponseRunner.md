@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomationActionsRunner201ResponseRunner
+# PagerDutyOpenapiClient::CreateAutomationActionsRunner201ResponseRunner
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateAutomationActionsRunner201ResponseRunner.new(
+instance = PagerDutyOpenapiClient::CreateAutomationActionsRunner201ResponseRunner.new(
   runner_type: null,
   name: us-west-2 prod runner,
   description: us-west-2 runner provisioned in the production environment by the SRE team,

@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsRunnerSidecarBody
+# PagerDutyOpenapiClient::AutomationActionsRunnerSidecarBody
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsRunnerSidecarBody.new(
+instance = PagerDutyOpenapiClient::AutomationActionsRunnerSidecarBody.new(
   name: us-west-2 prod runner,
   description: us-west-2 runner provisioned in the production environment by the SRE team
 )

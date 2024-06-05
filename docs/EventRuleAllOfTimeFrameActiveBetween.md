@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfTimeFrameActiveBetween
+# PagerDutyOpenapiClient::EventRuleAllOfTimeFrameActiveBetween
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfTimeFrameActiveBetween.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfTimeFrameActiveBetween.new(
   start_time: null,
   end_time: null
 )

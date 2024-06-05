@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationCacheVariableConfigurationOneOf
+# PagerDutyOpenapiClient::OrchestrationCacheVariableConfigurationOneOf
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new(
+instance = PagerDutyOpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new(
   type: null,
   source: event.summary,
   regex: null

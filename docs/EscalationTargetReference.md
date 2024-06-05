@@ -1,4 +1,4 @@
-# OpenapiClient::EscalationTargetReference
+# PagerDutyOpenapiClient::EscalationTargetReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EscalationTargetReference.new(
+instance = PagerDutyOpenapiClient::EscalationTargetReference.new(
   type: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateOrchPathRouter200ResponseAllOfWarningsInner
+# PagerDutyOpenapiClient::UpdateOrchPathRouter200ResponseAllOfWarningsInner
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateOrchPathRouter200ResponseAllOfWarningsInner.new(
+instance = PagerDutyOpenapiClient::UpdateOrchPathRouter200ResponseAllOfWarningsInner.new(
   message: null,
   rule_id: null,
   feature: null,

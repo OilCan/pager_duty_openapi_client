@@ -1,4 +1,4 @@
-# OpenapiClient::SupportHours
+# PagerDutyOpenapiClient::SupportHours
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::SupportHours.new(
+instance = PagerDutyOpenapiClient::SupportHours.new(
   type: null,
   time_zone: null,
   days_of_week: null,

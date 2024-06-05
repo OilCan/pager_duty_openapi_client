@@ -1,4 +1,4 @@
-# OpenapiClient::ResponsePlaysApi
+# PagerDutyOpenapiClient::ResponsePlaysApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -24,28 +24,28 @@ Creates a new Response Plays.  Response Plays allow you to create packages of In
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ResponsePlaysApi.new
+api_instance = PagerDutyOpenapiClient::ResponsePlaysApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_response_play_request: OpenapiClient::CreateResponsePlayRequest.new({response_play: OpenapiClient::ResponsePlay.new}) # CreateResponsePlayRequest | The Response Play to be created.
+  create_response_play_request: PagerDutyOpenapiClient::CreateResponsePlayRequest.new({response_play: PagerDutyOpenapiClient::ResponsePlay.new}) # CreateResponsePlayRequest | The Response Play to be created.
 }
 
 begin
   # Create a Response Play
   result = api_instance.create_response_play(accept, content_type, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->create_response_play: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateResponsePlay201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->create_response_play_with_http_info: #{e}"
 end
 ```
@@ -103,16 +103,16 @@ Delete an existing Response Play. Once the Response Play is deleted, the action 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ResponsePlaysApi.new
+api_instance = PagerDutyOpenapiClient::ResponsePlaysApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
@@ -121,7 +121,7 @@ from = 'from_example' # String | The email address of a valid user associated wi
 begin
   # Delete a Response Play
   api_instance.delete_response_play(id, accept, content_type, from)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->delete_response_play: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->delete_response_play_with_http_info: #{e}"
 end
 ```
@@ -179,16 +179,16 @@ Get details about an existing Response Play.  Response Plays allow you to create
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ResponsePlaysApi.new
+api_instance = PagerDutyOpenapiClient::ResponsePlaysApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
@@ -200,7 +200,7 @@ begin
   # Get a Response Play
   result = api_instance.get_response_play(id, accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->get_response_play: #{e}"
 end
 ```
@@ -218,7 +218,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateResponsePlay201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->get_response_play_with_http_info: #{e}"
 end
 ```
@@ -258,16 +258,16 @@ List all of the existing Response Plays.  Response Plays allow you to create pac
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ResponsePlaysApi.new
+api_instance = PagerDutyOpenapiClient::ResponsePlaysApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -280,7 +280,7 @@ begin
   # List Response Plays
   result = api_instance.list_response_plays(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->list_response_plays: #{e}"
 end
 ```
@@ -298,7 +298,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListResponsePlays200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->list_response_plays_with_http_info: #{e}"
 end
 ```
@@ -339,29 +339,29 @@ Run a specified response play on a given incident.  Response Plays are a package
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ResponsePlaysApi.new
+api_instance = PagerDutyOpenapiClient::ResponsePlaysApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 response_play_id = 'response_play_id_example' # String | The response play ID of the response play associated with the request.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  merge_incidents200_response: OpenapiClient::MergeIncidents200Response.new({incident: OpenapiClient::IncidentReference.new({type: 'incident_reference'})}) # MergeIncidents200Response | 
+  merge_incidents200_response: PagerDutyOpenapiClient::MergeIncidents200Response.new({incident: PagerDutyOpenapiClient::IncidentReference.new({type: 'incident_reference'})}) # MergeIncidents200Response | 
 }
 
 begin
   # Run a response play
   result = api_instance.run_response_play(accept, content_type, response_play_id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->run_response_play: #{e}"
 end
 ```
@@ -379,7 +379,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunResponsePlay200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->run_response_play_with_http_info: #{e}"
 end
 ```
@@ -420,29 +420,29 @@ Updates an existing Response Play.  Response Plays allow you to create packages 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ResponsePlaysApi.new
+api_instance = PagerDutyOpenapiClient::ResponsePlaysApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_response_play_request: OpenapiClient::CreateResponsePlayRequest.new({response_play: OpenapiClient::ResponsePlay.new}) # CreateResponsePlayRequest | The Response Play to be updated.
+  create_response_play_request: PagerDutyOpenapiClient::CreateResponsePlayRequest.new({response_play: PagerDutyOpenapiClient::ResponsePlay.new}) # CreateResponsePlayRequest | The Response Play to be updated.
 }
 
 begin
   # Update a Response Play
   result = api_instance.update_response_play(id, accept, content_type, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->update_response_play: #{e}"
 end
 ```
@@ -460,7 +460,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateResponsePlay201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ResponsePlaysApi->update_response_play_with_http_info: #{e}"
 end
 ```

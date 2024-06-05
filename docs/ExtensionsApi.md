@@ -1,4 +1,4 @@
-# OpenapiClient::ExtensionsApi
+# PagerDutyOpenapiClient::ExtensionsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -24,27 +24,27 @@ Create a new Extension.  Extensions are representations of Extension Schema obje
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExtensionsApi.new
+api_instance = PagerDutyOpenapiClient::ExtensionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_extension_request: OpenapiClient::CreateExtensionRequest.new({extension: OpenapiClient::Extension.new({name: 'name_example', extension_objects: [OpenapiClient::ServiceReference.new({type: 'service_reference'})], extension_schema: OpenapiClient::ExtensionSchemaReference.new({type: 'extension_schema_reference'})})}) # CreateExtensionRequest | The extension to be created
+  create_extension_request: PagerDutyOpenapiClient::CreateExtensionRequest.new({extension: PagerDutyOpenapiClient::Extension.new({name: 'name_example', extension_objects: [PagerDutyOpenapiClient::ServiceReference.new({type: 'service_reference'})], extension_schema: PagerDutyOpenapiClient::ExtensionSchemaReference.new({type: 'extension_schema_reference'})})}) # CreateExtensionRequest | The extension to be created
 }
 
 begin
   # Create an extension
   result = api_instance.create_extension(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->create_extension: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateExtensionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->create_extension_with_http_info: #{e}"
 end
 ```
@@ -101,16 +101,16 @@ Delete an existing extension.  Once the extension is deleted, it will not be acc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExtensionsApi.new
+api_instance = PagerDutyOpenapiClient::ExtensionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -118,7 +118,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an extension
   api_instance.delete_extension(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->delete_extension: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->delete_extension_with_http_info: #{e}"
 end
 ```
@@ -175,16 +175,16 @@ Enable an extension that is temporarily disabled. (This API does not require a r
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExtensionsApi.new
+api_instance = PagerDutyOpenapiClient::ExtensionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -193,7 +193,7 @@ begin
   # Enable an extension
   result = api_instance.enable_extension(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->enable_extension: #{e}"
 end
 ```
@@ -211,7 +211,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateExtensionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->enable_extension_with_http_info: #{e}"
 end
 ```
@@ -250,16 +250,16 @@ Get details about an existing extension.  Extensions are representations of Exte
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExtensionsApi.new
+api_instance = PagerDutyOpenapiClient::ExtensionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -271,7 +271,7 @@ begin
   # Get an extension
   result = api_instance.get_extension(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->get_extension: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateExtensionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->get_extension_with_http_info: #{e}"
 end
 ```
@@ -329,16 +329,16 @@ List existing extensions.  Extensions are representations of Extension Schema ob
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExtensionsApi.new
+api_instance = PagerDutyOpenapiClient::ExtensionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -355,7 +355,7 @@ begin
   # List extensions
   result = api_instance.list_extensions(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->list_extensions: #{e}"
 end
 ```
@@ -373,7 +373,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListExtensions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->list_extensions_with_http_info: #{e}"
 end
 ```
@@ -418,28 +418,28 @@ Update an existing extension.  Extensions are representations of Extension Schem
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExtensionsApi.new
+api_instance = PagerDutyOpenapiClient::ExtensionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_extension_request: OpenapiClient::CreateExtensionRequest.new({extension: OpenapiClient::Extension.new({name: 'name_example', extension_objects: [OpenapiClient::ServiceReference.new({type: 'service_reference'})], extension_schema: OpenapiClient::ExtensionSchemaReference.new({type: 'extension_schema_reference'})})}) # CreateExtensionRequest | The extension to be updated.
+  create_extension_request: PagerDutyOpenapiClient::CreateExtensionRequest.new({extension: PagerDutyOpenapiClient::Extension.new({name: 'name_example', extension_objects: [PagerDutyOpenapiClient::ServiceReference.new({type: 'service_reference'})], extension_schema: PagerDutyOpenapiClient::ExtensionSchemaReference.new({type: 'extension_schema_reference'})})}) # CreateExtensionRequest | The extension to be updated.
 }
 
 begin
   # Update an extension
   result = api_instance.update_extension(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->update_extension: #{e}"
 end
 ```
@@ -457,7 +457,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateExtensionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ExtensionsApi->update_extension_with_http_info: #{e}"
 end
 ```

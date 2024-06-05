@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfMigratedBy
+# PagerDutyOpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfMigratedBy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfMigratedBy.new(
+instance = PagerDutyOpenapiClient::ServiceOrchestrationAllOfOrchestrationPathAllOfMigratedBy.new(
   id: null,
   type: null,
   _self: null

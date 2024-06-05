@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationCacheVariableUpdatedBy
+# PagerDutyOpenapiClient::OrchestrationCacheVariableUpdatedBy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationCacheVariableUpdatedBy.new(
+instance = PagerDutyOpenapiClient::OrchestrationCacheVariableUpdatedBy.new(
   id: null,
   type: null,
   _self: null

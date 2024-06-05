@@ -1,0 +1,5 @@
+---
+gemName: "pager_duty_openapi_client"
+moduleName: "PagerDutyOpenapiClient"
+library: "faraday"
+

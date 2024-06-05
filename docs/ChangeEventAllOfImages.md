@@ -1,4 +1,4 @@
-# OpenapiClient::ChangeEventAllOfImages
+# PagerDutyOpenapiClient::ChangeEventAllOfImages
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ChangeEventAllOfImages.new(
+instance = PagerDutyOpenapiClient::ChangeEventAllOfImages.new(
   src: null,
   href: null,
   alt: null

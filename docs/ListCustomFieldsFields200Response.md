@@ -1,4 +1,4 @@
-# OpenapiClient::ListCustomFieldsFields200Response
+# PagerDutyOpenapiClient::ListCustomFieldsFields200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListCustomFieldsFields200Response.new(
+instance = PagerDutyOpenapiClient::ListCustomFieldsFields200Response.new(
   fields: null
 )
 ```

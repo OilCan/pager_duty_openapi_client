@@ -1,4 +1,4 @@
-# OpenapiClient::GetUserStatusUpdateNotificationRule200Response
+# PagerDutyOpenapiClient::GetUserStatusUpdateNotificationRule200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetUserStatusUpdateNotificationRule200Response.new(
+instance = PagerDutyOpenapiClient::GetUserStatusUpdateNotificationRule200Response.new(
   notification_rule: null
 )
 ```

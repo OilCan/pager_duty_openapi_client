@@ -1,4 +1,4 @@
-# OpenapiClient::MaintenanceWindowsApi
+# PagerDutyOpenapiClient::MaintenanceWindowsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -23,28 +23,28 @@ Create a new maintenance window for the specified services. No new incidents wil
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::MaintenanceWindowsApi.new
+api_instance = PagerDutyOpenapiClient::MaintenanceWindowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_maintenance_window_request: OpenapiClient::CreateMaintenanceWindowRequest.new({maintenance_window: OpenapiClient::MaintenanceWindow.new({type: 'maintenance_window', start_time: Time.now, end_time: Time.now, services: [OpenapiClient::ServiceReference.new({type: 'service_reference'})]})}) # CreateMaintenanceWindowRequest | The maintenance window object.
+  create_maintenance_window_request: PagerDutyOpenapiClient::CreateMaintenanceWindowRequest.new({maintenance_window: PagerDutyOpenapiClient::MaintenanceWindow.new({type: 'maintenance_window', start_time: Time.now, end_time: Time.now, services: [PagerDutyOpenapiClient::ServiceReference.new({type: 'service_reference'})]})}) # CreateMaintenanceWindowRequest | The maintenance window object.
 }
 
 begin
   # Create a maintenance window
   result = api_instance.create_maintenance_window(accept, content_type, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->create_maintenance_window: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateMaintenanceWindowRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->create_maintenance_window_with_http_info: #{e}"
 end
 ```
@@ -102,16 +102,16 @@ Delete an existing maintenance window if it's in the future, or end it if it's c
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::MaintenanceWindowsApi.new
+api_instance = PagerDutyOpenapiClient::MaintenanceWindowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -119,7 +119,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete or end a maintenance window
   api_instance.delete_maintenance_window(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->delete_maintenance_window: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->delete_maintenance_window_with_http_info: #{e}"
 end
 ```
@@ -176,16 +176,16 @@ Get an existing maintenance window.  A Maintenance Window is used to temporarily
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::MaintenanceWindowsApi.new
+api_instance = PagerDutyOpenapiClient::MaintenanceWindowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -197,7 +197,7 @@ begin
   # Get a maintenance window
   result = api_instance.get_maintenance_window(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->get_maintenance_window: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateMaintenanceWindowRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->get_maintenance_window_with_http_info: #{e}"
 end
 ```
@@ -255,16 +255,16 @@ List existing maintenance windows, optionally filtered by service and/or team, o
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::MaintenanceWindowsApi.new
+api_instance = PagerDutyOpenapiClient::MaintenanceWindowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -282,7 +282,7 @@ begin
   # List maintenance windows
   result = api_instance.list_maintenance_windows(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->list_maintenance_windows: #{e}"
 end
 ```
@@ -300,7 +300,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListMaintenanceWindows200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->list_maintenance_windows_with_http_info: #{e}"
 end
 ```
@@ -346,28 +346,28 @@ Update an existing maintenance window.  A Maintenance Window is used to temporar
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::MaintenanceWindowsApi.new
+api_instance = PagerDutyOpenapiClient::MaintenanceWindowsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_maintenance_window_request: OpenapiClient::CreateMaintenanceWindowRequest.new({maintenance_window: OpenapiClient::MaintenanceWindow.new({type: 'maintenance_window', start_time: Time.now, end_time: Time.now, services: [OpenapiClient::ServiceReference.new({type: 'service_reference'})]})}) # CreateMaintenanceWindowRequest | The maintenance window to be updated.
+  create_maintenance_window_request: PagerDutyOpenapiClient::CreateMaintenanceWindowRequest.new({maintenance_window: PagerDutyOpenapiClient::MaintenanceWindow.new({type: 'maintenance_window', start_time: Time.now, end_time: Time.now, services: [PagerDutyOpenapiClient::ServiceReference.new({type: 'service_reference'})]})}) # CreateMaintenanceWindowRequest | The maintenance window to be updated.
 }
 
 begin
   # Update a maintenance window
   result = api_instance.update_maintenance_window(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->update_maintenance_window: #{e}"
 end
 ```
@@ -385,7 +385,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateMaintenanceWindowRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling MaintenanceWindowsApi->update_maintenance_window_with_http_info: #{e}"
 end
 ```

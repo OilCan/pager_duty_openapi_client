@@ -1,4 +1,4 @@
-# OpenapiClient::NotificationsApi
+# PagerDutyOpenapiClient::NotificationsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -19,16 +19,16 @@ List notifications for a given time range, optionally filtered by type (sms_noti
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::NotificationsApi.new
+api_instance = PagerDutyOpenapiClient::NotificationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 since = Time.parse('2013-10-20T19:20:30+01:00') # Time | The start of the date range over which you want to search. The time element is optional.
@@ -46,7 +46,7 @@ begin
   # List notifications
   result = api_instance.list_notifications(accept, content_type, since, _until, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling NotificationsApi->list_notifications: #{e}"
 end
 ```
@@ -64,7 +64,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListNotifications200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling NotificationsApi->list_notifications_with_http_info: #{e}"
 end
 ```

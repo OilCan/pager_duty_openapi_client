@@ -1,4 +1,4 @@
-# OpenapiClient::WebhookSubscriptionUpdateWebhookSubscriptionFilter
+# PagerDutyOpenapiClient::WebhookSubscriptionUpdateWebhookSubscriptionFilter
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::WebhookSubscriptionUpdateWebhookSubscriptionFilter.new(
+instance = PagerDutyOpenapiClient::WebhookSubscriptionUpdateWebhookSubscriptionFilter.new(
   id: null,
   type: null
 )

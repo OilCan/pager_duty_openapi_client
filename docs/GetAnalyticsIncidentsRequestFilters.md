@@ -1,4 +1,4 @@
-# OpenapiClient::GetAnalyticsIncidentsRequestFilters
+# PagerDutyOpenapiClient::GetAnalyticsIncidentsRequestFilters
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetAnalyticsIncidentsRequestFilters.new(
+instance = PagerDutyOpenapiClient::GetAnalyticsIncidentsRequestFilters.new(
   created_at_start: 2023-05-01T00:00:00-04:00,
   created_at_end: 2023-06-01T00:00:00-04:00,
   urgency: high,

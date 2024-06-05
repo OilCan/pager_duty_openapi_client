@@ -1,4 +1,4 @@
-# OpenapiClient::SnoozeLogEntry
+# PagerDutyOpenapiClient::SnoozeLogEntry
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::SnoozeLogEntry.new(
+instance = PagerDutyOpenapiClient::SnoozeLogEntry.new(
   type: null,
   created_at: null,
   channel: null,

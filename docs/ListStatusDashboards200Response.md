@@ -1,4 +1,4 @@
-# OpenapiClient::ListStatusDashboards200Response
+# PagerDutyOpenapiClient::ListStatusDashboards200Response
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListStatusDashboards200Response.new(
+instance = PagerDutyOpenapiClient::ListStatusDashboards200Response.new(
   limit: null,
   next_cursor: dXNlcjaVMzc5V0ZYTlo&#x3D;,
   status_dashboards: null

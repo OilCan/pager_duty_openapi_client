@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentWorkflowTriggerAllOfServices
+# PagerDutyOpenapiClient::IncidentWorkflowTriggerAllOfServices
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentWorkflowTriggerAllOfServices.new(
+instance = PagerDutyOpenapiClient::IncidentWorkflowTriggerAllOfServices.new(
   id: null,
   summary: null,
   type: null,

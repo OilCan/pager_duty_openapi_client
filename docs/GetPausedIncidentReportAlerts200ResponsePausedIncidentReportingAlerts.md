@@ -1,4 +1,4 @@
-# OpenapiClient::GetPausedIncidentReportAlerts200ResponsePausedIncidentReportingAlerts
+# PagerDutyOpenapiClient::GetPausedIncidentReportAlerts200ResponsePausedIncidentReportingAlerts
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetPausedIncidentReportAlerts200ResponsePausedIncidentReportingAlerts.new(
+instance = PagerDutyOpenapiClient::GetPausedIncidentReportAlerts200ResponsePausedIncidentReportingAlerts.new(
   since: null,
   _until: null,
   triggered_after_pause_alerts: null,

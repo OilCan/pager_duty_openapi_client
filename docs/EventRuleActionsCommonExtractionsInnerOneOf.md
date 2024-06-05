@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleActionsCommonExtractionsInnerOneOf
+# PagerDutyOpenapiClient::EventRuleActionsCommonExtractionsInnerOneOf
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleActionsCommonExtractionsInnerOneOf.new(
+instance = PagerDutyOpenapiClient::EventRuleActionsCommonExtractionsInnerOneOf.new(
   target: null,
   source: null,
   regex: null

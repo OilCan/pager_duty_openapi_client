@@ -1,4 +1,4 @@
-# OpenapiClient::OnCallsApi
+# PagerDutyOpenapiClient::OnCallsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -19,16 +19,16 @@ List the on-call entries during a given time range.  An on-call represents a con
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OnCallsApi.new
+api_instance = PagerDutyOpenapiClient::OnCallsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -49,7 +49,7 @@ begin
   # List all of the on-calls
   result = api_instance.list_on_calls(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling OnCallsApi->list_on_calls: #{e}"
 end
 ```
@@ -67,7 +67,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOnCalls200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling OnCallsApi->list_on_calls_with_http_info: #{e}"
 end
 ```

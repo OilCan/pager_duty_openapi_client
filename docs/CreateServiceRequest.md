@@ -1,4 +1,4 @@
-# OpenapiClient::CreateServiceRequest
+# PagerDutyOpenapiClient::CreateServiceRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateServiceRequest.new(
+instance = PagerDutyOpenapiClient::CreateServiceRequest.new(
   service: null
 )
 ```

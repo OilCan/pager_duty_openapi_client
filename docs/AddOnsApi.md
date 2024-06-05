@@ -1,4 +1,4 @@
-# OpenapiClient::AddOnsApi
+# PagerDutyOpenapiClient::AddOnsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -23,27 +23,27 @@ Install an Add-on for your account.  Addon's are pieces of functionality that de
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AddOnsApi.new
+api_instance = PagerDutyOpenapiClient::AddOnsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_addon_request: OpenapiClient::CreateAddonRequest.new({addon: OpenapiClient::Addon.new({type: 'full_page_addon', name: 'name_example', src: 'src_example'})}) # CreateAddonRequest | The Add-on to be installed.
+  create_addon_request: PagerDutyOpenapiClient::CreateAddonRequest.new({addon: PagerDutyOpenapiClient::Addon.new({type: 'full_page_addon', name: 'name_example', src: 'src_example'})}) # CreateAddonRequest | The Add-on to be installed.
 }
 
 begin
   # Install an Add-on
   result = api_instance.create_addon(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->create_addon: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAddon201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->create_addon_with_http_info: #{e}"
 end
 ```
@@ -100,16 +100,16 @@ Remove an existing Add-on.  Addon's are pieces of functionality that developers 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AddOnsApi.new
+api_instance = PagerDutyOpenapiClient::AddOnsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -117,7 +117,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an Add-on
   api_instance.delete_addon(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->delete_addon: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->delete_addon_with_http_info: #{e}"
 end
 ```
@@ -174,16 +174,16 @@ Get details about an existing Add-on.  Addon's are pieces of functionality that 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AddOnsApi.new
+api_instance = PagerDutyOpenapiClient::AddOnsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -192,7 +192,7 @@ begin
   # Get an Add-on
   result = api_instance.get_addon(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->get_addon: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAddonRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->get_addon_with_http_info: #{e}"
 end
 ```
@@ -249,16 +249,16 @@ List all of the Add-ons installed on your account.  Addon's are pieces of functi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AddOnsApi.new
+api_instance = PagerDutyOpenapiClient::AddOnsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -274,7 +274,7 @@ begin
   # List installed Add-ons
   result = api_instance.list_addon(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->list_addon: #{e}"
 end
 ```
@@ -292,7 +292,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAddon200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->list_addon_with_http_info: #{e}"
 end
 ```
@@ -336,28 +336,28 @@ Update an existing Add-on.  Addon's are pieces of functionality that developers 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AddOnsApi.new
+api_instance = PagerDutyOpenapiClient::AddOnsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_addon_request: OpenapiClient::CreateAddonRequest.new({addon: OpenapiClient::Addon.new({type: 'full_page_addon', name: 'name_example', src: 'src_example'})}) # CreateAddonRequest | The Add-on to be updated.
+  create_addon_request: PagerDutyOpenapiClient::CreateAddonRequest.new({addon: PagerDutyOpenapiClient::Addon.new({type: 'full_page_addon', name: 'name_example', src: 'src_example'})}) # CreateAddonRequest | The Add-on to be updated.
 }
 
 begin
   # Update an Add-on
   result = api_instance.update_addon(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->update_addon: #{e}"
 end
 ```
@@ -375,7 +375,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAddonRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AddOnsApi->update_addon_with_http_info: #{e}"
 end
 ```

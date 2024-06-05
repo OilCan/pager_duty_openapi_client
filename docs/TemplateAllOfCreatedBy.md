@@ -1,4 +1,4 @@
-# OpenapiClient::TemplateAllOfCreatedBy
+# PagerDutyOpenapiClient::TemplateAllOfCreatedBy
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::TemplateAllOfCreatedBy.openapi_one_of
+PagerDutyOpenapiClient::TemplateAllOfCreatedBy.openapi_one_of
 # =>
 # [
 #   :'TemplateAllOfCreatedByOneOf',
@@ -26,12 +26,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::TemplateAllOfCreatedBy.build(data)
+PagerDutyOpenapiClient::TemplateAllOfCreatedBy.build(data)
 # => #<TemplateAllOfCreatedByOneOf:0x00007fdd4aab02a0>
 
-OpenapiClient::TemplateAllOfCreatedBy.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::TemplateAllOfCreatedBy.build(data_that_doesnt_match)
 # => nil
 ```
 

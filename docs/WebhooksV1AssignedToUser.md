@@ -1,4 +1,4 @@
-# OpenapiClient::WebhooksV1AssignedToUser
+# PagerDutyOpenapiClient::WebhooksV1AssignedToUser
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::WebhooksV1AssignedToUser.new(
+instance = PagerDutyOpenapiClient::WebhooksV1AssignedToUser.new(
   id: null,
   name: null,
   email: null,

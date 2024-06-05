@@ -1,4 +1,4 @@
-# OpenapiClient::SchedulesApi
+# PagerDutyOpenapiClient::SchedulesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -29,28 +29,28 @@ Create a new on-call schedule.  A Schedule determines the time periods that user
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
   overflow: true, # Boolean | Any on-call schedule entries that pass the date range bounds will be truncated at the bounds, unless the parameter `overflow=true` is passed. This parameter defaults to false. For instance, if your schedule is a rotation that changes daily at midnight UTC, and your date range is from `2011-06-01T10:00:00Z` to `2011-06-01T14:00:00Z`:   - If you don't pass the `overflow=true` parameter, you will get one schedule entry returned with a start of `2011-06-01T10:00:00Z` and end of `2011-06-01T14:00:00Z`. - If you do pass the `overflow=true` parameter, you will get one schedule entry returned with a start of `2011-06-01T00:00:00Z` and end of `2011-06-02T00:00:00Z`. 
-  create_schedule_request: OpenapiClient::CreateScheduleRequest.new({schedule: OpenapiClient::Schedule.new({type: 'schedule', time_zone: 'time_zone_example'})}) # CreateScheduleRequest | The schedule to be created.
+  create_schedule_request: PagerDutyOpenapiClient::CreateScheduleRequest.new({schedule: PagerDutyOpenapiClient::Schedule.new({type: 'schedule', time_zone: 'time_zone_example'})}) # CreateScheduleRequest | The schedule to be created.
 }
 
 begin
   # Create a schedule
   result = api_instance.create_schedule(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->create_schedule: #{e}"
 end
 ```
@@ -68,7 +68,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateScheduleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->create_schedule_with_http_info: #{e}"
 end
 ```
@@ -108,26 +108,26 @@ Create one or more overrides, each for a specific user covering a specified time
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-create_schedule_override_request = OpenapiClient::CreateScheduleOverrideRequest.new # CreateScheduleOverrideRequest | The overrides to be created
+create_schedule_override_request = PagerDutyOpenapiClient::CreateScheduleOverrideRequest.new # CreateScheduleOverrideRequest | The overrides to be created
 
 begin
   # Create one or more overrides
   result = api_instance.create_schedule_override(accept, content_type, id, create_schedule_override_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->create_schedule_override: #{e}"
 end
 ```
@@ -145,7 +145,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CreateScheduleOverride201ResponseInner>>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->create_schedule_override_with_http_info: #{e}"
 end
 ```
@@ -185,30 +185,30 @@ Preview what an on-call schedule would look like without saving it.  A Schedule 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
   since: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start of the date range over which you want to search.
   _until: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end of the date range over which you want to search.
   overflow: true, # Boolean | Any on-call schedule entries that pass the date range bounds will be truncated at the bounds, unless the parameter `overflow=true` is passed. This parameter defaults to false. For instance, if your schedule is a rotation that changes daily at midnight UTC, and your date range is from `2011-06-01T10:00:00Z` to `2011-06-01T14:00:00Z`:   - If you don't pass the `overflow=true` parameter, you will get one schedule entry returned with a start of `2011-06-01T10:00:00Z` and end of `2011-06-01T14:00:00Z`. - If you do pass the `overflow=true` parameter, you will get one schedule entry returned with a start of `2011-06-01T00:00:00Z` and end of `2011-06-02T00:00:00Z`. 
-  create_schedule_request: OpenapiClient::CreateScheduleRequest.new({schedule: OpenapiClient::Schedule.new({type: 'schedule', time_zone: 'time_zone_example'})}) # CreateScheduleRequest | The schedule to be previewed.
+  create_schedule_request: PagerDutyOpenapiClient::CreateScheduleRequest.new({schedule: PagerDutyOpenapiClient::Schedule.new({type: 'schedule', time_zone: 'time_zone_example'})}) # CreateScheduleRequest | The schedule to be previewed.
 }
 
 begin
   # Preview a schedule
   result = api_instance.create_schedule_preview(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->create_schedule_preview: #{e}"
 end
 ```
@@ -226,7 +226,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateScheduleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->create_schedule_preview_with_http_info: #{e}"
 end
 ```
@@ -268,16 +268,16 @@ Delete an on-call schedule.  A Schedule determines the time periods that users a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -285,7 +285,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a schedule
   api_instance.delete_schedule(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->delete_schedule: #{e}"
 end
 ```
@@ -303,7 +303,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->delete_schedule_with_http_info: #{e}"
 end
 ```
@@ -342,16 +342,16 @@ Remove an override.  You cannot remove a past override.  If the override start t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -360,7 +360,7 @@ override_id = 'override_id_example' # String | The override ID on the schedule.
 begin
   # Delete an override
   api_instance.delete_schedule_override(accept, content_type, id, override_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->delete_schedule_override: #{e}"
 end
 ```
@@ -378,7 +378,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->delete_schedule_override_with_http_info: #{e}"
 end
 ```
@@ -418,16 +418,16 @@ Show detailed information about a schedule, including entries for each layer. Sc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -442,7 +442,7 @@ begin
   # Get a schedule
   result = api_instance.get_schedule(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->get_schedule: #{e}"
 end
 ```
@@ -460,7 +460,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateScheduleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->get_schedule_with_http_info: #{e}"
 end
 ```
@@ -503,16 +503,16 @@ List overrides for a given time range.  A Schedule determines the time periods t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -527,7 +527,7 @@ begin
   # List overrides
   result = api_instance.list_schedule_overrides(accept, content_type, id, since, _until, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedule_overrides: #{e}"
 end
 ```
@@ -545,7 +545,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListScheduleOverrides201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedule_overrides_with_http_info: #{e}"
 end
 ```
@@ -588,16 +588,16 @@ List all of the users on call in a given schedule for a given time range.  A Sch
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -610,7 +610,7 @@ begin
   # List users on call.
   result = api_instance.list_schedule_users(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedule_users: #{e}"
 end
 ```
@@ -628,7 +628,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListScheduleUsers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedule_users_with_http_info: #{e}"
 end
 ```
@@ -669,16 +669,16 @@ List the on-call schedules.  A Schedule determines the time periods that users a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -694,7 +694,7 @@ begin
   # List schedules
   result = api_instance.list_schedules(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedules: #{e}"
 end
 ```
@@ -712,7 +712,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListSchedules200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedules_with_http_info: #{e}"
 end
 ```
@@ -756,16 +756,16 @@ The returned records are sorted by the `execution_time` from newest to oldest.  
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -780,7 +780,7 @@ begin
   # List audit records for a schedule
   result = api_instance.list_schedules_audit_records(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedules_audit_records: #{e}"
 end
 ```
@@ -798,7 +798,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuditRecordResponseSchema>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->list_schedules_audit_records_with_http_info: #{e}"
 end
 ```
@@ -841,29 +841,29 @@ Update an existing on-call schedule.  A Schedule determines the time periods tha
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::SchedulesApi.new
+api_instance = PagerDutyOpenapiClient::SchedulesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
   overflow: true, # Boolean | Any on-call schedule entries that pass the date range bounds will be truncated at the bounds, unless the parameter `overflow=true` is passed. This parameter defaults to false. For instance, if your schedule is a rotation that changes daily at midnight UTC, and your date range is from `2011-06-01T10:00:00Z` to `2011-06-01T14:00:00Z`:   - If you don't pass the `overflow=true` parameter, you will get one schedule entry returned with a start of `2011-06-01T10:00:00Z` and end of `2011-06-01T14:00:00Z`. - If you do pass the `overflow=true` parameter, you will get one schedule entry returned with a start of `2011-06-01T00:00:00Z` and end of `2011-06-02T00:00:00Z`. 
-  create_schedule_request: OpenapiClient::CreateScheduleRequest.new({schedule: OpenapiClient::Schedule.new({type: 'schedule', time_zone: 'time_zone_example'})}) # CreateScheduleRequest | The schedule to be updated.
+  create_schedule_request: PagerDutyOpenapiClient::CreateScheduleRequest.new({schedule: PagerDutyOpenapiClient::Schedule.new({type: 'schedule', time_zone: 'time_zone_example'})}) # CreateScheduleRequest | The schedule to be updated.
 }
 
 begin
   # Update a schedule
   result = api_instance.update_schedule(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->update_schedule: #{e}"
 end
 ```
@@ -881,7 +881,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateScheduleRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling SchedulesApi->update_schedule_with_http_info: #{e}"
 end
 ```

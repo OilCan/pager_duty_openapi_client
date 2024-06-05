@@ -1,4 +1,4 @@
-# OpenapiClient::ConvertServiceEventRulesToEventOrchestration400ResponseError
+# PagerDutyOpenapiClient::ConvertServiceEventRulesToEventOrchestration400ResponseError
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ConvertServiceEventRulesToEventOrchestration400ResponseError.new(
+instance = PagerDutyOpenapiClient::ConvertServiceEventRulesToEventOrchestration400ResponseError.new(
   message: null,
   errors: null
 )

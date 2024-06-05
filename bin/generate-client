@@ -1,0 +1,10 @@
+#!/bin/bash
+set -eu -o pipefail
+
+openapi-generator-cli generate \
+  -g ruby \
+  -c openapi_config.yml \
+  -i openapiv3.json \
+  -o . \
+  --skip-validate-spec
+

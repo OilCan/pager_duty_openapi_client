@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsApi
+# PagerDutyOpenapiClient::AutomationActionsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -43,25 +43,25 @@ Create a Script, Process Automation, or Runbook Automation action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
-create_automation_action_request = OpenapiClient::CreateAutomationActionRequest.new({action: OpenapiClient::AutomationActionsProcessAutomationJobActionPostBody.new({name: 'Restart apache', description: 'Restarts apache on the us-west-2-shopping-cart host', action_type: TODO, action_data_reference: OpenapiClient::AutomationActionsProcessAutomationJobActionDataReference.new({process_automation_job_id: '79c199bba1aff6e519f198457f5ec0fc'})})}) # CreateAutomationActionRequest | 
+create_automation_action_request = PagerDutyOpenapiClient::CreateAutomationActionRequest.new({action: PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionPostBody.new({name: 'Restart apache', description: 'Restarts apache on the us-west-2-shopping-cart host', action_type: TODO, action_data_reference: PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionDataReference.new({process_automation_job_id: '79c199bba1aff6e519f198457f5ec0fc'})})}) # CreateAutomationActionRequest | 
 
 begin
   # Create an Automation Action
   result = api_instance.create_automation_action(accept, content_type, create_automation_action_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action: #{e}"
 end
 ```
@@ -79,7 +79,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationAction201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_with_http_info: #{e}"
 end
 ```
@@ -118,26 +118,26 @@ Invokes an Action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-create_automation_action_invocation_request = OpenapiClient::CreateAutomationActionInvocationRequest.new({invocation: OpenapiClient::CreateAutomationActionInvocationRequestInvocation.new({metadata: OpenapiClient::CreateAutomationActionInvocationRequestInvocationMetadata.new({incident_id: 'incident_id_example'})})}) # CreateAutomationActionInvocationRequest | 
+create_automation_action_invocation_request = PagerDutyOpenapiClient::CreateAutomationActionInvocationRequest.new({invocation: PagerDutyOpenapiClient::CreateAutomationActionInvocationRequestInvocation.new({metadata: PagerDutyOpenapiClient::CreateAutomationActionInvocationRequestInvocationMetadata.new({incident_id: 'incident_id_example'})})}) # CreateAutomationActionInvocationRequest | 
 
 begin
   # Create an Invocation
   result = api_instance.create_automation_action_invocation(accept, content_type, id, create_automation_action_invocation_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_invocation: #{e}"
 end
 ```
@@ -155,7 +155,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationActionInvocation201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_invocation_with_http_info: #{e}"
 end
 ```
@@ -195,26 +195,26 @@ Associate an Automation Action with a service
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-create_automation_action_service_assocation_request = OpenapiClient::CreateAutomationActionServiceAssocationRequest.new({service: OpenapiClient::ServiceReference.new({type: 'service_reference'})}) # CreateAutomationActionServiceAssocationRequest | 
+create_automation_action_service_assocation_request = PagerDutyOpenapiClient::CreateAutomationActionServiceAssocationRequest.new({service: PagerDutyOpenapiClient::ServiceReference.new({type: 'service_reference'})}) # CreateAutomationActionServiceAssocationRequest | 
 
 begin
   # Associate an Automation Action with a service
   result = api_instance.create_automation_action_service_assocation(accept, content_type, id, create_automation_action_service_assocation_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_service_assocation: #{e}"
 end
 ```
@@ -232,7 +232,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationActionServiceAssocationRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_service_assocation_with_http_info: #{e}"
 end
 ```
@@ -272,26 +272,26 @@ Associate an Automation Action with a team
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-create_automation_action_team_association_request = OpenapiClient::CreateAutomationActionTeamAssociationRequest.new({team: OpenapiClient::TeamReference.new({type: 'team_reference'})}) # CreateAutomationActionTeamAssociationRequest | 
+create_automation_action_team_association_request = PagerDutyOpenapiClient::CreateAutomationActionTeamAssociationRequest.new({team: PagerDutyOpenapiClient::TeamReference.new({type: 'team_reference'})}) # CreateAutomationActionTeamAssociationRequest | 
 
 begin
   # Associate an Automation Action with a team
   result = api_instance.create_automation_action_team_association(accept, content_type, id, create_automation_action_team_association_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_team_association: #{e}"
 end
 ```
@@ -309,7 +309,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationActionTeamAssociationRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_action_team_association_with_http_info: #{e}"
 end
 ```
@@ -349,25 +349,25 @@ Create a Process Automation or a Runbook Automation runner.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
-create_automation_actions_runner_request = OpenapiClient::CreateAutomationActionsRunnerRequest.new({runner: OpenapiClient::AutomationActionsRunnerRunbookPostBody.new({runner_type: OpenapiClient::AutomationActionsRunnerTypeEnum::SIDECAR, name: 'us-west-2 prod runner', description: 'us-west-2 runner provisioned in the production environment by the SRE team', runbook_base_uri: 'subdomain', runbook_api_key: 'runbook_api_key_example'})}) # CreateAutomationActionsRunnerRequest | 
+create_automation_actions_runner_request = PagerDutyOpenapiClient::CreateAutomationActionsRunnerRequest.new({runner: PagerDutyOpenapiClient::AutomationActionsRunnerRunbookPostBody.new({runner_type: PagerDutyOpenapiClient::AutomationActionsRunnerTypeEnum::SIDECAR, name: 'us-west-2 prod runner', description: 'us-west-2 runner provisioned in the production environment by the SRE team', runbook_base_uri: 'subdomain', runbook_api_key: 'runbook_api_key_example'})}) # CreateAutomationActionsRunnerRequest | 
 
 begin
   # Create an Automation Action runner.
   result = api_instance.create_automation_actions_runner(accept, content_type, create_automation_actions_runner_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_actions_runner: #{e}"
 end
 ```
@@ -385,7 +385,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationActionsRunner201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_actions_runner_with_http_info: #{e}"
 end
 ```
@@ -424,26 +424,26 @@ Associate a runner with a team
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-create_automation_action_team_association_request = OpenapiClient::CreateAutomationActionTeamAssociationRequest.new({team: OpenapiClient::TeamReference.new({type: 'team_reference'})}) # CreateAutomationActionTeamAssociationRequest | 
+create_automation_action_team_association_request = PagerDutyOpenapiClient::CreateAutomationActionTeamAssociationRequest.new({team: PagerDutyOpenapiClient::TeamReference.new({type: 'team_reference'})}) # CreateAutomationActionTeamAssociationRequest | 
 
 begin
   # Associate a runner with a team
   result = api_instance.create_automation_actions_runner_team_association(accept, content_type, id, create_automation_action_team_association_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_actions_runner_team_association: #{e}"
 end
 ```
@@ -461,7 +461,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationActionTeamAssociationRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->create_automation_actions_runner_team_association_with_http_info: #{e}"
 end
 ```
@@ -501,16 +501,16 @@ Delete an Automation Action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -518,7 +518,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an Automation Action
   api_instance.delete_automation_action(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_action: #{e}"
 end
 ```
@@ -536,7 +536,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_action_with_http_info: #{e}"
 end
 ```
@@ -575,16 +575,16 @@ Disassociate an Automation Action from a service
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -593,7 +593,7 @@ service_id = 'service_id_example' # String | The service ID
 begin
   # Disassociate an Automation Action from a service
   api_instance.delete_automation_action_service_association(accept, content_type, id, service_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_action_service_association: #{e}"
 end
 ```
@@ -611,7 +611,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_action_service_association_with_http_info: #{e}"
 end
 ```
@@ -651,16 +651,16 @@ Disassociate an Automation Action from a team
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -669,7 +669,7 @@ team_id = 'team_id_example' # String | The team ID
 begin
   # Disassociate an Automation Action from a team
   api_instance.delete_automation_action_team_association(accept, content_type, id, team_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_action_team_association: #{e}"
 end
 ```
@@ -687,7 +687,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_action_team_association_with_http_info: #{e}"
 end
 ```
@@ -727,16 +727,16 @@ Delete an Automation Action runner
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -744,7 +744,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an Automation Action runner
   api_instance.delete_automation_actions_runner(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_actions_runner: #{e}"
 end
 ```
@@ -762,7 +762,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_actions_runner_with_http_info: #{e}"
 end
 ```
@@ -801,16 +801,16 @@ Disassociates a runner from a team
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -819,7 +819,7 @@ team_id = 'team_id_example' # String | The team ID
 begin
   # Disassociate a runner from a team
   api_instance.delete_automation_actions_runner_team_association(accept, content_type, id, team_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_actions_runner_team_association: #{e}"
 end
 ```
@@ -837,7 +837,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->delete_automation_actions_runner_team_association_with_http_info: #{e}"
 end
 ```
@@ -877,16 +877,16 @@ Lists Automation Actions matching provided query params.  The returned records a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -894,7 +894,7 @@ opts = {
   cursor: 'cursor_example', # String | Optional parameter used to request the \"next\" set of results from an API.  The value provided here is most commonly obtained from the `next_cursor` field of the previous request.  When no value is provided, the request starts at the beginning of the result set. 
   name: 'name_example', # String | Filters results to include the ones matching the name (case insensitive substring matching)
   runner_id: 'runner_id_example', # String | Filters results to include the ones linked to the specified runner. Specifying the value `any` filters results to include the ones linked to runners only, thus omitting the results not linked to runners. 
-  classification: OpenapiClient::AutomationActionsActionClassificationEnum::DIAGNOSTIC, # AutomationActionsActionClassificationEnum | Filters results to include the ones matching the specified classification (aka category)
+  classification: PagerDutyOpenapiClient::AutomationActionsActionClassificationEnum::DIAGNOSTIC, # AutomationActionsActionClassificationEnum | Filters results to include the ones matching the specified classification (aka category)
   team_id: 'team_id_example', # String | Filters results to include the ones associated with the specified team.
   service_id: 'service_id_example', # String | Filters results to include the ones associated with the specified service
   action_type: 'script' # String | Filters results to include the ones matching the specified action type
@@ -904,7 +904,7 @@ begin
   # List Automation Actions
   result = api_instance.get_all_automation_actions(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_all_automation_actions: #{e}"
 end
 ```
@@ -922,7 +922,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAllAutomationActions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_all_automation_actions_with_http_info: #{e}"
 end
 ```
@@ -968,16 +968,16 @@ Get an Automation Action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -986,7 +986,7 @@ begin
   # Get an Automation Action
   result = api_instance.get_automation_action(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_action: #{e}"
 end
 ```
@@ -1004,7 +1004,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationAction201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_action_with_http_info: #{e}"
 end
 ```
@@ -1043,16 +1043,16 @@ Gets the details of a Automation Action / service relation
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1062,7 +1062,7 @@ begin
   # Get the details of an Automation Action / service relation
   result = api_instance.get_automation_actions_action_service_association(accept, content_type, id, service_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_service_association: #{e}"
 end
 ```
@@ -1080,7 +1080,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsActionServiceAssociation200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_service_association_with_http_info: #{e}"
 end
 ```
@@ -1120,16 +1120,16 @@ Gets all service references associated with an Automation Action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1138,7 +1138,7 @@ begin
   # Get all service references associated with an Automation Action
   result = api_instance.get_automation_actions_action_service_associations(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_service_associations: #{e}"
 end
 ```
@@ -1156,7 +1156,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsActionServiceAssociations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_service_associations_with_http_info: #{e}"
 end
 ```
@@ -1195,16 +1195,16 @@ Gets the details of an Automation Action / team relation
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1214,7 +1214,7 @@ begin
   # Get the details of an Automation Action / team relation
   result = api_instance.get_automation_actions_action_team_association(accept, content_type, id, team_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_team_association: #{e}"
 end
 ```
@@ -1232,7 +1232,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsActionTeamAssociation200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_team_association_with_http_info: #{e}"
 end
 ```
@@ -1272,16 +1272,16 @@ Gets all team references associated with an Automation Action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1290,7 +1290,7 @@ begin
   # Get all team references associated with an Automation Action
   result = api_instance.get_automation_actions_action_team_associations(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_team_associations: #{e}"
 end
 ```
@@ -1308,7 +1308,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsActionTeamAssociations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_action_team_associations_with_http_info: #{e}"
 end
 ```
@@ -1347,16 +1347,16 @@ Get an Automation Action Invocation
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1365,7 +1365,7 @@ begin
   # Get an Invocation
   result = api_instance.get_automation_actions_invocation(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_invocation: #{e}"
 end
 ```
@@ -1383,7 +1383,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsInvocation200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_invocation_with_http_info: #{e}"
 end
 ```
@@ -1422,16 +1422,16 @@ Get an Automation Action runner
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1440,7 +1440,7 @@ begin
   # Get an Automation Action runner
   result = api_instance.get_automation_actions_runner(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runner: #{e}"
 end
 ```
@@ -1458,7 +1458,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsRunner200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runner_with_http_info: #{e}"
 end
 ```
@@ -1497,16 +1497,16 @@ Gets the details of a runner / team relation
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1516,7 +1516,7 @@ begin
   # Get the details of a runner / team relation
   result = api_instance.get_automation_actions_runner_team_association(accept, content_type, id, team_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runner_team_association: #{e}"
 end
 ```
@@ -1534,7 +1534,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsActionTeamAssociation200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runner_team_association_with_http_info: #{e}"
 end
 ```
@@ -1574,16 +1574,16 @@ Gets all team references associated with a runner
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1592,7 +1592,7 @@ begin
   # Get all team references associated with a runner
   result = api_instance.get_automation_actions_runner_team_associations(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runner_team_associations: #{e}"
 end
 ```
@@ -1610,7 +1610,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsActionTeamAssociations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runner_team_associations_with_http_info: #{e}"
 end
 ```
@@ -1649,16 +1649,16 @@ Lists Automation Action runners matching provided query params. The returned rec
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -1672,7 +1672,7 @@ begin
   # List Automation Action runners
   result = api_instance.get_automation_actions_runners(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runners: #{e}"
 end
 ```
@@ -1690,7 +1690,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsRunners200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->get_automation_actions_runners_with_http_info: #{e}"
 end
 ```
@@ -1732,16 +1732,16 @@ List Invocations
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -1755,7 +1755,7 @@ begin
   # List Invocations
   result = api_instance.list_automation_action_invocations(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->list_automation_action_invocations: #{e}"
 end
 ```
@@ -1773,7 +1773,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAutomationActionInvocations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->list_automation_action_invocations_with_http_info: #{e}"
 end
 ```
@@ -1815,26 +1815,26 @@ Updates an Automation Action
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-update_automation_action_request = OpenapiClient::UpdateAutomationActionRequest.new({action: OpenapiClient::AutomationActionsProcessAutomationJobActionPutBody.new}) # UpdateAutomationActionRequest | 
+update_automation_action_request = PagerDutyOpenapiClient::UpdateAutomationActionRequest.new({action: PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionPutBody.new}) # UpdateAutomationActionRequest | 
 
 begin
   # Update an Automation Action
   result = api_instance.update_automation_action(accept, content_type, id, update_automation_action_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->update_automation_action: #{e}"
 end
 ```
@@ -1852,7 +1852,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomationAction201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->update_automation_action_with_http_info: #{e}"
 end
 ```
@@ -1892,26 +1892,26 @@ Update an Automation Action runner
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomationActionsApi.new
+api_instance = PagerDutyOpenapiClient::AutomationActionsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
-update_automation_actions_runner_request = OpenapiClient::UpdateAutomationActionsRunnerRequest.new({runner: OpenapiClient::AutomationActionsRunnerRunbookBody.new}) # UpdateAutomationActionsRunnerRequest | 
+update_automation_actions_runner_request = PagerDutyOpenapiClient::UpdateAutomationActionsRunnerRequest.new({runner: PagerDutyOpenapiClient::AutomationActionsRunnerRunbookBody.new}) # UpdateAutomationActionsRunnerRequest | 
 
 begin
   # Update an Automation Action runner
   result = api_instance.update_automation_actions_runner(accept, content_type, id, update_automation_actions_runner_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->update_automation_actions_runner: #{e}"
 end
 ```
@@ -1929,7 +1929,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAutomationActionsRunner200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AutomationActionsApi->update_automation_actions_runner_with_http_info: #{e}"
 end
 ```

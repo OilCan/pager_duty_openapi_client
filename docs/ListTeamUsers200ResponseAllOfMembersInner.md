@@ -1,4 +1,4 @@
-# OpenapiClient::ListTeamUsers200ResponseAllOfMembersInner
+# PagerDutyOpenapiClient::ListTeamUsers200ResponseAllOfMembersInner
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListTeamUsers200ResponseAllOfMembersInner.new(
+instance = PagerDutyOpenapiClient::ListTeamUsers200ResponseAllOfMembersInner.new(
   user: null,
   role: null
 )

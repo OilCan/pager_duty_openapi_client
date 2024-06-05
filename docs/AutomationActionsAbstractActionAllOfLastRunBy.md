@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy
+# PagerDutyOpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy.openapi_one_of
+PagerDutyOpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy.openapi_one_of
 # =>
 # [
 #   :'AutomationActionsAbstractActionAllOfLastRunByOneOf',
@@ -27,12 +27,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy.build(data)
+PagerDutyOpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy.build(data)
 # => #<AutomationActionsAbstractActionAllOfLastRunByOneOf:0x00007fdd4aab02a0>
 
-OpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::AutomationActionsAbstractActionAllOfLastRunBy.build(data_that_doesnt_match)
 # => nil
 ```
 

@@ -1,4 +1,4 @@
-# OpenapiClient::PausedIncidentReportsApi
+# PagerDutyOpenapiClient::PausedIncidentReportsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -20,16 +20,16 @@ Returns the 5 most recent alerts that were triggered after being paused and the 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::PausedIncidentReportsApi.new
+api_instance = PagerDutyOpenapiClient::PausedIncidentReportsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -43,7 +43,7 @@ begin
   # Get Paused Incident Reporting on Alerts
   result = api_instance.get_paused_incident_report_alerts(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling PausedIncidentReportsApi->get_paused_incident_report_alerts: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPausedIncidentReportAlerts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling PausedIncidentReportsApi->get_paused_incident_report_alerts_with_http_info: #{e}"
 end
 ```
@@ -103,16 +103,16 @@ Returns reporting counts for paused Incident usage for a given reporting period 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::PausedIncidentReportsApi.new
+api_instance = PagerDutyOpenapiClient::PausedIncidentReportsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -126,7 +126,7 @@ begin
   # Get Paused Incident Reporting counts
   result = api_instance.get_paused_incident_report_counts(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling PausedIncidentReportsApi->get_paused_incident_report_counts: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPausedIncidentReportCounts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling PausedIncidentReportsApi->get_paused_incident_report_counts_with_http_info: #{e}"
 end
 ```

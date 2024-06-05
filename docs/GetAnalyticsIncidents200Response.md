@@ -1,4 +1,4 @@
-# OpenapiClient::GetAnalyticsIncidents200Response
+# PagerDutyOpenapiClient::GetAnalyticsIncidents200Response
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetAnalyticsIncidents200Response.new(
+instance = PagerDutyOpenapiClient::GetAnalyticsIncidents200Response.new(
   first: null,
   last: null,
   limit: null,

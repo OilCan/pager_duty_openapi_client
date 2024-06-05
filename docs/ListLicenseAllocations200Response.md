@@ -1,4 +1,4 @@
-# OpenapiClient::ListLicenseAllocations200Response
+# PagerDutyOpenapiClient::ListLicenseAllocations200Response
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListLicenseAllocations200Response.new(
+instance = PagerDutyOpenapiClient::ListLicenseAllocations200Response.new(
   offset: null,
   limit: null,
   more: null,

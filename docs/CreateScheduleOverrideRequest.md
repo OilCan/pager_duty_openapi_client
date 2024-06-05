@@ -1,4 +1,4 @@
-# OpenapiClient::CreateScheduleOverrideRequest
+# PagerDutyOpenapiClient::CreateScheduleOverrideRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateScheduleOverrideRequest.new(
+instance = PagerDutyOpenapiClient::CreateScheduleOverrideRequest.new(
   overrides: null
 )
 ```

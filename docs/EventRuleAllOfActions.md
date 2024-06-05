@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleAllOfActions
+# PagerDutyOpenapiClient::EventRuleAllOfActions
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::EventRuleAllOfActions.new(
+instance = PagerDutyOpenapiClient::EventRuleAllOfActions.new(
   annotate: null,
   event_action: null,
   extractions: null,

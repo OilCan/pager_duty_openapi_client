@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsProcessAutomationJobActionPostBody
+# PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionPostBody
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsProcessAutomationJobActionPostBody.new(
+instance = PagerDutyOpenapiClient::AutomationActionsProcessAutomationJobActionPostBody.new(
   name: Restart apache,
   description: Restarts apache on the us-west-2-shopping-cart host,
   action_classification: null,

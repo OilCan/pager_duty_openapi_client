@@ -1,4 +1,4 @@
-# OpenapiClient::GetUserHandoffNotificationRules200Response
+# PagerDutyOpenapiClient::GetUserHandoffNotificationRules200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetUserHandoffNotificationRules200Response.new(
+instance = PagerDutyOpenapiClient::GetUserHandoffNotificationRules200Response.new(
   oncall_handoff_notification_rules: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::Schedule
+# PagerDutyOpenapiClient::Schedule
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Schedule.new(
+instance = PagerDutyOpenapiClient::Schedule.new(
   type: null,
   schedule_layers: null,
   time_zone: null,

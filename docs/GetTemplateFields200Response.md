@@ -1,4 +1,4 @@
-# OpenapiClient::GetTemplateFields200Response
+# PagerDutyOpenapiClient::GetTemplateFields200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetTemplateFields200Response.new(
+instance = PagerDutyOpenapiClient::GetTemplateFields200Response.new(
   fields: null
 )
 ```

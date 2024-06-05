@@ -1,4 +1,4 @@
-# OpenapiClient::Impactor
+# PagerDutyOpenapiClient::Impactor
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Impactor.new(
+instance = PagerDutyOpenapiClient::Impactor.new(
   id: null,
   type: null
 )

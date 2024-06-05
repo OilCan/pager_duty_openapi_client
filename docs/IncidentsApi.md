@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentsApi
+# PagerDutyOpenapiClient::IncidentsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -44,28 +44,28 @@ Create an incident synchronously without a corresponding event from a monitoring
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_incident_request: OpenapiClient::CreateIncidentRequest.new({incident: OpenapiClient::CreateIncidentRequestIncident.new({type: 'incident', title: 'title_example', service: OpenapiClient::ServiceReference.new({type: 'service_reference'})})}) # CreateIncidentRequest | 
+  create_incident_request: PagerDutyOpenapiClient::CreateIncidentRequest.new({incident: PagerDutyOpenapiClient::CreateIncidentRequestIncident.new({type: 'incident', title: 'title_example', service: PagerDutyOpenapiClient::ServiceReference.new({type: 'service_reference'})})}) # CreateIncidentRequest | 
 }
 
 begin
   # Create an Incident
   result = api_instance.create_incident(accept, content_type, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident: #{e}"
 end
 ```
@@ -83,7 +83,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncident201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_with_http_info: #{e}"
 end
 ```
@@ -123,29 +123,29 @@ Create a new note for the specified incident.  An incident represents a problem 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_incident_note_request: OpenapiClient::CreateIncidentNoteRequest.new({note: OpenapiClient::CreateIncidentNoteRequestNote.new({content: 'content_example'})}) # CreateIncidentNoteRequest | 
+  create_incident_note_request: PagerDutyOpenapiClient::CreateIncidentNoteRequest.new({note: PagerDutyOpenapiClient::CreateIncidentNoteRequestNote.new({content: 'content_example'})}) # CreateIncidentNoteRequest | 
 }
 
 begin
   # Create a note on an incident
   result = api_instance.create_incident_note(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_note: #{e}"
 end
 ```
@@ -163,7 +163,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentNote200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_note_with_http_info: #{e}"
 end
 ```
@@ -204,27 +204,27 @@ Subscribe the given entities to Incident Status Update Notifications.  Scoped OA
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_business_service_notification_subscribers_request: OpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [OpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to subscribe.
+  create_business_service_notification_subscribers_request: PagerDutyOpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [PagerDutyOpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to subscribe.
 }
 
 begin
   # Add Notification Subscribers
   result = api_instance.create_incident_notification_subscribers(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_notification_subscribers: #{e}"
 end
 ```
@@ -242,7 +242,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateBusinessServiceNotificationSubscribers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_notification_subscribers_with_http_info: #{e}"
 end
 ```
@@ -281,29 +281,29 @@ Send a new responder request for the specified incident.  An incident represents
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_incident_responder_request_request: OpenapiClient::CreateIncidentResponderRequestRequest.new({requester_id: 'requester_id_example', message: 'message_example', responder_request_targets: [OpenapiClient::ResponderRequestTargetReference.new]}) # CreateIncidentResponderRequestRequest | 
+  create_incident_responder_request_request: PagerDutyOpenapiClient::CreateIncidentResponderRequestRequest.new({requester_id: 'requester_id_example', message: 'message_example', responder_request_targets: [PagerDutyOpenapiClient::ResponderRequestTargetReference.new]}) # CreateIncidentResponderRequestRequest | 
 }
 
 begin
   # Create a responder request for an incident
   result = api_instance.create_incident_responder_request(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_responder_request: #{e}"
 end
 ```
@@ -321,7 +321,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentResponderRequest200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_responder_request_with_http_info: #{e}"
 end
 ```
@@ -362,29 +362,29 @@ Snooze an incident.  An incident represents a problem or an issue that needs to 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_incident_snooze_request: OpenapiClient::CreateIncidentSnoozeRequest.new({duration: 37}) # CreateIncidentSnoozeRequest | 
+  create_incident_snooze_request: PagerDutyOpenapiClient::CreateIncidentSnoozeRequest.new({duration: 37}) # CreateIncidentSnoozeRequest | 
 }
 
 begin
   # Snooze an incident
   result = api_instance.create_incident_snooze(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_snooze: #{e}"
 end
 ```
@@ -402,7 +402,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncident201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_snooze_with_http_info: #{e}"
 end
 ```
@@ -443,29 +443,29 @@ Create a new status update for the specified incident. Optionally pass `subject`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  create_incident_status_update_request: OpenapiClient::CreateIncidentStatusUpdateRequest.new({message: 'message_example'}) # CreateIncidentStatusUpdateRequest | 
+  create_incident_status_update_request: PagerDutyOpenapiClient::CreateIncidentStatusUpdateRequest.new({message: 'message_example'}) # CreateIncidentStatusUpdateRequest | 
 }
 
 begin
   # Create a status update on an incident
   result = api_instance.create_incident_status_update(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_status_update: #{e}"
 end
 ```
@@ -483,7 +483,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncidentStatusUpdate200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->create_incident_status_update_with_http_info: #{e}"
 end
 ```
@@ -524,16 +524,16 @@ Show detailed information about an incident. Accepts either an incident id, or a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -545,7 +545,7 @@ begin
   # Get an incident
   result = api_instance.get_incident(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident: #{e}"
 end
 ```
@@ -563,7 +563,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateIncident201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_with_http_info: #{e}"
 end
 ```
@@ -603,16 +603,16 @@ Show detailed information about an alert. Accepts an alert id.  An incident repr
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -622,7 +622,7 @@ begin
   # Get an alert
   result = api_instance.get_incident_alert(accept, content_type, id, alert_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_alert: #{e}"
 end
 ```
@@ -640,7 +640,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentAlert200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_alert_with_http_info: #{e}"
 end
 ```
@@ -680,23 +680,23 @@ Get custom field values for an incident.  <!-- theme: warning -->  Scoped OAuth 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 id = 'id_example' # String | The ID of the resource.
 
 begin
   # Get Custom Field Values
   result = api_instance.get_incident_field_values(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_field_values: #{e}"
 end
 ```
@@ -714,7 +714,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentFieldValues200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_field_values_with_http_info: #{e}"
 end
 ```
@@ -751,16 +751,16 @@ Retrieve a list of Business Services that are being impacted by the given Incide
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
@@ -769,7 +769,7 @@ begin
   # List Business Services impacted by the given Incident
   result = api_instance.get_incident_impacted_business_services(accept, id, x_early_access)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_impacted_business_services: #{e}"
 end
 ```
@@ -787,7 +787,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentImpactedBusinessServices200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_impacted_business_services_with_http_info: #{e}"
 end
 ```
@@ -826,16 +826,16 @@ Retrieve a list of Notification Subscribers on the Incident.  <!-- theme: warnin
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 
@@ -843,7 +843,7 @@ begin
   # List Notification Subscribers
   result = api_instance.get_incident_notification_subscribers(accept, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_notification_subscribers: #{e}"
 end
 ```
@@ -861,7 +861,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentNotificationSubscribers200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_incident_notification_subscribers_with_http_info: #{e}"
 end
 ```
@@ -899,16 +899,16 @@ Gets Outlier Incident information for a given Incident on its Service.  For more
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -921,7 +921,7 @@ begin
   # Get Outlier Incident
   result = api_instance.get_outlier_incident(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_outlier_incident: #{e}"
 end
 ```
@@ -939,7 +939,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOutlierIncident200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_outlier_incident_with_http_info: #{e}"
 end
 ```
@@ -980,16 +980,16 @@ Past Incidents returns Incidents within the past 6 months that have similar meta
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1002,7 +1002,7 @@ begin
   # Get Past Incidents
   result = api_instance.get_past_incidents(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_past_incidents: #{e}"
 end
 ```
@@ -1020,7 +1020,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPastIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_past_incidents_with_http_info: #{e}"
 end
 ```
@@ -1061,16 +1061,16 @@ Returns the 20 most recent Related Incidents that are impacting other Responders
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1082,7 +1082,7 @@ begin
   # Get Related Incidents
   result = api_instance.get_related_incidents(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_related_incidents: #{e}"
 end
 ```
@@ -1100,7 +1100,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetRelatedIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->get_related_incidents_with_http_info: #{e}"
 end
 ```
@@ -1140,16 +1140,16 @@ List alerts for the specified incident.  An incident represents a problem or an 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1167,7 +1167,7 @@ begin
   # List alerts for an incident
   result = api_instance.list_incident_alerts(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incident_alerts: #{e}"
 end
 ```
@@ -1185,7 +1185,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentAlerts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incident_alerts_with_http_info: #{e}"
 end
 ```
@@ -1231,16 +1231,16 @@ List log entries for the specified incident.  An incident represents a problem o
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1259,7 +1259,7 @@ begin
   # List log entries for an incident
   result = api_instance.list_incident_log_entries(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incident_log_entries: #{e}"
 end
 ```
@@ -1277,7 +1277,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentLogEntries200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incident_log_entries_with_http_info: #{e}"
 end
 ```
@@ -1324,16 +1324,16 @@ List existing notes for the specified incident.  An incident represents a proble
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -1342,7 +1342,7 @@ begin
   # List notes for an incident
   result = api_instance.list_incident_notes(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incident_notes: #{e}"
 end
 ```
@@ -1360,7 +1360,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentNotes200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incident_notes_with_http_info: #{e}"
 end
 ```
@@ -1399,16 +1399,16 @@ List existing incidents.  An incident represents a problem or an issue that need
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -1433,7 +1433,7 @@ begin
   # List incidents
   result = api_instance.list_incidents(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incidents: #{e}"
 end
 ```
@@ -1451,7 +1451,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->list_incidents_with_http_info: #{e}"
 end
 ```
@@ -1504,29 +1504,29 @@ Merge a list of source incidents into this incident.  An incident represents a p
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  merge_incidents_request: OpenapiClient::MergeIncidentsRequest.new({source_incidents: [OpenapiClient::IncidentReference.new({type: 'incident_reference'})]}) # MergeIncidentsRequest | 
+  merge_incidents_request: PagerDutyOpenapiClient::MergeIncidentsRequest.new({source_incidents: [PagerDutyOpenapiClient::IncidentReference.new({type: 'incident_reference'})]}) # MergeIncidentsRequest | 
 }
 
 begin
   # Merge incidents
   result = api_instance.merge_incidents(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->merge_incidents: #{e}"
 end
 ```
@@ -1544,7 +1544,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MergeIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->merge_incidents_with_http_info: #{e}"
 end
 ```
@@ -1585,29 +1585,29 @@ Change Impact of an Incident on a Business Service. Scoped OAuth requires: `inci
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 business_service_id = 'business_service_id_example' # String | The business service ID.
 x_early_access = 'x_early_access_example' # String | This header indicates that this API endpoint is __UNDER CONSTRUCTION__ and may change at any time. You __MUST__ pass in this header with the value `business-impact-early-access`. Do not use this endpoint in production, as it may change!
 opts = {
-  put_incident_manual_business_service_association_request: OpenapiClient::PutIncidentManualBusinessServiceAssociationRequest.new({relation: 'impacted'}) # PutIncidentManualBusinessServiceAssociationRequest | The `impacted` relation will cause the Business Service and any Services that it supports to become impacted by this incident.  The `not_impacted` relation will remove the Incident's Impact from the specified Business Service.  The effect of adding or removing Impact to a Business Service in this way will also change the propagation of Impact to other Services supported by that Business Service.
+  put_incident_manual_business_service_association_request: PagerDutyOpenapiClient::PutIncidentManualBusinessServiceAssociationRequest.new({relation: 'impacted'}) # PutIncidentManualBusinessServiceAssociationRequest | The `impacted` relation will cause the Business Service and any Services that it supports to become impacted by this incident.  The `not_impacted` relation will remove the Incident's Impact from the specified Business Service.  The effect of adding or removing Impact to a Business Service in this way will also change the propagation of Impact to other Services supported by that Business Service.
 }
 
 begin
   # Manually change an Incident's Impact on a Business Service.
   result = api_instance.put_incident_manual_business_service_association(accept, id, business_service_id, x_early_access, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->put_incident_manual_business_service_association: #{e}"
 end
 ```
@@ -1625,7 +1625,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PutIncidentManualBusinessServiceAssociation200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->put_incident_manual_business_service_association_with_http_info: #{e}"
 end
 ```
@@ -1666,27 +1666,27 @@ Unsubscribes the matching Subscribers from Incident Status Update Notifications.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_business_service_notification_subscribers_request: OpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [OpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to unsubscribe.
+  create_business_service_notification_subscribers_request: PagerDutyOpenapiClient::CreateBusinessServiceNotificationSubscribersRequest.new({subscribers: [PagerDutyOpenapiClient::NotificationSubscriber.new]}) # CreateBusinessServiceNotificationSubscribersRequest | The entities to unsubscribe.
 }
 
 begin
   # Remove Notification Subscriber
   result = api_instance.remove_incident_notification_subscribers(accept, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->remove_incident_notification_subscribers: #{e}"
 end
 ```
@@ -1704,7 +1704,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RemoveBusinessServiceNotificationSubscriber200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->remove_incident_notification_subscribers_with_http_info: #{e}"
 end
 ```
@@ -1743,26 +1743,26 @@ Set custom field values for an incident.  Scoped OAuth requires: `incidents.writ
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  set_incident_field_values_request: OpenapiClient::SetIncidentFieldValuesRequest.new({custom_fields: [OpenapiClient::ValueByFieldID.new]}) # SetIncidentFieldValuesRequest | 
+  set_incident_field_values_request: PagerDutyOpenapiClient::SetIncidentFieldValuesRequest.new({custom_fields: [PagerDutyOpenapiClient::ValueByFieldID.new]}) # SetIncidentFieldValuesRequest | 
 }
 
 begin
   # Update Custom Field Values
   result = api_instance.set_incident_field_values(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->set_incident_field_values: #{e}"
 end
 ```
@@ -1780,7 +1780,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentFieldValues200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->set_incident_field_values_with_http_info: #{e}"
 end
 ```
@@ -1818,29 +1818,29 @@ Acknowledge, resolve, escalate or reassign an incident.  An incident represents 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  update_incident_request: OpenapiClient::UpdateIncidentRequest.new({incident: OpenapiClient::UpdateIncidentRequestIncident.new({type: 'incident'})}) # UpdateIncidentRequest | 
+  update_incident_request: PagerDutyOpenapiClient::UpdateIncidentRequest.new({incident: PagerDutyOpenapiClient::UpdateIncidentRequestIncident.new({type: 'incident'})}) # UpdateIncidentRequest | 
 }
 
 begin
   # Update an incident
   result = api_instance.update_incident(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incident: #{e}"
 end
 ```
@@ -1858,7 +1858,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateIncident200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incident_with_http_info: #{e}"
 end
 ```
@@ -1899,30 +1899,30 @@ Resolve an alert or associate an alert with a new parent incident.  An incident 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 alert_id = 'alert_id_example' # String | The id of the alert to retrieve.
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
 opts = {
-  get_incident_alert200_response: OpenapiClient::GetIncidentAlert200Response.new({alert: OpenapiClient::Alert.new({type: 'alert'})}) # GetIncidentAlert200Response | The parameters of the alert to update.
+  get_incident_alert200_response: PagerDutyOpenapiClient::GetIncidentAlert200Response.new({alert: PagerDutyOpenapiClient::Alert.new({type: 'alert'})}) # GetIncidentAlert200Response | The parameters of the alert to update.
 }
 
 begin
   # Update an alert
   result = api_instance.update_incident_alert(accept, content_type, id, alert_id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incident_alert: #{e}"
 end
 ```
@@ -1940,7 +1940,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetIncidentAlert200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incident_alert_with_http_info: #{e}"
 end
 ```
@@ -1982,16 +1982,16 @@ Resolve multiple alerts or associate them with different incidents.  An incident
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -2000,14 +2000,14 @@ opts = {
   limit: 56, # Integer | The number of results per page.
   offset: 56, # Integer | Offset to start pagination search results.
   total: true, # Boolean | By default the `total` field in pagination responses is set to `null` to provide the fastest possible response times. Set `total` to `true` for this field to be populated.  See our [Pagination Docs](https://developer.pagerduty.com/docs/rest-api-v2/pagination/) for more information. 
-  update_incident_alerts_request: OpenapiClient::UpdateIncidentAlertsRequest.new({alerts: [OpenapiClient::Alert.new({type: 'alert'})]}) # UpdateIncidentAlertsRequest | 
+  update_incident_alerts_request: PagerDutyOpenapiClient::UpdateIncidentAlertsRequest.new({alerts: [PagerDutyOpenapiClient::Alert.new({type: 'alert'})]}) # UpdateIncidentAlertsRequest | 
 }
 
 begin
   # Manage alerts
   result = api_instance.update_incident_alerts(accept, content_type, id, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incident_alerts: #{e}"
 end
 ```
@@ -2025,7 +2025,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentAlerts200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incident_alerts_with_http_info: #{e}"
 end
 ```
@@ -2069,16 +2069,16 @@ Acknowledge, resolve, escalate or reassign one or more incidents.  An incident r
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::IncidentsApi.new
+api_instance = PagerDutyOpenapiClient::IncidentsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 from = 'from_example' # String | The email address of a valid user associated with the account making the request.
@@ -2086,14 +2086,14 @@ opts = {
   limit: 56, # Integer | The number of results per page.
   offset: 56, # Integer | Offset to start pagination search results.
   total: true, # Boolean | By default the `total` field in pagination responses is set to `null` to provide the fastest possible response times. Set `total` to `true` for this field to be populated.  See our [Pagination Docs](https://developer.pagerduty.com/docs/rest-api-v2/pagination/) for more information. 
-  update_incidents_request: OpenapiClient::UpdateIncidentsRequest.new({incidents: [OpenapiClient::UpdateIncidentsRequestIncidentsInner.new({id: 'id_example', type: 'incident'})]}) # UpdateIncidentsRequest | 
+  update_incidents_request: PagerDutyOpenapiClient::UpdateIncidentsRequest.new({incidents: [PagerDutyOpenapiClient::UpdateIncidentsRequestIncidentsInner.new({id: 'id_example', type: 'incident'})]}) # UpdateIncidentsRequest | 
 }
 
 begin
   # Manage incidents
   result = api_instance.update_incidents(accept, content_type, from, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incidents: #{e}"
 end
 ```
@@ -2111,7 +2111,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling IncidentsApi->update_incidents_with_http_info: #{e}"
 end
 ```

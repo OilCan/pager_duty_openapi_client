@@ -1,4 +1,4 @@
-# OpenapiClient::CreateResponsePlayRequest
+# PagerDutyOpenapiClient::CreateResponsePlayRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateResponsePlayRequest.new(
+instance = PagerDutyOpenapiClient::CreateResponsePlayRequest.new(
   response_play: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsInvocationAllOfActionSnapshot
+# PagerDutyOpenapiClient::AutomationActionsInvocationAllOfActionSnapshot
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsInvocationAllOfActionSnapshot.new(
+instance = PagerDutyOpenapiClient::AutomationActionsInvocationAllOfActionSnapshot.new(
   name: Restart apache,
   action_type: null,
   action_data_reference: null

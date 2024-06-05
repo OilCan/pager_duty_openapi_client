@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceDependenciesApi
+# PagerDutyOpenapiClient::ServiceDependenciesApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -22,27 +22,27 @@ Create new dependencies between two services.  Business services model capabilit
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServiceDependenciesApi.new
+api_instance = PagerDutyOpenapiClient::ServiceDependenciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_service_dependency_request: OpenapiClient::CreateServiceDependencyRequest.new # CreateServiceDependencyRequest | 
+  create_service_dependency_request: PagerDutyOpenapiClient::CreateServiceDependencyRequest.new # CreateServiceDependencyRequest | 
 }
 
 begin
   # Associate service dependencies
   result = api_instance.create_service_dependency(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->create_service_dependency: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceDependency200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->create_service_dependency_with_http_info: #{e}"
 end
 ```
@@ -99,27 +99,27 @@ Disassociate dependencies between two services.  Business services model capabil
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServiceDependenciesApi.new
+api_instance = PagerDutyOpenapiClient::ServiceDependenciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  delete_service_dependency_request: OpenapiClient::DeleteServiceDependencyRequest.new # DeleteServiceDependencyRequest | 
+  delete_service_dependency_request: PagerDutyOpenapiClient::DeleteServiceDependencyRequest.new # DeleteServiceDependencyRequest | 
 }
 
 begin
   # Disassociate service dependencies
   result = api_instance.delete_service_dependency(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->delete_service_dependency: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceDependency200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->delete_service_dependency_with_http_info: #{e}"
 end
 ```
@@ -176,16 +176,16 @@ Get all immediate dependencies of any Business Service.  Business Services model
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServiceDependenciesApi.new
+api_instance = PagerDutyOpenapiClient::ServiceDependenciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -194,7 +194,7 @@ begin
   # Get Business Service dependencies
   result = api_instance.get_business_service_service_dependencies(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->get_business_service_service_dependencies: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBusinessServiceServiceDependencies200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->get_business_service_service_dependencies_with_http_info: #{e}"
 end
 ```
@@ -251,16 +251,16 @@ Get all immediate dependencies of any technical service. Technical services are 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ServiceDependenciesApi.new
+api_instance = PagerDutyOpenapiClient::ServiceDependenciesApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -269,7 +269,7 @@ begin
   # Get technical service dependencies
   result = api_instance.get_technical_service_service_dependencies(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->get_technical_service_service_dependencies: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateServiceDependency200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ServiceDependenciesApi->get_technical_service_service_dependencies_with_http_info: #{e}"
 end
 ```

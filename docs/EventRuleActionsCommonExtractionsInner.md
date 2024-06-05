@@ -1,4 +1,4 @@
-# OpenapiClient::EventRuleActionsCommonExtractionsInner
+# PagerDutyOpenapiClient::EventRuleActionsCommonExtractionsInner
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::EventRuleActionsCommonExtractionsInner.openapi_one_of
+PagerDutyOpenapiClient::EventRuleActionsCommonExtractionsInner.openapi_one_of
 # =>
 # [
 #   :'EventRuleActionsCommonExtractionsInnerOneOf',
@@ -26,12 +26,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::EventRuleActionsCommonExtractionsInner.build(data)
+PagerDutyOpenapiClient::EventRuleActionsCommonExtractionsInner.build(data)
 # => #<EventRuleActionsCommonExtractionsInnerOneOf:0x00007fdd4aab02a0>
 
-OpenapiClient::EventRuleActionsCommonExtractionsInner.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::EventRuleActionsCommonExtractionsInner.build(data_that_doesnt_match)
 # => nil
 ```
 

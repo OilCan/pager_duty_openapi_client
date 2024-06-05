@@ -1,4 +1,4 @@
-# OpenapiClient::TimeBasedAlertGroupingConfiguration
+# PagerDutyOpenapiClient::TimeBasedAlertGroupingConfiguration
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::TimeBasedAlertGroupingConfiguration.new(
+instance = PagerDutyOpenapiClient::TimeBasedAlertGroupingConfiguration.new(
   timeout: null
 )
 ```

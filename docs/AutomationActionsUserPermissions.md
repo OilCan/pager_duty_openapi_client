@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsUserPermissions
+# PagerDutyOpenapiClient::AutomationActionsUserPermissions
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsUserPermissions.new(
+instance = PagerDutyOpenapiClient::AutomationActionsUserPermissions.new(
   permissions: [&quot;update&quot;,&quot;delete&quot;]
 )
 ```

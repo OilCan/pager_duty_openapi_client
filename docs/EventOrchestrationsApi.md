@@ -1,4 +1,4 @@
-# OpenapiClient::EventOrchestrationsApi
+# PagerDutyOpenapiClient::EventOrchestrationsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -49,28 +49,28 @@ Create a Cache Variable for a Global Event Orchestration.  Cache Variables allow
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  create_cache_var_on_global_orch_request: OpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: OpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: OpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
+  create_cache_var_on_global_orch_request: PagerDutyOpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: PagerDutyOpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: PagerDutyOpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
 }
 
 begin
   # Create a Cache Variable for a Global Event Orchestration
   result = api_instance.create_cache_var_on_global_orch(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->create_cache_var_on_global_orch: #{e}"
 end
 ```
@@ -88,7 +88,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->create_cache_var_on_global_orch_with_http_info: #{e}"
 end
 ```
@@ -128,28 +128,28 @@ Create a Cache Variable for a Service Event Orchestration.  Cache Variables allo
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
 opts = {
-  create_cache_var_on_global_orch_request: OpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: OpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: OpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
+  create_cache_var_on_global_orch_request: PagerDutyOpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: PagerDutyOpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: PagerDutyOpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
 }
 
 begin
   # Create a Cache Variable for a Service Event Orchestration
   result = api_instance.create_cache_var_on_service_orch(accept, content_type, service_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->create_cache_var_on_service_orch: #{e}"
 end
 ```
@@ -167,7 +167,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->create_cache_var_on_service_orch_with_http_info: #{e}"
 end
 ```
@@ -207,16 +207,16 @@ Delete a Cache Variable for a Global Event Orchestration.  Cache Variables allow
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -225,7 +225,7 @@ cache_variable_id = 'cache_variable_id_example' # String | The ID of a Cache Var
 begin
   # Delete a Cache Variable for a Global Event Orchestration
   api_instance.delete_cache_var_on_global_orch(accept, content_type, id, cache_variable_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_cache_var_on_global_orch: #{e}"
 end
 ```
@@ -243,7 +243,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_cache_var_on_global_orch_with_http_info: #{e}"
 end
 ```
@@ -283,16 +283,16 @@ Delete a Cache Variable for a Service Event Orchestration.  Cache Variables allo
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
@@ -301,7 +301,7 @@ cache_variable_id = 'cache_variable_id_example' # String | The ID of a Cache Var
 begin
   # Delete a Cache Variable for a Service Event Orchestration
   api_instance.delete_cache_var_on_service_orch(accept, content_type, service_id, cache_variable_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_cache_var_on_service_orch: #{e}"
 end
 ```
@@ -319,7 +319,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_cache_var_on_service_orch_with_http_info: #{e}"
 end
 ```
@@ -359,16 +359,16 @@ Delete a Global Event Orchestration.  Once deleted, you will no longer be able t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -376,7 +376,7 @@ id = 'id_example' # String | The ID of an Event Orchestration.
 begin
   # Delete an Orchestration
   api_instance.delete_orchestration(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_orchestration: #{e}"
 end
 ```
@@ -394,7 +394,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_orchestration_with_http_info: #{e}"
 end
 ```
@@ -433,16 +433,16 @@ Delete an Integration and its associated Routing Key.  Once deleted, PagerDuty w
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -451,7 +451,7 @@ integration_id = 'integration_id_example' # String | The ID of an Integration.
 begin
   # Delete an Integration for an Event Orchestration
   api_instance.delete_orchestration_integration(accept, content_type, id, integration_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_orchestration_integration: #{e}"
 end
 ```
@@ -469,7 +469,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->delete_orchestration_integration_with_http_info: #{e}"
 end
 ```
@@ -509,16 +509,16 @@ Get a Cache Variable for a Global Event Orchestration.  Cache Variables allow yo
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -528,7 +528,7 @@ begin
   # Get a Cache Variable for a Global Event Orchestration
   result = api_instance.get_cache_var_on_global_orch(accept, content_type, id, cache_variable_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_cache_var_on_global_orch: #{e}"
 end
 ```
@@ -546,7 +546,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_cache_var_on_global_orch_with_http_info: #{e}"
 end
 ```
@@ -586,16 +586,16 @@ Get a Cache Variable for a Service Event Orchestration.  Cache Variables allow y
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
@@ -605,7 +605,7 @@ begin
   # Get a Cache Variable for a Service Event Orchestration
   result = api_instance.get_cache_var_on_service_orch(accept, content_type, service_id, cache_variable_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_cache_var_on_service_orch: #{e}"
 end
 ```
@@ -623,7 +623,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_cache_var_on_service_orch_with_http_info: #{e}"
 end
 ```
@@ -663,16 +663,16 @@ Get a Service Orchestration's active status.  A Service Orchestration allows you
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
@@ -681,7 +681,7 @@ begin
   # Get the Service Orchestration active status for a Service
   result = api_instance.get_orch_active_status(accept, content_type, service_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_active_status: #{e}"
 end
 ```
@@ -699,7 +699,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOrchActiveStatus200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_active_status_with_http_info: #{e}"
 end
 ```
@@ -738,16 +738,16 @@ Get the Global Orchestration for an Event Orchestration.  Global Orchestration R
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -756,7 +756,7 @@ begin
   # Get the Global Orchestration for an Event Orchestration
   result = api_instance.get_orch_path_global(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_global: #{e}"
 end
 ```
@@ -774,7 +774,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OrchestrationGlobal>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_global_with_http_info: #{e}"
 end
 ```
@@ -813,16 +813,16 @@ Get a Global Orchestration's Routing Rules.  An Orchestration Router allows you 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -831,7 +831,7 @@ begin
   # Get the Router for an Event Orchestration
   result = api_instance.get_orch_path_router(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_router: #{e}"
 end
 ```
@@ -849,7 +849,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OrchestrationRouter>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_router_with_http_info: #{e}"
 end
 ```
@@ -888,16 +888,16 @@ Get a Service Orchestration.  A Service Orchestration allows you to create a set
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
@@ -909,7 +909,7 @@ begin
   # Get the Service Orchestration for a Service
   result = api_instance.get_orch_path_service(accept, content_type, service_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_service: #{e}"
 end
 ```
@@ -927,7 +927,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServiceOrchestration>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_service_with_http_info: #{e}"
 end
 ```
@@ -967,16 +967,16 @@ Get a Global Event Orchestration's Rules for Unrouted events.  An Unrouted Orche
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -985,7 +985,7 @@ begin
   # Get the Unrouted Orchestration for an Event Orchestration
   result = api_instance.get_orch_path_unrouted(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_unrouted: #{e}"
 end
 ```
@@ -1003,7 +1003,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OrchestrationUnrouted>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orch_path_unrouted_with_http_info: #{e}"
 end
 ```
@@ -1042,16 +1042,16 @@ Get a Global Event Orchestration.  Global Event Orchestrations allow you define 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -1060,7 +1060,7 @@ begin
   # Get an Orchestration
   result = api_instance.get_orchestration(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orchestration: #{e}"
 end
 ```
@@ -1078,7 +1078,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostOrchestration201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orchestration_with_http_info: #{e}"
 end
 ```
@@ -1117,16 +1117,16 @@ Get an Integration associated with this Event Orchestrations.  You can use the R
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -1136,7 +1136,7 @@ begin
   # Get an Integration for an Event Orchestration
   result = api_instance.get_orchestration_integration(accept, content_type, id, integration_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orchestration_integration: #{e}"
 end
 ```
@@ -1154,7 +1154,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOrchestrationIntegration200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->get_orchestration_integration_with_http_info: #{e}"
 end
 ```
@@ -1194,16 +1194,16 @@ List Cache Variables for a Global Event Orchestration.  Cache Variables allow yo
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -1212,7 +1212,7 @@ begin
   # List Cache Variables for a Global Event Orchestration
   result = api_instance.list_cache_var_on_global_orch(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_cache_var_on_global_orch: #{e}"
 end
 ```
@@ -1230,7 +1230,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_cache_var_on_global_orch_with_http_info: #{e}"
 end
 ```
@@ -1269,16 +1269,16 @@ List Cache Variables for a Service Event Orchestration.  Cache Variables allow y
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
@@ -1287,7 +1287,7 @@ begin
   # List Cache Variables for a Service Event Orchestration
   result = api_instance.list_cache_var_on_service_orch(accept, content_type, service_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_cache_var_on_service_orch: #{e}"
 end
 ```
@@ -1305,7 +1305,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_cache_var_on_service_orch_with_http_info: #{e}"
 end
 ```
@@ -1344,16 +1344,16 @@ List all Global Event Orchestrations on an Account.  Global Event Orchestrations
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -1366,7 +1366,7 @@ begin
   # List Event Orchestrations
   result = api_instance.list_event_orchestrations(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_event_orchestrations: #{e}"
 end
 ```
@@ -1384,7 +1384,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListEventOrchestrations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_event_orchestrations_with_http_info: #{e}"
 end
 ```
@@ -1425,16 +1425,16 @@ List the Integrations associated with this Event Orchestrations.  You can use a 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
@@ -1443,7 +1443,7 @@ begin
   # List Integrations for an Event Orchestration
   result = api_instance.list_orchestration_integrations(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_orchestration_integrations: #{e}"
 end
 ```
@@ -1461,7 +1461,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOrchestrationIntegrations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->list_orchestration_integrations_with_http_info: #{e}"
 end
 ```
@@ -1500,28 +1500,28 @@ Move an Integration and its Routing Key from the Event Orchestration specified i
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  migrate_orchestration_integration_request: OpenapiClient::MigrateOrchestrationIntegrationRequest.new({source_id: 'source_id_example', source_type: 'orchestration', integration_id: 'integration_id_example'}) # MigrateOrchestrationIntegrationRequest | 
+  migrate_orchestration_integration_request: PagerDutyOpenapiClient::MigrateOrchestrationIntegrationRequest.new({source_id: 'source_id_example', source_type: 'orchestration', integration_id: 'integration_id_example'}) # MigrateOrchestrationIntegrationRequest | 
 }
 
 begin
   # Migrate an Integration from one Event Orchestration to another
   result = api_instance.migrate_orchestration_integration(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->migrate_orchestration_integration: #{e}"
 end
 ```
@@ -1539,7 +1539,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOrchestrationIntegrations200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->migrate_orchestration_integration_with_http_info: #{e}"
 end
 ```
@@ -1579,27 +1579,27 @@ Create a Global Event Orchestration.  Global Event Orchestrations allow you defi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  post_orchestration_request: OpenapiClient::PostOrchestrationRequest.new({orchestration: OpenapiClient::Orchestration.new}) # PostOrchestrationRequest | 
+  post_orchestration_request: PagerDutyOpenapiClient::PostOrchestrationRequest.new({orchestration: PagerDutyOpenapiClient::Orchestration.new}) # PostOrchestrationRequest | 
 }
 
 begin
   # Create an Orchestration
   result = api_instance.post_orchestration(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->post_orchestration: #{e}"
 end
 ```
@@ -1617,7 +1617,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostOrchestration201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->post_orchestration_with_http_info: #{e}"
 end
 ```
@@ -1656,28 +1656,28 @@ Create an Integration associated with this Event Orchestration.  You can then us
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  post_orchestration_integration_request: OpenapiClient::PostOrchestrationIntegrationRequest.new({integration: OpenapiClient::PostOrchestrationIntegrationRequestIntegration.new({label: 'label_example'})}) # PostOrchestrationIntegrationRequest | 
+  post_orchestration_integration_request: PagerDutyOpenapiClient::PostOrchestrationIntegrationRequest.new({integration: PagerDutyOpenapiClient::PostOrchestrationIntegrationRequestIntegration.new({label: 'label_example'})}) # PostOrchestrationIntegrationRequest | 
 }
 
 begin
   # Create an Integration for an Event Orchestration
   result = api_instance.post_orchestration_integration(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->post_orchestration_integration: #{e}"
 end
 ```
@@ -1695,7 +1695,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostOrchestrationIntegration201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->post_orchestration_integration_with_http_info: #{e}"
 end
 ```
@@ -1735,29 +1735,29 @@ Update a Cache Variable for a Global Event Orchestration.  Cache Variables allow
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 cache_variable_id = 'cache_variable_id_example' # String | The ID of a Cache Variable.
 opts = {
-  create_cache_var_on_global_orch_request: OpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: OpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: OpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
+  create_cache_var_on_global_orch_request: PagerDutyOpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: PagerDutyOpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: PagerDutyOpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
 }
 
 begin
   # Update a Cache Variable for a Global Event Orchestration
   result = api_instance.update_cache_var_on_global_orch(accept, content_type, id, cache_variable_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_cache_var_on_global_orch: #{e}"
 end
 ```
@@ -1775,7 +1775,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_cache_var_on_global_orch_with_http_info: #{e}"
 end
 ```
@@ -1816,29 +1816,29 @@ Update a Cache Variable for a Service Event Orchestration.  Cache Variables allo
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
 cache_variable_id = 'cache_variable_id_example' # String | The ID of a Cache Variable.
 opts = {
-  create_cache_var_on_global_orch_request: OpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: OpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: OpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
+  create_cache_var_on_global_orch_request: PagerDutyOpenapiClient::CreateCacheVarOnGlobalOrchRequest.new({cache_variable: PagerDutyOpenapiClient::OrchestrationCacheVariable.new({name: 'name_example', configuration: PagerDutyOpenapiClient::OrchestrationCacheVariableConfigurationOneOf.new({type: 'recent_value', source: 'event.summary', regex: 'regex_example'})})}) # CreateCacheVarOnGlobalOrchRequest | 
 }
 
 begin
   # Update a Cache Variable for a Service Event Orchestration
   result = api_instance.update_cache_var_on_service_orch(accept, content_type, service_id, cache_variable_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_cache_var_on_service_orch: #{e}"
 end
 ```
@@ -1856,7 +1856,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCacheVarOnGlobalOrch200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_cache_var_on_service_orch_with_http_info: #{e}"
 end
 ```
@@ -1897,16 +1897,16 @@ Update a Service Orchestration's active status.  A Service Orchestration allows 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
@@ -1918,7 +1918,7 @@ begin
   # Update the Service Orchestration active status for a Service
   result = api_instance.update_orch_active_status(accept, content_type, service_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_active_status: #{e}"
 end
 ```
@@ -1936,7 +1936,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOrchActiveStatus200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_active_status_with_http_info: #{e}"
 end
 ```
@@ -1976,28 +1976,28 @@ Update the Global Orchestration for an Event Orchestration.  Global Orchestratio
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  orchestration_global: OpenapiClient::OrchestrationGlobal.new({orchestration_path: OpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1.new}) # OrchestrationGlobal | Update Global Orchestration rules. Omitted rules and rule details are deleted.
+  orchestration_global: PagerDutyOpenapiClient::OrchestrationGlobal.new({orchestration_path: PagerDutyOpenapiClient::OrchestrationGlobalAllOfOrchestrationPath1.new}) # OrchestrationGlobal | Update Global Orchestration rules. Omitted rules and rule details are deleted.
 }
 
 begin
   # Update the Global Orchestration for an Event Orchestration
   result = api_instance.update_orch_path_global(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_global: #{e}"
 end
 ```
@@ -2015,7 +2015,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateOrchPathGlobal200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_global_with_http_info: #{e}"
 end
 ```
@@ -2055,28 +2055,28 @@ Update a Global Orchestration's Routing Rules.  An Orchestration Router allows y
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  orchestration_router: OpenapiClient::OrchestrationRouter.new # OrchestrationRouter | Updates to Orchestration Router details. Omitted rules and rule details are deleted.
+  orchestration_router: PagerDutyOpenapiClient::OrchestrationRouter.new # OrchestrationRouter | Updates to Orchestration Router details. Omitted rules and rule details are deleted.
 }
 
 begin
   # Update the Router for an Event Orchestration
   result = api_instance.update_orch_path_router(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_router: #{e}"
 end
 ```
@@ -2094,7 +2094,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateOrchPathRouter200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_router_with_http_info: #{e}"
 end
 ```
@@ -2134,28 +2134,28 @@ Update a Service Orchestration.  A Service Orchestration allows you to create a 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 service_id = 'service_id_example' # String | The service ID
 opts = {
-  service_orchestration: OpenapiClient::ServiceOrchestration.new # ServiceOrchestration | Update Service Orchestration rules. Omitted rules and rule details are deleted.
+  service_orchestration: PagerDutyOpenapiClient::ServiceOrchestration.new # ServiceOrchestration | Update Service Orchestration rules. Omitted rules and rule details are deleted.
 }
 
 begin
   # Update the Service Orchestration for a Service
   result = api_instance.update_orch_path_service(accept, content_type, service_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_service: #{e}"
 end
 ```
@@ -2173,7 +2173,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateOrchPathService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_service_with_http_info: #{e}"
 end
 ```
@@ -2213,28 +2213,28 @@ Update a Global Event Orchestration's Rules for Unrouted events.  An Unrouted Or
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  orchestration_unrouted: OpenapiClient::OrchestrationUnrouted.new # OrchestrationUnrouted | Updates to Unrouted Orchestration rules. Omitted rules and rule details are deleted.
+  orchestration_unrouted: PagerDutyOpenapiClient::OrchestrationUnrouted.new # OrchestrationUnrouted | Updates to Unrouted Orchestration rules. Omitted rules and rule details are deleted.
 }
 
 begin
   # Update the Unrouted Orchestration for an Event Orchestration
   result = api_instance.update_orch_path_unrouted(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_unrouted: #{e}"
 end
 ```
@@ -2252,7 +2252,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateOrchPathUnrouted200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orch_path_unrouted_with_http_info: #{e}"
 end
 ```
@@ -2292,28 +2292,28 @@ Update a Global Event Orchestration.  Global Event Orchestrations allow you defi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 opts = {
-  post_orchestration_request: OpenapiClient::PostOrchestrationRequest.new({orchestration: OpenapiClient::Orchestration.new}) # PostOrchestrationRequest | 
+  post_orchestration_request: PagerDutyOpenapiClient::PostOrchestrationRequest.new({orchestration: PagerDutyOpenapiClient::Orchestration.new}) # PostOrchestrationRequest | 
 }
 
 begin
   # Update an Orchestration
   result = api_instance.update_orchestration(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orchestration: #{e}"
 end
 ```
@@ -2331,7 +2331,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostOrchestration201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orchestration_with_http_info: #{e}"
 end
 ```
@@ -2371,29 +2371,29 @@ Update an Integration associated with this Event Orchestrations.  You can use th
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::EventOrchestrationsApi.new
+api_instance = PagerDutyOpenapiClient::EventOrchestrationsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of an Event Orchestration.
 integration_id = 'integration_id_example' # String | The ID of an Integration.
 opts = {
-  post_orchestration_integration_request: OpenapiClient::PostOrchestrationIntegrationRequest.new({integration: OpenapiClient::PostOrchestrationIntegrationRequestIntegration.new({label: 'label_example'})}) # PostOrchestrationIntegrationRequest | 
+  post_orchestration_integration_request: PagerDutyOpenapiClient::PostOrchestrationIntegrationRequest.new({integration: PagerDutyOpenapiClient::PostOrchestrationIntegrationRequestIntegration.new({label: 'label_example'})}) # PostOrchestrationIntegrationRequest | 
 }
 
 begin
   # Update an Integration for an Event Orchestration
   result = api_instance.update_orchestration_integration(accept, content_type, id, integration_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orchestration_integration: #{e}"
 end
 ```
@@ -2411,7 +2411,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostOrchestrationIntegration201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling EventOrchestrationsApi->update_orchestration_integration_with_http_info: #{e}"
 end
 ```

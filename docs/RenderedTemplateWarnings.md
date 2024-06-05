@@ -1,4 +1,4 @@
-# OpenapiClient::RenderedTemplateWarnings
+# PagerDutyOpenapiClient::RenderedTemplateWarnings
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RenderedTemplateWarnings.new(
+instance = PagerDutyOpenapiClient::RenderedTemplateWarnings.new(
   email_subject: null,
   email_body: null,
   message: null

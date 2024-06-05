@@ -1,4 +1,4 @@
-# OpenapiClient::Alert
+# PagerDutyOpenapiClient::Alert
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Alert.new(
+instance = PagerDutyOpenapiClient::Alert.new(
   created_at: null,
   type: null,
   status: null,

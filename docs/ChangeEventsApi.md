@@ -1,4 +1,4 @@
-# OpenapiClient::ChangeEventsApi
+# PagerDutyOpenapiClient::ChangeEventsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -24,23 +24,23 @@ Sending Change Events is documented as part of the V2 Events API. See [`Send Cha
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ChangeEventsApi.new
+api_instance = PagerDutyOpenapiClient::ChangeEventsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 
 begin
   # Create a Change Event
   api_instance.create_change_event(accept, content_type)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->create_change_event: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->create_change_event_with_http_info: #{e}"
 end
 ```
@@ -96,16 +96,16 @@ Get details about an existing Change Event.  Scoped OAuth requires: `change_even
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ChangeEventsApi.new
+api_instance = PagerDutyOpenapiClient::ChangeEventsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -114,7 +114,7 @@ begin
   # Get a Change Event
   result = api_instance.get_change_event(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->get_change_event: #{e}"
 end
 ```
@@ -132,7 +132,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetChangeEvent200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->get_change_event_with_http_info: #{e}"
 end
 ```
@@ -171,16 +171,16 @@ List all of the existing Change Events.  Scoped OAuth requires: `change_events.r
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ChangeEventsApi.new
+api_instance = PagerDutyOpenapiClient::ChangeEventsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -197,7 +197,7 @@ begin
   # List Change Events
   result = api_instance.list_change_events(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->list_change_events: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListChangeEvents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->list_change_events_with_http_info: #{e}"
 end
 ```
@@ -260,16 +260,16 @@ List related Change Events for an Incident, as well as the reason these changes 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ChangeEventsApi.new
+api_instance = PagerDutyOpenapiClient::ChangeEventsApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
@@ -281,7 +281,7 @@ begin
   # List related Change Events for an Incident
   result = api_instance.list_incident_related_change_events(id, accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->list_incident_related_change_events: #{e}"
 end
 ```
@@ -299,7 +299,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListIncidentRelatedChangeEvents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->list_incident_related_change_events_with_http_info: #{e}"
 end
 ```
@@ -339,16 +339,16 @@ List all of the existing Change Events for a service.  Scoped OAuth requires: `s
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ChangeEventsApi.new
+api_instance = PagerDutyOpenapiClient::ChangeEventsApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
@@ -366,7 +366,7 @@ begin
   # List Change Events for a service
   result = api_instance.list_service_change_events(id, accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->list_service_change_events: #{e}"
 end
 ```
@@ -384,7 +384,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListChangeEvents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->list_service_change_events_with_http_info: #{e}"
 end
 ```
@@ -430,28 +430,28 @@ Update an existing Change Event  Scoped OAuth requires: `change_events.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ChangeEventsApi.new
+api_instance = PagerDutyOpenapiClient::ChangeEventsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  update_change_event_request: OpenapiClient::UpdateChangeEventRequest.new({change_event: OpenapiClient::ChangeEvent.new}) # UpdateChangeEventRequest | The Change Event to be updated.
+  update_change_event_request: PagerDutyOpenapiClient::UpdateChangeEventRequest.new({change_event: PagerDutyOpenapiClient::ChangeEvent.new}) # UpdateChangeEventRequest | The Change Event to be updated.
 }
 
 begin
   # Update a Change Event
   result = api_instance.update_change_event(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->update_change_event: #{e}"
 end
 ```
@@ -469,7 +469,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetChangeEvent200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling ChangeEventsApi->update_change_event_with_http_info: #{e}"
 end
 ```

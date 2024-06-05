@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationIntegrationParameters
+# PagerDutyOpenapiClient::OrchestrationIntegrationParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationIntegrationParameters.new(
+instance = PagerDutyOpenapiClient::OrchestrationIntegrationParameters.new(
   routing_key: null,
   type: null
 )

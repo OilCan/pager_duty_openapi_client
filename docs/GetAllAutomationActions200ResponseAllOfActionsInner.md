@@ -1,4 +1,4 @@
-# OpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner
+# PagerDutyOpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.openapi_one_of
+PagerDutyOpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.openapi_one_of
 # =>
 # [
 #   :'AutomationActionsProcessAutomationJobAction',
@@ -26,9 +26,9 @@ Returns the discriminator's property name.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.openapi_discriminator_name
+PagerDutyOpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.openapi_discriminator_name
 # => :'action_type'
 ```
 
@@ -39,9 +39,9 @@ Returns the discriminator's mapping.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.openapi_discriminator_mapping
+PagerDutyOpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.openapi_discriminator_mapping
 # =>
 # {
 #   :'process_automation' => :'AutomationActionsProcessAutomationJobAction',
@@ -56,12 +56,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-OpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.build(data)
+PagerDutyOpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.build(data)
 # => #<AutomationActionsProcessAutomationJobAction:0x00007fdd4aab02a0>
 
-OpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.build(data_that_doesnt_match)
+PagerDutyOpenapiClient::GetAllAutomationActions200ResponseAllOfActionsInner.build(data_that_doesnt_match)
 # => nil
 ```
 

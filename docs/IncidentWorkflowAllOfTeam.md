@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentWorkflowAllOfTeam
+# PagerDutyOpenapiClient::IncidentWorkflowAllOfTeam
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentWorkflowAllOfTeam.new(
+instance = PagerDutyOpenapiClient::IncidentWorkflowAllOfTeam.new(
   type: null,
   id: null
 )

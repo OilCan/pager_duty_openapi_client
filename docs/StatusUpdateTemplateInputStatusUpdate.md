@@ -1,4 +1,4 @@
-# OpenapiClient::StatusUpdateTemplateInputStatusUpdate
+# PagerDutyOpenapiClient::StatusUpdateTemplateInputStatusUpdate
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::StatusUpdateTemplateInputStatusUpdate.new(
+instance = PagerDutyOpenapiClient::StatusUpdateTemplateInputStatusUpdate.new(
   message: null
 )
 ```

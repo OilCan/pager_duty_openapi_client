@@ -1,4 +1,4 @@
-# OpenapiClient::ListScheduleUsers200Response
+# PagerDutyOpenapiClient::ListScheduleUsers200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListScheduleUsers200Response.new(
+instance = PagerDutyOpenapiClient::ListScheduleUsers200Response.new(
   users: null
 )
 ```

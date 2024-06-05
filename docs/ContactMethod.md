@@ -1,4 +1,4 @@
-# OpenapiClient::ContactMethod
+# PagerDutyOpenapiClient::ContactMethod
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ContactMethod.new(
+instance = PagerDutyOpenapiClient::ContactMethod.new(
   type: null,
   label: null,
   address: null

@@ -1,4 +1,4 @@
-# OpenapiClient::CreateBusinessServiceAccountSubscription200Response
+# PagerDutyOpenapiClient::CreateBusinessServiceAccountSubscription200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::CreateBusinessServiceAccountSubscription200Response.new(
+instance = PagerDutyOpenapiClient::CreateBusinessServiceAccountSubscription200Response.new(
   account_is_subscribed: null
 )
 ```

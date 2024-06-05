@@ -1,4 +1,4 @@
-# OpenapiClient::AutomationActionsScriptActionDataReference
+# PagerDutyOpenapiClient::AutomationActionsScriptActionDataReference
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::AutomationActionsScriptActionDataReference.new(
+instance = PagerDutyOpenapiClient::AutomationActionsScriptActionDataReference.new(
   script: print(&quot;Hello from a Python script!&quot;),
   invocation_command: /usr/local/bin/python3
 )

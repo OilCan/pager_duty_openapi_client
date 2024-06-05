@@ -1,4 +1,4 @@
-# OpenapiClient::AlertGroupingSettingsApi
+# PagerDutyOpenapiClient::AlertGroupingSettingsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -23,16 +23,16 @@ Delete an existing Alert Grouping Setting.  The settings part of Alert Grouper s
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AlertGroupingSettingsApi.new
+api_instance = PagerDutyOpenapiClient::AlertGroupingSettingsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -40,7 +40,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete an Alert Grouping Setting
   api_instance.delete_alert_grouping_setting(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->delete_alert_grouping_setting: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->delete_alert_grouping_setting_with_http_info: #{e}"
 end
 ```
@@ -97,16 +97,16 @@ Get an existing Alert Grouping Setting.  The settings part of Alert Grouper serv
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AlertGroupingSettingsApi.new
+api_instance = PagerDutyOpenapiClient::AlertGroupingSettingsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -115,7 +115,7 @@ begin
   # Get an Alert Grouping Setting
   result = api_instance.get_alert_grouping_setting(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->get_alert_grouping_setting: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostAlertGroupingSettingsRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->get_alert_grouping_setting_with_http_info: #{e}"
 end
 ```
@@ -172,16 +172,16 @@ List all of your alert grouping settings including both single service settings 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AlertGroupingSettingsApi.new
+api_instance = PagerDutyOpenapiClient::AlertGroupingSettingsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -196,7 +196,7 @@ begin
   # List alert grouping settings
   result = api_instance.list_alert_grouping_settings(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->list_alert_grouping_settings: #{e}"
 end
 ```
@@ -214,7 +214,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAlertGroupingSettings200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->list_alert_grouping_settings_with_http_info: #{e}"
 end
 ```
@@ -257,27 +257,27 @@ Create a new Alert Grouping Setting.  The settings part of Alert Grouper service
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AlertGroupingSettingsApi.new
+api_instance = PagerDutyOpenapiClient::AlertGroupingSettingsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  post_alert_grouping_settings_request: OpenapiClient::PostAlertGroupingSettingsRequest.new({alert_grouping_setting: OpenapiClient::AlertGroupingSetting.new}) # PostAlertGroupingSettingsRequest | 
+  post_alert_grouping_settings_request: PagerDutyOpenapiClient::PostAlertGroupingSettingsRequest.new({alert_grouping_setting: PagerDutyOpenapiClient::AlertGroupingSetting.new}) # PostAlertGroupingSettingsRequest | 
 }
 
 begin
   # Create an Alert Grouping Setting
   result = api_instance.post_alert_grouping_settings(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->post_alert_grouping_settings: #{e}"
 end
 ```
@@ -295,7 +295,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostAlertGroupingSettingsRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->post_alert_grouping_settings_with_http_info: #{e}"
 end
 ```
@@ -334,28 +334,28 @@ Update an Alert Grouping Setting.  The settings part of Alert Grouper service al
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AlertGroupingSettingsApi.new
+api_instance = PagerDutyOpenapiClient::AlertGroupingSettingsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  post_alert_grouping_settings_request: OpenapiClient::PostAlertGroupingSettingsRequest.new({alert_grouping_setting: OpenapiClient::AlertGroupingSetting.new}) # PostAlertGroupingSettingsRequest | 
+  post_alert_grouping_settings_request: PagerDutyOpenapiClient::PostAlertGroupingSettingsRequest.new({alert_grouping_setting: PagerDutyOpenapiClient::AlertGroupingSetting.new}) # PostAlertGroupingSettingsRequest | 
 }
 
 begin
   # Update an Alert Grouping Setting
   result = api_instance.put_alert_grouping_setting(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->put_alert_grouping_setting: #{e}"
 end
 ```
@@ -373,7 +373,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostAlertGroupingSettingsRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AlertGroupingSettingsApi->put_alert_grouping_setting_with_http_info: #{e}"
 end
 ```

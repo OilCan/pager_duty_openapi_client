@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentUrgencyRule
+# PagerDutyOpenapiClient::IncidentUrgencyRule
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentUrgencyRule.new(
+instance = PagerDutyOpenapiClient::IncidentUrgencyRule.new(
   type: null,
   urgency: null,
   during_support_hours: null,

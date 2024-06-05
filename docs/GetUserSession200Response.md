@@ -1,4 +1,4 @@
-# OpenapiClient::GetUserSession200Response
+# PagerDutyOpenapiClient::GetUserSession200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetUserSession200Response.new(
+instance = PagerDutyOpenapiClient::GetUserSession200Response.new(
   user_session: null
 )
 ```

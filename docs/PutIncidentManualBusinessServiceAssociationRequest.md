@@ -1,4 +1,4 @@
-# OpenapiClient::PutIncidentManualBusinessServiceAssociationRequest
+# PagerDutyOpenapiClient::PutIncidentManualBusinessServiceAssociationRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::PutIncidentManualBusinessServiceAssociationRequest.new(
+instance = PagerDutyOpenapiClient::PutIncidentManualBusinessServiceAssociationRequest.new(
   relation: null
 )
 ```

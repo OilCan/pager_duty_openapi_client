@@ -1,4 +1,4 @@
-# OpenapiClient::GetOutlierIncident200Response
+# PagerDutyOpenapiClient::GetOutlierIncident200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetOutlierIncident200Response.new(
+instance = PagerDutyOpenapiClient::GetOutlierIncident200Response.new(
   outlier_incident: null
 )
 ```

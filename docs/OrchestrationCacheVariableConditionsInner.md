@@ -1,4 +1,4 @@
-# OpenapiClient::OrchestrationCacheVariableConditionsInner
+# PagerDutyOpenapiClient::OrchestrationCacheVariableConditionsInner
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::OrchestrationCacheVariableConditionsInner.new(
+instance = PagerDutyOpenapiClient::OrchestrationCacheVariableConditionsInner.new(
   expression: event.summary matches part &#39;my service error&#39;
 )
 ```

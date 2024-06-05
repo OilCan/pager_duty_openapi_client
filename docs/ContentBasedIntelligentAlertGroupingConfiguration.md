@@ -1,4 +1,4 @@
-# OpenapiClient::ContentBasedIntelligentAlertGroupingConfiguration
+# PagerDutyOpenapiClient::ContentBasedIntelligentAlertGroupingConfiguration
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ContentBasedIntelligentAlertGroupingConfiguration.new(
+instance = PagerDutyOpenapiClient::ContentBasedIntelligentAlertGroupingConfiguration.new(
   aggregate: null,
   fields: null,
   time_window: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::RulesetsApi
+# PagerDutyOpenapiClient::RulesetsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -28,27 +28,27 @@ Create a new Ruleset. <!-- theme: warning --> > ### End-of-life > Rulesets and E
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  create_ruleset_request: OpenapiClient::CreateRulesetRequest.new({ruleset: OpenapiClient::CreateRulesetRequestRuleset.new({name: 'name_example'})}) # CreateRulesetRequest | 
+  create_ruleset_request: PagerDutyOpenapiClient::CreateRulesetRequest.new({ruleset: PagerDutyOpenapiClient::CreateRulesetRequestRuleset.new({name: 'name_example'})}) # CreateRulesetRequest | 
 }
 
 begin
   # Create a Ruleset
   result = api_instance.create_ruleset(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->create_ruleset: #{e}"
 end
 ```
@@ -66,7 +66,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateRuleset201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->create_ruleset_with_http_info: #{e}"
 end
 ```
@@ -105,28 +105,28 @@ Create a new Event Rule. <!-- theme: warning --> > ### End-of-life > Rulesets an
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  create_ruleset_event_rule_request: OpenapiClient::CreateRulesetEventRuleRequest.new({rule: OpenapiClient::EventRule.new}) # CreateRulesetEventRuleRequest | 
+  create_ruleset_event_rule_request: PagerDutyOpenapiClient::CreateRulesetEventRuleRequest.new({rule: PagerDutyOpenapiClient::EventRule.new}) # CreateRulesetEventRuleRequest | 
 }
 
 begin
   # Create an Event Rule
   result = api_instance.create_ruleset_event_rule(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->create_ruleset_event_rule: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateRulesetEventRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->create_ruleset_event_rule_with_http_info: #{e}"
 end
 ```
@@ -184,16 +184,16 @@ Delete a Ruleset. <!-- theme: warning --> > ### End-of-life > Rulesets and Event
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -201,7 +201,7 @@ id = 'id_example' # String | The ID of the resource.
 begin
   # Delete a Ruleset
   api_instance.delete_ruleset(accept, content_type, id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->delete_ruleset: #{e}"
 end
 ```
@@ -219,7 +219,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->delete_ruleset_with_http_info: #{e}"
 end
 ```
@@ -258,16 +258,16 @@ Delete an Event Rule. <!-- theme: warning --> > ### End-of-life > Rulesets and E
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -276,7 +276,7 @@ rule_id = 'rule_id_example' # String | The id of the Event Rule to retrieve.
 begin
   # Delete an Event Rule
   api_instance.delete_ruleset_event_rule(accept, content_type, id, rule_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->delete_ruleset_event_rule: #{e}"
 end
 ```
@@ -294,7 +294,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->delete_ruleset_event_rule_with_http_info: #{e}"
 end
 ```
@@ -334,16 +334,16 @@ Get a Ruleset. <!-- theme: warning --> > ### End-of-life > Rulesets and Event Ru
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -352,7 +352,7 @@ begin
   # Get a Ruleset
   result = api_instance.get_ruleset(accept, content_type, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->get_ruleset: #{e}"
 end
 ```
@@ -370,7 +370,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateRuleset201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->get_ruleset_with_http_info: #{e}"
 end
 ```
@@ -409,16 +409,16 @@ Get an Event Rule. <!-- theme: warning --> > ### End-of-life > Rulesets and Even
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -428,7 +428,7 @@ begin
   # Get an Event Rule
   result = api_instance.get_ruleset_event_rule(accept, content_type, id, rule_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->get_ruleset_event_rule: #{e}"
 end
 ```
@@ -446,7 +446,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateRulesetEventRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->get_ruleset_event_rule_with_http_info: #{e}"
 end
 ```
@@ -486,16 +486,16 @@ List all Event Rules on a Ruleset. <!-- theme: warning --> > ### End-of-life > R
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
@@ -509,7 +509,7 @@ begin
   # List Event Rules
   result = api_instance.list_ruleset_event_rules(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->list_ruleset_event_rules: #{e}"
 end
 ```
@@ -527,7 +527,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListRulesetEventRules200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->list_ruleset_event_rules_with_http_info: #{e}"
 end
 ```
@@ -569,16 +569,16 @@ List all Rulesets <!-- theme: warning --> > ### End-of-life > Rulesets and Event
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
@@ -591,7 +591,7 @@ begin
   # List Rulesets
   result = api_instance.list_rulesets(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->list_rulesets: #{e}"
 end
 ```
@@ -609,7 +609,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListRulesets200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->list_rulesets_with_http_info: #{e}"
 end
 ```
@@ -650,28 +650,28 @@ Update a Ruleset. <!-- theme: warning --> > ### End-of-life > Rulesets and Event
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 opts = {
-  update_ruleset_request: OpenapiClient::UpdateRulesetRequest.new({ruleset: OpenapiClient::Ruleset.new}) # UpdateRulesetRequest | 
+  update_ruleset_request: PagerDutyOpenapiClient::UpdateRulesetRequest.new({ruleset: PagerDutyOpenapiClient::Ruleset.new}) # UpdateRulesetRequest | 
 }
 
 begin
   # Update a Ruleset
   result = api_instance.update_ruleset(accept, content_type, id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->update_ruleset: #{e}"
 end
 ```
@@ -689,7 +689,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateRuleset201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->update_ruleset_with_http_info: #{e}"
 end
 ```
@@ -729,29 +729,29 @@ Update an Event Rule. Note that the endpoint supports partial updates, so any nu
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::RulesetsApi.new
+api_instance = PagerDutyOpenapiClient::RulesetsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 id = 'id_example' # String | The ID of the resource.
 rule_id = 'rule_id_example' # String | The id of the Event Rule to retrieve.
 opts = {
-  update_ruleset_event_rule_request: OpenapiClient::UpdateRulesetEventRuleRequest.new({rule_id: 'rule_id_example'}) # UpdateRulesetEventRuleRequest | 
+  update_ruleset_event_rule_request: PagerDutyOpenapiClient::UpdateRulesetEventRuleRequest.new({rule_id: 'rule_id_example'}) # UpdateRulesetEventRuleRequest | 
 }
 
 begin
   # Update an Event Rule
   result = api_instance.update_ruleset_event_rule(accept, content_type, id, rule_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->update_ruleset_event_rule: #{e}"
 end
 ```
@@ -769,7 +769,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateRulesetEventRule201Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling RulesetsApi->update_ruleset_event_rule_with_http_info: #{e}"
 end
 ```

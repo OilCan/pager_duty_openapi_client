@@ -1,4 +1,4 @@
-# OpenapiClient::CustomFieldsApi
+# PagerDutyOpenapiClient::CustomFieldsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -27,25 +27,25 @@ Create a new Field, along with the Field Options if provided. An account may hav
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 opts = {
-  create_custom_fields_field_request: OpenapiClient::CreateCustomFieldsFieldRequest.new({field: OpenapiClient::CustomFieldsFieldWithOptions.new({display_name: 'display_name_example', id: 'id_example', name: 'name_example', summary: 'summary_example', _self: '_self_example', type: 'field', created_at: Time.now, updated_at: Time.now, data_type: 'boolean', field_type: 'single_value'})}) # CreateCustomFieldsFieldRequest | 
+  create_custom_fields_field_request: PagerDutyOpenapiClient::CreateCustomFieldsFieldRequest.new({field: PagerDutyOpenapiClient::CustomFieldsFieldWithOptions.new({display_name: 'display_name_example', id: 'id_example', name: 'name_example', summary: 'summary_example', _self: '_self_example', type: 'field', created_at: Time.now, updated_at: Time.now, data_type: 'boolean', field_type: 'single_value'})}) # CreateCustomFieldsFieldRequest | 
 }
 
 begin
   # Create a Field
   result = api_instance.create_custom_fields_field(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->create_custom_fields_field: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCustomFieldsFieldRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->create_custom_fields_field_with_http_info: #{e}"
 end
 ```
@@ -100,26 +100,26 @@ Create a new Field Option. Field Options may only be created for Fields that hav
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 opts = {
-  create_custom_fields_field_option_request: OpenapiClient::CreateCustomFieldsFieldOptionRequest.new({field_option: OpenapiClient::CustomFieldsFieldOption.new({id: 'id_example', type: 'field_option', created_at: Time.now, updated_at: Time.now, data: OpenapiClient::CustomFieldsEditableFieldOptionDataOneOf.new({data_type: 'string', value: 'value_example'})})}) # CreateCustomFieldsFieldOptionRequest | 
+  create_custom_fields_field_option_request: PagerDutyOpenapiClient::CreateCustomFieldsFieldOptionRequest.new({field_option: PagerDutyOpenapiClient::CustomFieldsFieldOption.new({id: 'id_example', type: 'field_option', created_at: Time.now, updated_at: Time.now, data: PagerDutyOpenapiClient::CustomFieldsEditableFieldOptionDataOneOf.new({data_type: 'string', value: 'value_example'})})}) # CreateCustomFieldsFieldOptionRequest | 
 }
 
 begin
   # Create a Field Option
   result = api_instance.create_custom_fields_field_option(field_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->create_custom_fields_field_option: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCustomFieldsFieldOptionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->create_custom_fields_field_option_with_http_info: #{e}"
 end
 ```
@@ -175,22 +175,22 @@ Delete a Field. Fields may not be deleted if they are used by a Field Schema.  S
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 
 begin
   # Delete a Field
   api_instance.delete_custom_fields_field(field_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->delete_custom_fields_field: #{e}"
 end
 ```
@@ -208,7 +208,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->delete_custom_fields_field_with_http_info: #{e}"
 end
 ```
@@ -245,23 +245,23 @@ Delete a Field Option.  Scoped OAuth requires: `custom_fields.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 field_option_id = 'field_option_id_example' # String | The ID of the field option.
 
 begin
   # Delete a Field Option
   api_instance.delete_custom_fields_field_option(field_id, field_option_id)
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->delete_custom_fields_field_option: #{e}"
 end
 ```
@@ -279,7 +279,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->delete_custom_fields_field_option_with_http_info: #{e}"
 end
 ```
@@ -317,16 +317,16 @@ Show detailed information about a field.  Scoped OAuth requires: `custom_fields.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 opts = {
   include: 'field_options' # String | Array of additional details to include.
@@ -336,7 +336,7 @@ begin
   # Get a Field
   result = api_instance.get_custom_fields_field(field_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->get_custom_fields_field: #{e}"
 end
 ```
@@ -354,7 +354,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCustomFieldsFieldRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->get_custom_fields_field_with_http_info: #{e}"
 end
 ```
@@ -392,23 +392,23 @@ List all enabled Field Options for a Field.  Scoped OAuth requires: `custom_fiel
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 
 begin
   # List Field Options
   result = api_instance.list_custom_fields_field_options(field_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->list_custom_fields_field_options: #{e}"
 end
 ```
@@ -426,7 +426,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListCustomFieldsFieldOptions200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->list_custom_fields_field_options_with_http_info: #{e}"
 end
 ```
@@ -463,16 +463,16 @@ List fields.  Scoped OAuth requires: `custom_fields.read`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 opts = {
   include: 'field_options' # String | Array of additional details to include.
 }
@@ -481,7 +481,7 @@ begin
   # List Fields
   result = api_instance.list_custom_fields_fields(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->list_custom_fields_fields: #{e}"
 end
 ```
@@ -499,7 +499,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListCustomFieldsFields200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->list_custom_fields_fields_with_http_info: #{e}"
 end
 ```
@@ -536,26 +536,26 @@ Update a field.  Scoped OAuth requires: `custom_fields.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 opts = {
-  update_custom_fields_field_request: OpenapiClient::UpdateCustomFieldsFieldRequest.new({field: OpenapiClient::CustomFieldsEditableField.new}) # UpdateCustomFieldsFieldRequest | 
+  update_custom_fields_field_request: PagerDutyOpenapiClient::UpdateCustomFieldsFieldRequest.new({field: PagerDutyOpenapiClient::CustomFieldsEditableField.new}) # UpdateCustomFieldsFieldRequest | 
 }
 
 begin
   # Update a Field
   result = api_instance.update_custom_fields_field(field_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->update_custom_fields_field: #{e}"
 end
 ```
@@ -573,7 +573,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UpdateCustomFieldsField200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->update_custom_fields_field_with_http_info: #{e}"
 end
 ```
@@ -611,27 +611,27 @@ Update Field Option for a Field.  Scoped OAuth requires: `custom_fields.write`
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CustomFieldsApi.new
+api_instance = PagerDutyOpenapiClient::CustomFieldsApi.new
 field_id = 'field_id_example' # String | The ID of the field.
 field_option_id = 'field_option_id_example' # String | The ID of the field option.
 opts = {
-  update_custom_fields_field_option_request: OpenapiClient::UpdateCustomFieldsFieldOptionRequest.new({field_option: OpenapiClient::CustomFieldsEditableFieldOption.new({id: 'id_example', type: 'field_option', created_at: Time.now, updated_at: Time.now})}) # UpdateCustomFieldsFieldOptionRequest | 
+  update_custom_fields_field_option_request: PagerDutyOpenapiClient::UpdateCustomFieldsFieldOptionRequest.new({field_option: PagerDutyOpenapiClient::CustomFieldsEditableFieldOption.new({id: 'id_example', type: 'field_option', created_at: Time.now, updated_at: Time.now})}) # UpdateCustomFieldsFieldOptionRequest | 
 }
 
 begin
   # Update a Field Option
   result = api_instance.update_custom_fields_field_option(field_id, field_option_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->update_custom_fields_field_option: #{e}"
 end
 ```
@@ -649,7 +649,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateCustomFieldsFieldOptionRequest>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling CustomFieldsApi->update_custom_fields_field_option_with_http_info: #{e}"
 end
 ```

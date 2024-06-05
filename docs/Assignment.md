@@ -1,4 +1,4 @@
-# OpenapiClient::Assignment
+# PagerDutyOpenapiClient::Assignment
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::Assignment.new(
+instance = PagerDutyOpenapiClient::Assignment.new(
   at: null,
   assignee: null
 )

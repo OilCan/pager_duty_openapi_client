@@ -1,4 +1,4 @@
-# OpenapiClient::LicenseWithCounts
+# PagerDutyOpenapiClient::LicenseWithCounts
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::LicenseWithCounts.new(
+instance = PagerDutyOpenapiClient::LicenseWithCounts.new(
   id: null,
   description: null,
   name: null,

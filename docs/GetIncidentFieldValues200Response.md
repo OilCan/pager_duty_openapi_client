@@ -1,4 +1,4 @@
-# OpenapiClient::GetIncidentFieldValues200Response
+# PagerDutyOpenapiClient::GetIncidentFieldValues200Response
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetIncidentFieldValues200Response.new(
+instance = PagerDutyOpenapiClient::GetIncidentFieldValues200Response.new(
   custom_fields: null
 )
 ```

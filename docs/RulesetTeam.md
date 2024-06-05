@@ -1,4 +1,4 @@
-# OpenapiClient::RulesetTeam
+# PagerDutyOpenapiClient::RulesetTeam
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::RulesetTeam.new(
+instance = PagerDutyOpenapiClient::RulesetTeam.new(
   id: null,
   type: null,
   _self: null

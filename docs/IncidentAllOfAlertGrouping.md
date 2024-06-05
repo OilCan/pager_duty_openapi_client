@@ -1,4 +1,4 @@
-# OpenapiClient::IncidentAllOfAlertGrouping
+# PagerDutyOpenapiClient::IncidentAllOfAlertGrouping
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::IncidentAllOfAlertGrouping.new(
+instance = PagerDutyOpenapiClient::IncidentAllOfAlertGrouping.new(
   grouping_type: null,
   started_at: null,
   ended_at: null,

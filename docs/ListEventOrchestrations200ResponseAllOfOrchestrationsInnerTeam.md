@@ -1,4 +1,4 @@
-# OpenapiClient::ListEventOrchestrations200ResponseAllOfOrchestrationsInnerTeam
+# PagerDutyOpenapiClient::ListEventOrchestrations200ResponseAllOfOrchestrationsInnerTeam
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ListEventOrchestrations200ResponseAllOfOrchestrationsInnerTeam.new(
+instance = PagerDutyOpenapiClient::ListEventOrchestrations200ResponseAllOfOrchestrationsInnerTeam.new(
   id: null,
   type: null,
   _self: null

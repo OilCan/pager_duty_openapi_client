@@ -1,4 +1,4 @@
-# OpenapiClient::UpdateStandardRequestAllOfValues
+# PagerDutyOpenapiClient::UpdateStandardRequestAllOfValues
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::UpdateStandardRequestAllOfValues.new(
+instance = PagerDutyOpenapiClient::UpdateStandardRequestAllOfValues.new(
   regex: null
 )
 ```

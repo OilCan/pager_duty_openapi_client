@@ -1,4 +1,4 @@
-# OpenapiClient::ScheduleLayerEntry
+# PagerDutyOpenapiClient::ScheduleLayerEntry
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::ScheduleLayerEntry.new(
+instance = PagerDutyOpenapiClient::ScheduleLayerEntry.new(
   user: null,
   start: null,
   _end: null

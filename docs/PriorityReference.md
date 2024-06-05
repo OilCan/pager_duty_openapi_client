@@ -1,4 +1,4 @@
-# OpenapiClient::PriorityReference
+# PagerDutyOpenapiClient::PriorityReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::PriorityReference.new(
+instance = PagerDutyOpenapiClient::PriorityReference.new(
   type: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::AnalyticsApi
+# PagerDutyOpenapiClient::AnalyticsApi
 
 All URIs are relative to *https://api.pagerduty.com*
 
@@ -31,28 +31,28 @@ Provides enriched responder data for a single incident.  Example metrics include
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  get_analytics_incident_responses_by_id_request: OpenapiClient::GetAnalyticsIncidentResponsesByIdRequest.new # GetAnalyticsIncidentResponsesByIdRequest | Parameters to apply to the dataset.
+  get_analytics_incident_responses_by_id_request: PagerDutyOpenapiClient::GetAnalyticsIncidentResponsesByIdRequest.new # GetAnalyticsIncidentResponsesByIdRequest | Parameters to apply to the dataset.
 }
 
 begin
   # Get raw responses from a single incident
   result = api_instance.get_analytics_incident_responses_by_id(id, accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_incident_responses_by_id: #{e}"
 end
 ```
@@ -70,7 +70,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsIncidentResponsesById200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_incident_responses_by_id_with_http_info: #{e}"
 end
 ```
@@ -110,27 +110,27 @@ Provides enriched incident data and metrics for multiple incidents.  Example met
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  get_analytics_incidents_request: OpenapiClient::GetAnalyticsIncidentsRequest.new # GetAnalyticsIncidentsRequest | Parameters and filters to apply to the dataset.
+  get_analytics_incidents_request: PagerDutyOpenapiClient::GetAnalyticsIncidentsRequest.new # GetAnalyticsIncidentsRequest | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get raw data - multiple incidents
   result = api_instance.get_analytics_incidents(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_incidents: #{e}"
 end
 ```
@@ -148,7 +148,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_incidents_with_http_info: #{e}"
 end
 ```
@@ -187,16 +187,16 @@ Provides enriched incident data and metrics for a single incident.  Example metr
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 id = 'id_example' # String | The ID of the resource.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
@@ -205,7 +205,7 @@ begin
   # Get raw data - single incident
   result = api_instance.get_analytics_incidents_by_id(id, accept, content_type)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_incidents_by_id: #{e}"
 end
 ```
@@ -223,7 +223,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AnalyticsRawIncident>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_incidents_by_id_with_http_info: #{e}"
 end
 ```
@@ -262,27 +262,27 @@ Provides aggregated enriched metrics for incidents.  The provided metrics are ag
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated incident data
   result = api_instance.get_analytics_metrics_incidents_all(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_all: #{e}"
 end
 ```
@@ -300,7 +300,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsAll200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_all_with_http_info: #{e}"
 end
 ```
@@ -339,27 +339,27 @@ Provides aggregated metrics for incidents aggregated into units of time by escal
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated escalation policy data
   result = api_instance.get_analytics_metrics_incidents_escalation_policy(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_escalation_policy: #{e}"
 end
 ```
@@ -377,7 +377,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsEscalationPolicy200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_escalation_policy_with_http_info: #{e}"
 end
 ```
@@ -416,27 +416,27 @@ Provides aggregated metrics across all escalation policies.  Example metrics inc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated metrics for all escalation policies
   result = api_instance.get_analytics_metrics_incidents_escalation_policy_all(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_escalation_policy_all: #{e}"
 end
 ```
@@ -454,7 +454,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsEscalationPolicy200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_escalation_policy_all_with_http_info: #{e}"
 end
 ```
@@ -493,27 +493,27 @@ Provides aggregated metrics for incidents aggregated into units of time by servi
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated service data
   result = api_instance.get_analytics_metrics_incidents_service(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_service: #{e}"
 end
 ```
@@ -531,7 +531,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_service_with_http_info: #{e}"
 end
 ```
@@ -570,27 +570,27 @@ Provides aggregated metrics across all services.  Example metrics include Second
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated metrics for all services
   result = api_instance.get_analytics_metrics_incidents_service_all(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_service_all: #{e}"
 end
 ```
@@ -608,7 +608,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_service_all_with_http_info: #{e}"
 end
 ```
@@ -647,27 +647,27 @@ Provides aggregated metrics for incidents aggregated into units of time by team.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated team data
   result = api_instance.get_analytics_metrics_incidents_team(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_team: #{e}"
 end
 ```
@@ -685,7 +685,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_team_with_http_info: #{e}"
 end
 ```
@@ -724,27 +724,27 @@ Provides aggregated metrics across all teams.  Example metrics include Seconds t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_model: OpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
+  analytics_model: PagerDutyOpenapiClient::AnalyticsModel.new # AnalyticsModel | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated metrics for all teams
   result = api_instance.get_analytics_metrics_incidents_team_all(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_team_all: #{e}"
 end
 ```
@@ -762,7 +762,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsIncidentsService200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_incidents_team_all_with_http_info: #{e}"
 end
 ```
@@ -801,27 +801,27 @@ Provides aggregated incident metrics for all selected responders.  Example metri
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_responder_filter: OpenapiClient::AnalyticsResponderFilter.new # AnalyticsResponderFilter | Parameters and filters to apply to the dataset.
+  analytics_responder_filter: PagerDutyOpenapiClient::AnalyticsResponderFilter.new # AnalyticsResponderFilter | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get aggregated metrics for all responders
   result = api_instance.get_analytics_metrics_responders_all(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_responders_all: #{e}"
 end
 ```
@@ -839,7 +839,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsRespondersAll200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_responders_all_with_http_info: #{e}"
 end
 ```
@@ -878,27 +878,27 @@ Provides incident metrics aggregated by responder.  Example metrics include Seco
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  analytics_responder_filter: OpenapiClient::AnalyticsResponderFilter.new # AnalyticsResponderFilter | Parameters and filters to apply to the dataset.
+  analytics_responder_filter: PagerDutyOpenapiClient::AnalyticsResponderFilter.new # AnalyticsResponderFilter | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get responder data aggregated by team
   result = api_instance.get_analytics_metrics_responders_team(accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_responders_team: #{e}"
 end
 ```
@@ -916,7 +916,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsMetricsRespondersAll200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_metrics_responders_team_with_http_info: #{e}"
 end
 ```
@@ -955,28 +955,28 @@ Provides enriched incident data and metrics for a specific responder.  Example m
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+PagerDutyOpenapiClient.configure do |config|
   # Configure API key authorization: api_key
   config.api_key['api_key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['api_key'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AnalyticsApi.new
+api_instance = PagerDutyOpenapiClient::AnalyticsApi.new
 responder_id = 'responder_id_example' # String | The ID of the responder.
 accept = 'accept_example' # String | The `Accept` header is used as a versioning header.
 content_type = 'application/json' # String | 
 opts = {
-  get_analytics_responder_incidents_request: OpenapiClient::GetAnalyticsResponderIncidentsRequest.new # GetAnalyticsResponderIncidentsRequest | Parameters and filters to apply to the dataset.
+  get_analytics_responder_incidents_request: PagerDutyOpenapiClient::GetAnalyticsResponderIncidentsRequest.new # GetAnalyticsResponderIncidentsRequest | Parameters and filters to apply to the dataset.
 }
 
 begin
   # Get raw incidents for a single responder_id
   result = api_instance.get_analytics_responder_incidents(responder_id, accept, content_type, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_responder_incidents: #{e}"
 end
 ```
@@ -994,7 +994,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnalyticsResponderIncidents200Response>
-rescue OpenapiClient::ApiError => e
+rescue PagerDutyOpenapiClient::ApiError => e
   puts "Error when calling AnalyticsApi->get_analytics_responder_incidents_with_http_info: #{e}"
 end
 ```

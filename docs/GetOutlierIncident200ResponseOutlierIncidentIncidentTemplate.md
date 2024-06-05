@@ -1,4 +1,4 @@
-# OpenapiClient::GetOutlierIncident200ResponseOutlierIncidentIncidentTemplate
+# PagerDutyOpenapiClient::GetOutlierIncident200ResponseOutlierIncidentIncidentTemplate
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'pager_duty_openapi_client'
 
-instance = OpenapiClient::GetOutlierIncident200ResponseOutlierIncidentIncidentTemplate.new(
+instance = PagerDutyOpenapiClient::GetOutlierIncident200ResponseOutlierIncidentIncidentTemplate.new(
   id: null,
   cluster_id: null,
   mined_text: null
