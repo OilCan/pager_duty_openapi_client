@@ -1,3 +1,8 @@
 #!/bin/bash
+set -eu -o pipefail
 
-curl https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json > openapiv3.json
+# NOTE: there's a bug in PD's schema with a property with "" as the name.
+# This breaks the Ruby OpenAPI client generation, so we've removed
+# the specific property.
+curl https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json \
+  | jq 'del(.components.schemas.Notification.properties."")' > openapiv3.json
