@@ -33,8 +33,6 @@ module PagerDutyOpenapiClient
 
     attr_accessor :status
 
-    attr_accessor :
-
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -66,8 +64,7 @@ module PagerDutyOpenapiClient
         :'address' => :'address',
         :'user' => :'user',
         :'conference_address' => :'conferenceAddress',
-        :'status' => :'status',
-        :'' => :''
+        :'status' => :'status'
       }
     end
 
@@ -85,8 +82,7 @@ module PagerDutyOpenapiClient
         :'address' => :'String',
         :'user' => :'UserReference',
         :'conference_address' => :'String',
-        :'status' => :'String',
-        :'' => :'String'
+        :'status' => :'String'
       }
     end
 
@@ -138,10 +134,6 @@ module PagerDutyOpenapiClient
       if attributes.key?(:'status')
         self.status = attributes[:'status']
       end
-
-      if attributes.key?(:'')
-        self. = attributes[:'']
-      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -182,8 +174,7 @@ module PagerDutyOpenapiClient
           address == o.address &&
           user == o.user &&
           conference_address == o.conference_address &&
-          status == o.status &&
-           == o.
+          status == o.status
     end
 
     # @see the `==` method
@@ -195,7 +186,7 @@ module PagerDutyOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, type, started_at, address, user, conference_address, status, ].hash
+      [id, type, started_at, address, user, conference_address, status].hash
     end
 
     # Builds the object from hash

@@ -8298,9 +8298,6 @@
           },
           "status": {
             "type": "string"
-          },
-          "": {
-            "type": "string"
           }
         }
       },

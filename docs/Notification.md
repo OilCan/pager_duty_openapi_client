@@ -11,7 +11,6 @@
 | **user** | [**UserReference**](UserReference.md) |  | [optional] |
 | **conference_address** | **String** | The address of the conference bridge | [optional] |
 | **status** | **String** |  | [optional] |
-| **** | **String** |  | [optional] |
 
 ## Example
 
@@ -25,8 +24,7 @@ instance = PagerDutyOpenapiClient::Notification.new(
   address: null,
   user: null,
   conference_address: null,
-  status: null,
-  : null
+  status: null
 )
 ```
 
